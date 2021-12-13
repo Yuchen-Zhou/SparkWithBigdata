@@ -1,0 +1,308 @@
+# Spark大数据平台笔记
+
+## 1.安装
+
+参考教程: [Hadoop伪分布式](http://dblab.xmu.edu.cn/blog/2441-2/)、[Hadoop集群](http://dblab.xmu.edu.cn/blog/2775-2/)、[Spark安装](http://dblab.xmu.edu.cn/blog/2501-2/)
+
+- ##### JDK安装
+
+  ```shell
+  $ tar -zxvf jdk* -C /opt/software/
+  ```
+
+- ##### Hadoop安装
+
+  ```shell
+  $ tar -zxvf hadoop* -C /opt/software/
+  ```
+
+  - 配置文件的编写
+
+    /opt/software/hadoop/etc/hadoop/core-site.xml
+
+  ```xml
+  <configuration>
+      <property>
+          <name>hadoop.tmp.dir</name>
+          <value>file:/opt/software/hadoop/tmp</value>
+          <description>Abase for other temporary directories.</description>
+      </property>
+      <property>
+          <name>fs.defaultFS</name>
+          <value>hdfs://localhost:9000</value>
+      </property>
+  </configuration>
+  ```
+
+  /opt/software/hadoop/etc/hadoop/hdfs-site.xml
+
+  ```xml
+  <configuration>
+      <property>
+          <name>dfs.replication</name>
+          <value>1</value>
+      </property>
+      <property>
+          <name>dfs.namenode.name.dir</name>
+          <value>file:/usr/local/hadoop/tmp/dfs/name</value>
+      </property>
+      <property>
+          <name>dfs.datanode.data.dir</name>
+          <value>file:/usr/local/hadoop/tmp/dfs/data</value>
+      </property>
+  </configuration>
+  ```
+
+  /opt/software/hadoop/etc/hadoop/hadoop-env.sh
+
+  ```shell
+  #修改JAVA_HOME
+  export JAVA_HOME=/opt/software/jdk
+  ```
+
+  - 配置文件
+
+    /etc/profile
+
+  ```shell
+  $ vim /etc/profile
+  
+  export JAVA_HOME=/opt/software/jdk
+  export HADOOP_HOME=/opt/software/hadoop
+  export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
+  export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib
+  
+  $ source /etc/profile
+  ```
+
+  - 启动Hadoop
+
+  ```shell
+  $ cd /opt/software/hadoop
+  $ ./sbin/start-dfs.sh
+  ```
+
+  编写快捷启动方式: 在家目录下创建start文件
+
+  ```shell
+  #! /bin/bash
+  #!/bin/bash
+  if [ $# -lt 1 ]
+  then
+      echo "No Args Input..."
+      exit ;
+  fi
+  case $1 in
+  "start")
+          echo " =================== 启动 hadoop ==================="
+  
+          echo " --------------- 启动 hdfs ---------------"
+          cd /opt/software/hadoop/sbin/
+          ./start-dfs.sh
+          echo " --------------- 启动 yarn ---------------"
+          cd /opt/software/hadoop/sbin/
+          ./start-yarn.sh
+  ;;
+  "stop")
+          echo " =================== 关闭 hadoop ==================="
+  
+          echo " --------------- 关闭 yarn ---------------"
+          cd /opt/software/hadoop/sbin/
+          ./stop-yarn.sh
+          echo " --------------- 关闭 hdfs ---------------"
+          cd /opt/software/hadoop/sbin/
+          ./stop-dfs.sh
+  ;;
+  *)
+      echo "Input Args Error..."
+  ;;
+  esac
+  ```
+
+  ​	
+
+  - 查看启动情况
+
+  ```shell
+  $ jps
+  ```
+
+
+
+- Spark安装
+
+  ```shell
+  $ tar -zxvf spark* -C /opt/software/
+  $ cd /opt/software/spark
+  $ cp ./conf/spark-env.sh.template ./conf/spark-env.sh
+  $ vim ./conf/spark-env.sh
+  $ export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)
+  ```
+
+  编写环境变量
+
+  ```shell
+  $ vim /etc/profile
+  	
+  export HADOOP_HOME=/opt/software/hadoop
+  export SPARK_HOME=/opt/software/spark
+  export PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$SPARK_HOME/bin:$PATH
+  
+  $ source /etc/profile
+  ```
+
+- [MySQL的安装](https://www.linuxprobe.com/centos7-mysql.html)
+
+- Hive安装
+
+  ```shell
+  $ wget https://archive.apache.org/dist/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz
+  $ tar -zxvf apache-hive-1.2.1-bin.tar.gz -C /opt/software/
+  $ cd /opt/software/
+  $ mv apache-hive-1.2.1-bin/ hive
+  ```
+
+  配置环境变量
+
+  ```shell
+  $ vim /etc/profile
+  
+  export HIVE_HOME=/usr/local/hive
+  export PATH=$PATH:$HIVE_HOME/bin
+  ```
+
+  修改hive-site.xml
+
+  ```shell
+  $ cd hive/conf/
+  $ cp hive-default.xml.template hive-default.xml
+  
+  $ vim hive-site.xml
+  ```
+
+  添加如下信息
+
+  ```xml
+  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+  <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+  <configuration>
+    <property>
+      <name>javax.jdo.option.ConnectionURL</name>
+      <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
+      <description>JDBC connect string for a JDBC metastore</description>
+    </property>
+    <property>
+      <name>javax.jdo.option.ConnectionDriverName</name>
+      <value>com.mysql.jdbc.Driver</value>
+      <description>Driver class name for a JDBC metastore</description>
+    </property>
+    <property>
+      <name>javax.jdo.option.ConnectionUserName</name>
+      <value>hive</value>
+      <description>username to use against metastore database</description>
+    </property>
+    <property>
+      <name>javax.jdo.option.ConnectionPassword</name>
+      <value>hive</value>
+      <description>password to use against metastore database</description>
+    </property>
+  </configuration>
+  ```
+
+  
+
+- Sqoop安装,[参考链接](http://www.tutorialspoint.com/sqoop/sqoop_installation.htm)
+
+  ```shell
+  $ tar -zxvf sqoop-1.4.2.bin__hadoop-0.20.tar.gz -C /opt/software/
+  $ mv sqoop-1.4.2.bin__hadoop-0.20.tar.gz sqoop
+  ```
+
+  修改配置文件swoop-env.sh
+
+  ```shell
+  $ cd sqoop/conf/
+  $ cat sqoop-env-template.sh >> sqoop-env.sh
+  $ vim sqoop-env.sh
+  ```
+
+  ```shell
+  export HADOOP_COMMON_HOME=/opt/software/hadoop
+  export HADOOP_MAPRED_HOME=/opt/software/hadoop
+  export HIVE_HOME=/opt/software/hive
+  ```
+
+  修改环境变量
+
+  ```shell
+  $ vim /etc/profile
+  
+  export SQOOP_HOME=/opt/software/sqoop
+  export PATH=$PATH:$SQOOP_HOMR/bin
+  export CLASSPATH=$CLASSPATH:$SQOOP_HOME/lib
+  ```
+
+  将mysql驱动包拷贝到$SQOOP_HOME/lib
+
+  ```shell
+  $ cd /opt/package/mysql-connector-java-8.0.27/ && cp ./mysql-connector-java-8.0.27.jar /opt/software/sqoop/lib
+  ```
+
+  测试与Mysql的连接
+
+  ```shell
+  $ sqoop list-databases --connect jdbc:///127.0.0.1:3306 --username root --password
+  ```
+
+  将股票数据通过Sqoop从MySQL导入HDFS
+
+  ```shell
+  $ sqoop import \
+  --connect jdbc:mysql://127.0.0.1:3306/stock_list \
+  --username root \
+  --password Zyc0804!  \
+  --table stocks \
+  -m 1 
+  ```
+
+- HBase安装
+
+  ```shell
+  $ tar -zxvf hbase-* -C /opt/software
+  $ mv hbase* hbase
+  $ vim /etc/profile
+  
+  export HBASE_HOME=/opt/software/hbase
+  export PATH=$PATH:$HBASE_HOME/bin
+  
+  $ source /etc/profile
+  ```
+
+  HBase配置文件
+
+  ```shell
+  $ vim $HBASE/conf/hbase-env.sh
+  
+  export JAVA_HOME=/opt/software/jdk
+  export HBASE_CLASSPATH=/opt/software/hadoop/conf
+  export HBASE_MANAGES_ZK=true 
+  ```
+
+  ```shell
+  $ vim $HBASE/conf/hbase-site.xml
+  ```
+
+  ```xml
+  <configuration>
+          <property>
+                  <name>hbase.rootdir</name>
+                  <value>hdfs://localhost:9000/hbase</value>
+          </property>
+          <property>
+                  <name>hbase.cluster.distributed</name>
+                  <value>true</value>
+          </property>
+  </configuration>
+  ```
+
+  使用细节参考：http://dblab.xmu.edu.cn/blog/install-hbase/
