@@ -7,11 +7,11 @@
 
 </head>
 <body>
-    <div id="69cdc817906f4f389ffb58fdb2acc05e" class="chart-container" style="width:900px; height:500px;"></div>
+    <div id="eb3aef5ade1c48839f9acfb1c2141a54" class="chart-container" style="width:1000px; height:600px;"></div>
     <script>
-        var chart_69cdc817906f4f389ffb58fdb2acc05e = echarts.init(
-            document.getElementById('69cdc817906f4f389ffb58fdb2acc05e'), 'white', {renderer: 'canvas'});
-        var option_69cdc817906f4f389ffb58fdb2acc05e = {
+        var chart_eb3aef5ade1c48839f9acfb1c2141a54 = echarts.init(
+            document.getElementById('eb3aef5ade1c48839f9acfb1c2141a54'), 'white', {renderer: 'canvas'});
+        var option_eb3aef5ade1c48839f9acfb1c2141a54 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -48,63 +48,97 @@
     ],
     "series": [
         {
-            "type": "bar",
-            "name": "\u6570\u91cf",
-            "legendHoverLink": true,
+            "type": "pie",
+            "clockwise": true,
             "data": [
-                278329,
-                210419,
-                178011,
-                176545,
-                171813,
-                158892,
-                148365,
-                146152,
-                145958,
-                139848,
-                136822,
-                125005,
-                122266,
-                117456,
-                108125
-            ],
-            "showBackground": false,
-            "barMinHeight": 0,
-            "barCategoryGap": "50%",
-            "barGap": "180%",
-            "large": false,
-            "largeThreshold": 400,
-            "seriesLayoutBy": "column",
-            "datasetIndex": 0,
-            "clip": true,
-            "zlevel": 0,
-            "z": 2,
-            "label": {
-                "show": false,
-                "position": "top",
-                "margin": 8
-            },
-            "markPoint": {
-                "label": {
-                    "show": true,
-                    "position": "inside",
-                    "color": "#fff",
-                    "margin": 8
+                {
+                    "name": 3.3,
+                    "value": 1
                 },
-                "data": [
-                    {
-                        "name": "\u6700\u5c0f\u503c",
-                        "type": "min"
-                    },
-                    {
-                        "name": "\u6700\u5927\u503c",
-                        "type": "max"
-                    },
-                    {
-                        "name": "\u5e73\u5747\u503c",
-                        "type": "average"
-                    }
-                ]
+                {
+                    "name": 3.6,
+                    "value": 1
+                },
+                {
+                    "name": 3.8,
+                    "value": 2
+                },
+                {
+                    "name": 3.9,
+                    "value": 3
+                },
+                {
+                    "name": 4.0,
+                    "value": 14
+                },
+                {
+                    "name": 4.1,
+                    "value": 6
+                },
+                {
+                    "name": 4.2,
+                    "value": 8
+                },
+                {
+                    "name": 4.3,
+                    "value": 25
+                },
+                {
+                    "name": 4.4,
+                    "value": 38
+                },
+                {
+                    "name": 4.5,
+                    "value": 60
+                },
+                {
+                    "name": 4.6,
+                    "value": 105
+                },
+                {
+                    "name": 4.7,
+                    "value": 108
+                },
+                {
+                    "name": 4.8,
+                    "value": 127
+                },
+                {
+                    "name": 4.9,
+                    "value": 52
+                }
+            ],
+            "radius": [
+                "0%",
+                "75%"
+            ],
+            "center": [
+                "30%",
+                "50%"
+            ],
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8,
+                "formatter": " {d}%"
+            },
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": "\u8bc4\u5206:{b}<br>\u6570\u91cf:{c}<br>\u5360\u6bd4:({d}%)",
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
             },
             "rippleEffect": {
                 "show": true,
@@ -117,13 +151,27 @@
     "legend": [
         {
             "data": [
-                "\u6570\u91cf"
+                3.3,
+                3.6,
+                3.8,
+                3.9,
+                4.0,
+                4.1,
+                4.2,
+                4.3,
+                4.4,
+                4.5,
+                4.6,
+                4.7,
+                4.8,
+                4.9
             ],
-            "selected": {
-                "\u6570\u91cf": true
-            },
+            "selected": {},
+            "type": "scroll",
             "show": true,
-            "left": "25%",
+            "left": "70%",
+            "top": "10%",
+            "orient": "vertical",
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -147,80 +195,9 @@
         "borderWidth": 0,
         "padding": 5
     },
-    "xAxis": [
-        {
-            "name": "\u56fe\u4e66\u540d\u79f0",
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "axisLabel": {
-                "interval": 0,
-                "rotate": 0
-            },
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            },
-            "data": [
-                "Suzanne Collins",
-                "John Green",
-                "E L James",
-                "Dr. Seuss",
-                "Gillian Flynn",
-                "Paula Hawkins",
-                "Laura Hillenbrand",
-                "Harper Lee",
-                "Gary Chapman",
-                "Don Miguel Ruiz",
-                "Eric Carle",
-                "Dale Carnegie",
-                "Michelle Obama",
-                "Sarah Young",
-                "R. J. Palacio"
-            ]
-        }
-    ],
-    "yAxis": [
-        {
-            "name": "\u6570\u91cf",
-            "show": true,
-            "scale": false,
-            "nameLocation": "end",
-            "nameGap": 15,
-            "gridIndex": 0,
-            "inverse": false,
-            "offset": 0,
-            "splitNumber": 5,
-            "minInterval": 0,
-            "splitLine": {
-                "show": false,
-                "lineStyle": {
-                    "show": true,
-                    "width": 1,
-                    "opacity": 1,
-                    "curveness": 0,
-                    "type": "solid"
-                }
-            }
-        }
-    ],
     "title": [
         {
-            "text": "\u56fe\u4e66\u6570\u91cf\u5206\u6790",
-            "subtext": "\u524d15\u56fe\u4e66\u6570\u636e",
-            "left": "center",
+            "text": "Pie",
             "padding": 5,
             "itemGap": 10
         }
@@ -299,19 +276,9 @@
                 }
             }
         }
-    },
-    "dataZoom": {
-        "show": true,
-        "type": "slider",
-        "realtime": true,
-        "start": 20,
-        "end": 80,
-        "orient": "horizontal",
-        "zoomLock": false,
-        "filterMode": "filter"
     }
 };
-        chart_69cdc817906f4f389ffb58fdb2acc05e.setOption(option_69cdc817906f4f389ffb58fdb2acc05e);
+        chart_eb3aef5ade1c48839f9acfb1c2141a54.setOption(option_eb3aef5ade1c48839f9acfb1c2141a54);
     </script>
 </body>
 </html>
