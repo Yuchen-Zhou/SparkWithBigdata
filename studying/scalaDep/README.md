@@ -12,8 +12,12 @@
 ## Maven教程
 参考菜鸟教程:https://www.runoob.com/maven/maven-tutorial.html
 
-###  Maven打包Scala的pom.xml
-可以[点这里查看](./pom.xml)
+## 使用IDEA Maven打包Scala
+可以参考这篇教程：https://blog.csdn.net/u011470552/article/details/54564636  
+重点在于要把多余的jar给删除否则就会出现大问题
+
+pom.xml文件怎么参考[这里](./pom.xml)
+
 注：我做的实验只用到了spark-core和spark-sql,如果要进行Streaming或者MLlib,可以参考如下结构
 ```xml
     <dependency>
@@ -24,9 +28,6 @@
 ```
 
 
-## 使用IDEA Maven打包Scala
-可以参考这篇教程：https://blog.csdn.net/u011470552/article/details/54564636  
-重点在于要把多余的jar给删除否则就会出现大问题
-
 ## 一些Spark编程实例
-和Python使用的数据是一致的，点击[这里](../../data)查看数据
+1.数据：和Python使用的数据是一致的，点击[这里](../../data)查看数据  
+2.代码：和Python上的实现效果相同的代码在[这里](./ScalaProject)

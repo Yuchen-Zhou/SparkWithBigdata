@@ -1,3 +1,4 @@
+//单词计数，可以用来测试环境是否安装良好
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
 
