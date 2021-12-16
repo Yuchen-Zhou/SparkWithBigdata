@@ -6,3 +6,5 @@
 [0m2021.12.15 23:18:36 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
 [0m2021.12.15 23:18:37 INFO  time: code lens generation in 2.12s[0m
 [0m2021.12.15 23:18:49 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/ReviewsRank.scala[0m
+Dec 16, 2021 12:06:50 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
