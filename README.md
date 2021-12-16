@@ -1,16 +1,33 @@
 # Spark大数据平台笔记
 
-## 1.安装
+## 0.前言
+### 关于编程语言 
+这个仓库主要以Python为主要开发语言，当然也会有一些Scala的开发，如果你对Scala开发更感兴趣，可以点[这里](./studying/scalaDep)
 
+### 关于版本使用
+- [JDK 1.8.0](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
+- [Hadoop 2.6.0](https://hadoop.apache.org/release/2.6.0.html)
+- [Spark 2.4.2](https://archive.apache.org/dist/spark/spark-2.4.2/)
+- [HBase 1.2.4](https://archive.apache.org/dist/hbase/1.2.4/)
+- [Maven 3.5.4](https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/)
+- [Hive 1.2.1](https://archive.apache.org/dist/hive/hive-1.2.1/)
+- [Zookeeper 3.4.5](https://archive.apache.org/dist/zookeeper/zookeeper-3.4.5/)
+- [Scala 2.12.2](https://www.scala-lang.org/download/2.12.2.html)
+- MySQL 5.7 参考下面[MySQL的安装](###1.4MySQL安装) 
+- [Sqoop 1.4.7](https://archive.apache.org/dist/sqoop/1.4.7/)
+- [Flume 1.8.0](https://downloads.apache.org/flume/1.8.0/)
+
+
+## 1.安装
 参考教程: [Hadoop伪分布式](http://dblab.xmu.edu.cn/blog/2441-2/)、[Hadoop集群](http://dblab.xmu.edu.cn/blog/2775-2/)、[Spark安装](http://dblab.xmu.edu.cn/blog/2501-2/)
 
-- ##### JDK安装
+- ### 1.1JDK安装
 
   ```shell
   $ tar -zxvf jdk* -C /opt/software/
   ```
 
-- ##### Hadoop安装
+- ### 1.2Hadoop安装
 
   ```shell
   $ tar -zxvf hadoop* -C /opt/software/
@@ -52,6 +69,38 @@
       </property>
   </configuration>
   ```
+  mapred-site.xml的配置修改
+  ```shell
+  $ cp mapred-site.xml.template mapred-site.xml
+  $ vim mapred-site.xml
+  ```
+
+  ```xml
+  <configuration>
+    <property>
+        <name>mapreduce.framework.name</name>
+        <value>yarn</value>
+    </property>
+  </configuration>
+  ```
+  yarn-site.xml的配置修改
+  ```shell
+  $ vim yarn-site.xml
+  ```
+  ```xml
+  <configuration>
+    <property>
+      <name>yarn.nodemanager.aux-services</name>
+      <value>mapreduce_shuffle</value>
+    </property>
+  </configuration>
+  ```
+
+
+
+
+
+
 
   /opt/software/hadoop/etc/hadoop/hadoop-env.sh
 
@@ -60,9 +109,7 @@
   export JAVA_HOME=/opt/software/jdk
   ```
 
-  - 配置文件
-
-    /etc/profile
+  环境变量/etc/profile
 
   ```shell
   $ vim /etc/profile
@@ -129,7 +176,7 @@
 
 
 
-- Spark安装
+- ### 1.3Spark安装
 
   ```shell
   $ tar -zxvf spark* -C /opt/software/
@@ -151,9 +198,10 @@
   $ source /etc/profile
   ```
 
-- [MySQL的安装](https://www.linuxprobe.com/centos7-mysql.html)
+- ### 1.4MySQL的安装
+  参考链接：https://www.linuxprobe.com/centos7-mysql.html
 
-- Hive安装
+- ### 1.5Hive安装
 
   ```shell
   $ wget https://archive.apache.org/dist/hive/hive-1.2.1/apache-hive-1.2.1-bin.tar.gz
@@ -211,7 +259,8 @@
 
   
 
-- Sqoop安装,[参考链接](http://www.tutorialspoint.com/sqoop/sqoop_installation.htm)
+- ### 1.6Sqoop安装
+[参考链接](http://www.tutorialspoint.com/sqoop/sqoop_installation.htm)
 
   ```shell
   $ tar -zxvf sqoop-1.4.2.bin__hadoop-0.20.tar.gz -C /opt/software/
@@ -265,7 +314,7 @@
   -m 1 
   ```
 
-- HBase安装
+- ### 1.7HBase安装
 
   ```shell
   $ tar -zxvf hbase-* -C /opt/software
