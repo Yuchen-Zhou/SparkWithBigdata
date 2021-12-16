@@ -355,3 +355,7 @@
   ```
 
   使用细节参考：http://dblab.xmu.edu.cn/blog/install-hbase/
+
+
+## 开发环境配置问题
+[在Spark上使用Python3的解释器](./studying/py/README.md)
