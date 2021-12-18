@@ -13,7 +13,7 @@
 - [Hive 1.2.1](https://archive.apache.org/dist/hive/hive-1.2.1/)
 - [Zookeeper 3.4.5](https://archive.apache.org/dist/zookeeper/zookeeper-3.4.5/)
 - [Scala 2.12.2](https://www.scala-lang.org/download/2.12.2.html)
-- MySQL 5.7 参考下面[MySQL的安装](1.4MySQL安装)
+- MySQL 5.7 参考下面[MySQL的安装](###1.4MySQL安装)
 - [Sqoop 1.4.7](https://archive.apache.org/dist/sqoop/1.4.7/)
 - [Flume 1.8.0](https://downloads.apache.org/flume/1.8.0/)
 
