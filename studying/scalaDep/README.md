@@ -16,7 +16,7 @@
 可以参考这篇教程：https://blog.csdn.net/u011470552/article/details/54564636  
 重点在于要把多余的jar给删除否则就会出现大问题
 
-pom.xml文件怎么参考[这里](./pom.xml)
+pom.xml文件怎么写参考[这里](./pom.xml)
 
 注：我做的实验只用到了spark-core和spark-sql,如果要进行Streaming或者MLlib,可以参考如下结构
 ```xml
