@@ -1,0 +1,15 @@
+[0m2021.12.20 03:55:47 INFO  Started: Metals version 0.10.9 in workspace '/home/spark/code/SparkProgramming' for client Visual Studio Code 1.63.2.[0m
+[0m2021.12.20 03:55:47 INFO  time: initialize in 0.28s[0m
+[0m2021.12.20 03:55:48 WARN  Build server is not auto-connectable.[0m
+[0m2021.12.20 03:55:48 WARN  no build tool detected in workspace '/home/spark/code/SparkProgramming'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.12.20 03:55:48 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/SellCounts.scala[0m
+[0m2021.12.20 03:55:49 INFO  no build target: using presentation compiler with only scala-library: 3.1.0[0m
+[0m2021.12.20 03:55:51 INFO  time: code lens generation in 3.05s[0m
+[0m2021.12.20 03:59:11 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/SellCounts.scala[0m
+[0m2021.12.20 03:59:11 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/SellCounts.scala[0m
+[0m2021.12.20 05:09:52 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/Bestsell.scala[0m
+[0m2021.12.20 05:10:28 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/Bestsell.scala[0m
+[0m2021.12.20 05:10:48 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/BestSellwithColour.scala[0m
+[0m2021.12.20 05:11:19 WARN  no build target for: /home/spark/code/SparkProgramming/studying/scalaDep/ScalaProject/BestSellwithColour.scala[0m
+Dec 20, 2021 5:11:22 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
