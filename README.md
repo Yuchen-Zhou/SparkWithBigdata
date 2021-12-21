@@ -260,59 +260,59 @@
   
 
 - ### 1.6Sqoop安装
-[参考链接](http://www.tutorialspoint.com/sqoop/sqoop_installation.htm)
+  [参考链接](http://www.tutorialspoint.com/sqoop/sqoop_installation.htm)
 
-  ```shell
-  $ tar -zxvf sqoop-1.4.2.bin__hadoop-0.20.tar.gz -C /opt/software/
-  $ mv sqoop-1.4.2.bin__hadoop-0.20.tar.gz sqoop
-  ```
+    ```shell
+    $ tar -zxvf sqoop-1.4.2.bin__hadoop-0.20.tar.gz -C /opt/software/
+    $ mv sqoop-1.4.2.bin__hadoop-0.20.tar.gz sqoop
+    ```
 
-  修改配置文件swoop-env.sh
+    修改配置文件swoop-env.sh
 
-  ```shell
-  $ cd sqoop/conf/
-  $ cat sqoop-env-template.sh >> sqoop-env.sh
-  $ vim sqoop-env.sh
-  ```
+    ```shell
+    $ cd sqoop/conf/
+    $ cat sqoop-env-template.sh >> sqoop-env.sh
+    $ vim sqoop-env.sh
+    ```
 
-  ```shell
-  export HADOOP_COMMON_HOME=/opt/software/hadoop
-  export HADOOP_MAPRED_HOME=/opt/software/hadoop
-  export HIVE_HOME=/opt/software/hive
-  ```
+    ```shell
+    export HADOOP_COMMON_HOME=/opt/software/hadoop
+    export HADOOP_MAPRED_HOME=/opt/software/hadoop
+    export HIVE_HOME=/opt/software/hive
+    ```
 
-  修改环境变量
+    修改环境变量
 
-  ```shell
-  $ vim /etc/profile
+    ```shell
+    $ vim /etc/profile
   
-  export SQOOP_HOME=/opt/software/sqoop
-  export PATH=$PATH:$SQOOP_HOMR/bin
-  export CLASSPATH=$CLASSPATH:$SQOOP_HOME/lib
-  ```
+    export SQOOP_HOME=/opt/software/sqoop
+    export PATH=$PATH:$SQOOP_HOMR/bin
+    export CLASSPATH=$CLASSPATH:$SQOOP_HOME/lib
+    ```
 
-  将mysql驱动包拷贝到$SQOOP_HOME/lib
+    将mysql驱动包拷贝到$SQOOP_HOME/lib
 
-  ```shell
-  $ cd /opt/package/mysql-connector-java-8.0.27/ && cp ./mysql-connector-java-8.0.27.jar /opt/software/sqoop/lib
-  ```
+    ```shell
+    $ cd /opt/package/mysql-connector-java-8.0.27/ && cp ./mysql-connector-java-8.0.27.jar /opt/software/sqoop/lib
+    ```
 
-  测试与Mysql的连接
+    测试与Mysql的连接
 
-  ```shell
-  $ sqoop list-databases --connect jdbc:///127.0.0.1:3306 --username root --password
-  ```
+    ```shell
+    $ sqoop list-databases --connect jdbc:///127.0.0.1:3306 --username root --password
+    ```
 
-  将股票数据通过Sqoop从MySQL导入HDFS
+    将股票数据通过Sqoop从MySQL导入HDFS
 
-  ```shell
-  $ sqoop import \
-  --connect jdbc:mysql://127.0.0.1:3306/stock_list \
-  --username root \
-  --password Zyc0804!  \
-  --table stocks \
-  -m 1 
-  ```
+    ```shell
+    $ sqoop import \
+    --connect jdbc:mysql://127.0.0.1:3306/stock_list \
+    --username root \
+    --password Zyc0804!  \
+    --table stocks \
+    -m 1 
+    ```
 
 - ### 1.7HBase安装
 
@@ -355,7 +355,7 @@
   ```
 
   使用细节参考：http://dblab.xmu.edu.cn/blog/install-hbase/
-
+  
 
 ## 开发环境配置问题
 [在Spark上使用Python3的解释器](./studying/py/README.md)
