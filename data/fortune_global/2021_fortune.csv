@@ -1,0 +1,501 @@
+,year,rank,name,sector,industry,revenues,revchange,profits,prftchange,assets,employees,hqcity,hqstate,newcomer,profitable,ceowoman,jobgrowth,permalink
+1000,2021,1.0,Walmart,Retailing,General Merchandisers,559151.0,6.7,13510.0,-9.2,252496.0,2300000,Bentonville,Arkansas,no,yes,no,yes,https://fortune.com/company/walmart/global500/
+1001,2021,2.0,State Grid,Energy,Utilities,386617.7,0.7,5580.4,-30.0,666088.5,896360,Beijing,,no,yes,no,no,https://fortune.com/company/state-grid/global500/
+1002,2021,3.0,Amazon,Retailing,Internet Services and Retailing,386064.0,37.6,21331.0,84.1,321195.0,1298000,Seattle,Washington,no,yes,no,yes,https://fortune.com/company/amazon-com/global500/
+1003,2021,4.0,China National Petroleum,Energy,Petroleum Refining,283957.6,-25.1,4575.2,3.0,626616.7,1242245,Beijing,,no,yes,no,no,https://fortune.com/company/china-national-petroleum/global500/
+1004,2021,5.0,Sinopec Group,Energy,Petroleum Refining,283727.6,-30.3,6205.2,-8.7,343289.0,553833,Beijing,,no,yes,no,no,https://fortune.com/company/sinopec-group/global500/
+1005,2021,6.0,Apple,Technology,"Computers, Office Equipment",274515.0,5.5,57411.0,3.9,323888.0,147000,Cupertino,California,no,yes,no,yes,https://fortune.com/company/apple/global500/
+1006,2021,7.0,CVS Health,Health Care,Health Care: Pharmacy and Other Services,268706.0,4.6,7179.0,8.2,230715.0,256500,Woonsocket,Rhode Island,no,yes,yes,no,https://fortune.com/company/cvs-health/global500/
+1007,2021,8.0,UnitedHealth Group,Health Care,Health Care: Insurance and Managed Care,257141.0,6.2,15403.0,11.3,197289.0,330000,Minnetonka,Minnesota,no,yes,no,yes,https://fortune.com/company/unitedhealth-group/global500/
+1008,2021,9.0,Toyota Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,256721.7,-6.5,21180.1,13.1,562994.0,366283,Toyota,,no,yes,no,yes,https://fortune.com/company/toyota-motor/global500/
+1009,2021,10.0,Volkswagen,Motor Vehicles & Parts,Motor Vehicles & Parts,253965.0,-10.2,10103.5,-35.0,608368.1,662575,Wolfsburg,,no,yes,no,no,https://fortune.com/company/volkswagen/global500/
+1010,2021,11.0,Berkshire Hathaway,Financials,Insurance: Property and Casualty (Stock),245510.0,-3.6,42521.0,-47.8,873729.0,360000,Omaha,Nebraska,no,yes,no,no,https://fortune.com/company/berkshire-hathaway/global500/
+1011,2021,12.0,McKesson,Health Care,Wholesalers: Health Care,238228.0,3.1,-4539.0,-604.3,65015.0,67500,Irving,Texas,no,no,no,no,https://fortune.com/company/mckesson/global500/
+1012,2021,13.0,China State Construction Engineering,Engineering & Construction,Engineering & Construction,234425.0,13.9,3578.4,7.4,338033.2,356864,Beijing,,no,yes,no,yes,https://fortune.com/company/china-state-construction-engineering/global500/
+1013,2021,14.0,Saudi Aramco,Energy,"Mining, Crude-Oil Production",229766.2,-30.3,49286.8,-44.1,510265.5,79800,Dhahran,,no,yes,no,yes,https://fortune.com/company/saudi-aramco/global500/
+1014,2021,15.0,Samsung Electronics,Technology,"Electronics, Electrical Equip.",200734.4,1.5,22116.4,19.9,347991.8,267937,"Suwon, Gyeonggi-do",,no,yes,no,no,https://fortune.com/company/samsung-electronics/global500/
+1015,2021,16.0,Ping An Insurance,Financials,"Insurance: Life, Health (stock)",191509.4,3.9,20738.9,-4.1,1460210.0,362035,Shenzhen,,no,yes,yes,no,https://fortune.com/company/ping-an-insurance/global500/
+1016,2021,17.0,AmerisourceBergen,Health Care,Wholesalers: Health Care,189893.9,5.7,-3408.7,-498.5,44274.8,21500,Chesterbrook,Pennsylvania,no,no,no,no,https://fortune.com/company/amerisourcebergen/global500/
+1017,2021,18.0,BP,Energy,Petroleum Refining,183500.0,-35.1,-20305.0,-604.3,267654.0,68100,London,,no,no,no,no,https://fortune.com/company/bp/global500/
+1018,2021,19.0,Royal Dutch Shell,Energy,Petroleum Refining,183195.0,-48.0,-21680.0,-236.9,379268.0,87000,The Hague,,no,no,no,yes,https://fortune.com/company/royal-dutch-shell/global500/
+1019,2021,20.0,Industrial & Commercial Bank of China,Financials,Banks: Commercial and Savings,182794.4,3.2,45783.4,1.3,5110353.7,439787,Beijing,,no,yes,no,no,https://fortune.com/company/industrial-commercial-bank-of-china/global500/
+1020,2021,21.0,Alphabet,Technology,Internet Services and Retailing,182527.0,12.8,40269.0,17.3,319616.0,135301,Mountain View,California,no,yes,no,yes,https://fortune.com/company/alphabet/global500/
+1021,2021,22.0,Hon Hai Precision Industry,Technology,"Electronics, Electrical Equip.",181945.4,5.3,3456.7,-7.3,130845.6,878429,New Taipei City,,no,yes,no,yes,https://fortune.com/company/hon-hai-precision-industry/global500/
+1022,2021,23.0,Exxon Mobil,Energy,Petroleum Refining,181502.0,-31.5,-22440.0,-256.5,332750.0,72000,Irving,Texas,no,no,no,no,https://fortune.com/company/exxon-mobil/global500/
+1023,2021,24.0,Daimler,Motor Vehicles & Parts,Motor Vehicles & Parts,175827.3,-9.1,4132.8,55.3,349684.9,288481,Stuttgart,,no,yes,no,no,https://fortune.com/company/daimler/global500/
+1024,2021,25.0,China Construction Bank,Financials,Banks: Commercial and Savings,172000.2,8.3,39282.5,1.7,4311456.6,373814,Beijing,,no,yes,no,yes,https://fortune.com/company/china-construction-bank/global500/
+1025,2021,26.0,AT&T,Telecommunications,Telecommunications,171760.0,-5.2,-5176.0,-137.2,525761.0,230760,Dallas,Texas,no,no,no,no,https://fortune.com/company/att/global500/
+1026,2021,27.0,Costco Wholesale,Retailing,General Merchandisers,166761.0,9.2,4002.0,9.4,55556.0,214500,Issaquah,Washington,no,yes,no,yes,https://fortune.com/company/costco/global500/
+1027,2021,28.0,Cigna,Health Care,Health Care: Pharmacy and Other Services,160401.0,4.5,8458.0,65.7,155451.0,72963,Bloomfield,Connecticut,no,yes,no,no,https://fortune.com/company/cigna/global500/
+1028,2021,29.0,Agricultural Bank of China,Financials,Banks: Commercial and Savings,153884.6,4.5,31293.4,1.9,4169355.9,462592,Beijing,,no,yes,no,no,https://fortune.com/company/agricultural-bank-of-china/global500/
+1029,2021,30.0,Cardinal Health,Health Care,Wholesalers: Health Care,152922.0,5.1,-3696.0,-371.2,40766.0,48000,Dublin,Ohio,no,no,no,no,https://fortune.com/company/cardinal-health/global500/
+1030,2021,31.0,Trafigura Group,Wholesalers,Trading,146994.3,-14.3,1699.2,94.9,56985.6,8619,Singapore,,no,yes,no,yes,https://fortune.com/company/trafigura-group/global500/
+1031,2021,32.0,China Life Insurance,Financials,"Insurance: Life, Health (stock)",144589.1,10.2,4648.1,-0.3,776308.8,183417,Beijing,,no,yes,no,yes,https://fortune.com/company/china-life-insurance/global500/
+1032,2021,33.0,Microsoft,Technology,Computer Software,143015.0,13.6,44281.0,12.8,301311.0,163000,Redmond,Washington,no,yes,no,yes,https://fortune.com/company/microsoft/global500/
+1033,2021,34.0,Glencore,Energy,"Mining, Crude-Oil Production",142338.0,-33.8,-1903.0,,118000.0,87822,Baar,,no,no,no,no,https://fortune.com/company/glencore/global500/
+1034,2021,35.0,China Railway Engineering Group,Engineering & Construction,Engineering & Construction,141383.6,14.6,1638.8,6.7,185315.7,308483,Beijing,,no,yes,no,yes,https://fortune.com/company/china-railway-engineering/global500/
+1035,2021,36.0,Walgreens Boots Alliance,Food & Drug Stores,Food & Drug Stores,139537.0,2.0,456.0,-88.5,87174.0,277000,Deerfield,Illinois,no,yes,yes,no,https://fortune.com/company/walgreens-boots-alliance/global500/
+1036,2021,37.0,EXOR Group,Financials,Diversified Financials,136185.9,-16.3,-34.2,-101.0,211650.1,263284,Amsterdam,,no,no,no,no,https://fortune.com/company/exor-group/global500/
+1037,2021,38.0,Allianz,Financials,"Insurance: Life, Health (stock)",136173.3,4.5,7756.2,-12.4,1297242.7,150269,Munich,,no,yes,no,yes,https://fortune.com/company/allianz/global500/
+1038,2021,39.0,Bank of China,Financials,Banks: Commercial and Savings,134045.6,-0.8,27952.1,3.0,3739871.1,309084,Beijing,,no,yes,no,no,https://fortune.com/company/bank-of-china/global500/
+1039,2021,40.0,Kroger,Food & Drug Stores,Food & Drug Stores,132498.0,8.4,2585.0,55.8,48662.0,465000,Cincinnati,Ohio,no,yes,no,yes,https://fortune.com/company/kroger/global500/
+1040,2021,41.0,Home Depot,Retailing,Specialty Retailers,132110.0,19.9,12866.0,14.4,70581.0,504800,Atlanta,Georgia,no,yes,no,yes,https://fortune.com/company/home-depot/global500/
+1041,2021,42.0,China Railway Construction,Engineering & Construction,Engineering & Construction,131992.3,9.7,1485.5,9.3,190916.1,364632,Beijing,,no,yes,no,no,https://fortune.com/company/china-railway-construction/global500/
+1042,2021,43.0,JPMorgan Chase,Financials,Banks: Commercial and Savings,129503.0,-9.1,29131.0,-20.0,3386071.0,255351,New York,New York City,no,yes,no,no,https://fortune.com/company/jpmorgan-chase/global500/
+1043,2021,44.0,Huawei Investment & Holding,Technology,Network and Other Communications Equipment,129183.5,3.9,9361.6,3.3,134383.8,197000,Shenzhen,,no,yes,no,yes,https://fortune.com/company/huawei-investment-holding/global500/
+1044,2021,45.0,Verizon Communications,Telecommunications,Telecommunications,128292.0,-2.7,17801.0,-7.6,316481.0,132200,New York,New York City,no,yes,no,no,https://fortune.com/company/verizon/global500/
+1045,2021,46.0,AXA,Financials,"Insurance: Life, Health (stock)",128011.4,-14.1,3605.2,-16.5,984656.0,96595,Paris,,no,yes,no,no,https://fortune.com/company/axa/global500/
+1046,2021,47.0,Ford Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,127144.0,-18.4,-1279.0,-2821.3,267261.0,186000,Dearborn,Michigan,no,no,no,no,https://fortune.com/company/ford-motor/global500/
+1047,2021,48.0,Honda Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,124240.6,-9.5,6201.6,47.9,198201.0,211374,Tokyo,,no,yes,no,no,https://fortune.com/company/honda-motor/global500/
+1048,2021,49.0,General Motors,Motor Vehicles & Parts,Motor Vehicles & Parts,122485.0,-10.7,6427.0,-4.5,235194.0,155000,Detroit,Michigan,no,yes,yes,no,https://fortune.com/company/general-motors/global500/
+1049,2021,50.0,Anthem,Health Care,Health Care: Insurance and Managed Care,121867.0,16.9,4572.0,-4.9,86615.0,83400,Indianapolis,Indiana,no,yes,yes,yes,https://fortune.com/company/anthem/global500/
+1050,2021,51.0,Mitsubishi,Wholesalers,Trading,121542.7,-10.6,1627.7,-66.9,168489.8,82997,Tokyo,,no,yes,no,no,https://fortune.com/company/mitsubishi/global500/
+1051,2021,52.0,TotalEnergies,Energy,Petroleum Refining,119704.0,-32.1,-7242.0,-164.3,266132.0,105476,Courbevoie,,no,no,no,no,https://fortune.com/company/total/global500/
+1052,2021,53.0,Deutsche Telekom,Telecommunications,Telecommunications,115083.2,27.7,4737.8,9.5,324205.4,226291,Bonn,,no,yes,no,yes,https://fortune.com/company/deutsche-telekom/global500/
+1053,2021,54.0,BMW Group,Motor Vehicles & Parts,Motor Vehicles & Parts,112794.1,-3.3,4301.4,-21.8,265146.1,120726,Munich,,no,yes,no,no,https://fortune.com/company/bmw-group/global500/
+1054,2021,55.0,Nippon Telegraph and Telephone,Telecommunications,Telecommunications,112670.3,2.9,8642.6,9.9,207644.6,324667,Tokyo,,no,yes,no,yes,https://fortune.com/company/nippon-telegraph-telephone/global500/
+1055,2021,56.0,China Mobile Communications,Telecommunications,Telecommunications,111825.5,3.0,12920.1,6.4,304527.8,455721,Beijing,,no,yes,no,no,https://fortune.com/company/china-mobile-communications/global500/
+1056,2021,57.0,Centene,Health Care,Health Care: Insurance and Managed Care,111115.0,48.9,1808.0,36.9,68719.0,71300,St. Louis,Missouri,no,yes,no,yes,https://fortune.com/company/centene/global500/
+1057,2021,58.0,Japan Post Holdings,Financials,"Insurance: Life, Health (stock)",110561.3,0.6,3945.3,-11.3,2692026.5,243612,Tokyo,,no,yes,no,no,https://fortune.com/company/japan-post-holdings/global500/
+1058,2021,59.0,JD.com,Retailing,Internet Services and Retailing,108087.0,29.4,7160.2,306.0,64718.4,314906,Beijing,,no,yes,no,yes,https://fortune.com/company/jd-com/global500/
+1059,2021,60.0,SAIC Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,107555.2,-11.9,2961.0,-20.1,140906.5,143261,Shanghai,,no,yes,no,no,https://fortune.com/company/saic-motor/global500/
+1060,2021,61.0,China Communications Construction,Engineering & Construction,Engineering & Construction,106867.7,12.4,1165.0,-12.6,306555.0,213438,Beijing,,no,yes,no,yes,https://fortune.com/company/china-communications-construction/global500/
+1061,2021,62.0,Fannie Mae,Financials,Diversified Financials,106437.0,-11.5,11805.0,-16.6,3985749.0,7700,Washington,District Of Columbia,no,yes,no,yes,https://fortune.com/company/fannie-mae/global500/
+1062,2021,63.0,Alibaba Group Holding,Retailing,Internet Services and Retailing,105865.7,44.7,22224.0,3.6,257977.7,251462,Hangzhou,,no,yes,no,yes,https://fortune.com/company/alibaba-group-holding/global500/
+1063,2021,64.0,Comcast,Telecommunications,Telecommunications,103564.0,-4.9,10534.0,-19.3,273869.0,168000,Philadelphia,Pennsylvania,no,yes,no,no,https://fortune.com/company/comcast/global500/
+1064,2021,65.0,China Minmetals,Materials,Metals,102014.8,15.5,491.1,113.4,150651.9,205015,Beijing,,no,yes,no,yes,https://fortune.com/company/china-minmetals/global500/
+1065,2021,66.0,China FAW Group,Motor Vehicles & Parts,Motor Vehicles & Parts,101075.8,13.0,2866.5,0.7,74933.4,121002,Changchun,,no,yes,no,no,https://fortune.com/company/china-faw-group/global500/
+1066,2021,67.0,Hengli Group,Industrials,Textiles,100773.1,25.0,2372.7,14.2,40747.7,118496,Suzhou City,,no,yes,no,yes,https://fortune.com/company/hengli-group/global500/
+1067,2021,68.0,Amer International Group,Materials,Metals,100280.5,12.8,1851.7,2.5,31046.8,20180,Shenzhen,,no,yes,no,yes,https://fortune.com/company/amer-international-group/global500/
+1068,2021,69.0,China Resources,Health Care,Pharmaceuticals,99437.6,4.9,4330.2,21.2,275691.9,370955,Hong Kong,,no,yes,no,no,https://fortune.com/company/china-resources-national/global500/
+1069,2021,70.0,Shandong Energy Group,Energy,"Mining, Crude-Oil Production",97860.6,136.8,1161.9,322.6,104996.6,244832,Jinan,,no,yes,no,yes,https://fortune.com/company/yankuang-group/global500/
+1070,2021,71.0,Itochu,Wholesalers,Trading,97753.1,-3.2,3786.8,-17.9,101070.8,148887,Osaka,,no,yes,no,no,https://fortune.com/company/itochu/global500/
+1071,2021,72.0,China Baowu Steel Group,Materials,Metals,97643.1,22.2,3628.7,25.1,155413.2,234570,Shanghai,,no,yes,no,yes,https://fortune.com/company/china-baowu-steel-group/global500/
+1072,2021,73.0,Assicurazioni Generali,Financials,"Insurance: Life, Health (stock)",97128.9,-8.3,1987.2,-33.5,666616.1,72644,Trieste,,no,yes,no,yes,https://fortune.com/company/assicurazioni-generali/global500/
+1073,2021,74.0,China Post Group,Transportation,"Mail, Package, and Freight Delivery",96304.1,7.8,4698.4,5.8,1811048.3,827231,Beijing,,no,yes,no,no,https://fortune.com/company/china-post-group/global500/
+1074,2021,75.0,Chevron,Energy,Petroleum Refining,94692.0,-35.4,-5543.0,-289.6,239790.0,47736,San Ramon,California,no,no,no,no,https://fortune.com/company/chevron/global500/
+1075,2021,76.0,Dell Technologies,Technology,"Computers, Office Equipment",94224.0,2.2,3250.0,-29.6,123415.0,158000,Round Rock,Texas,no,yes,no,no,https://fortune.com/company/dell-technologies/global500/
+1076,2021,77.0,Bank of America,Financials,Banks: Commercial and Savings,93753.0,-17.5,17894.0,-34.8,2819627.0,212505,Charlotte,North Carolina,no,yes,no,yes,https://fortune.com/company/bank-of-america-corp/global500/
+1077,2021,78.0,Target,Retailing,General Merchandisers,93561.0,19.8,4368.0,33.1,51248.0,409000,Minneapolis,Minnesota,no,yes,no,yes,https://fortune.com/company/target/global500/
+1078,2021,79.0,Nestlé,"Food, Beverages & Tobacco",Food Consumer Products,89852.9,-3.6,13031.1,2.7,140366.7,273000,Vevey,,no,yes,no,no,https://fortune.com/company/nestle/global500/
+1079,2021,80.0,Lowe&#8217;s,Retailing,Specialty Retailers,89597.0,24.2,5835.0,36.3,46735.0,280000,Mooresville,North Carolina,no,yes,no,yes,https://fortune.com/company/lowes/global500/
+1080,2021,81.0,Marathon Petroleum,Energy,Petroleum Refining,88952.0,-28.7,-9826.0,-472.6,85158.0,57900,Findlay,Ohio,no,no,no,no,https://fortune.com/company/marathon-petroleum/global500/
+1081,2021,82.0,Citigroup,Financials,Banks: Commercial and Savings,88839.0,-14.1,11047.0,-43.1,2260090.0,210153,New York,New York City,no,yes,yes,yes,https://fortune.com/company/citigroup/global500/
+1082,2021,83.0,Hyundai Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,88155.7,-2.8,1207.5,-52.8,192604.9,122814,Seoul,,no,yes,no,yes,https://fortune.com/company/hyundai-motor/global500/
+1083,2021,84.0,Gazprom,Energy,Energy,87870.4,-25.5,1872.0,-89.9,315933.4,467000,Moscow,,no,yes,no,no,https://fortune.com/company/gazprom/global500/
+1084,2021,85.0,Dongfeng Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,86856.3,3.3,1115.5,-16.0,85096.0,145756,Wuhan,,no,yes,no,no,https://fortune.com/company/dongfeng-motor/global500/
+1085,2021,86.0,Meta Platforms,Technology,Internet Services and Retailing,85965.0,21.6,29146.0,57.7,159316.0,58604,Menlo Park,California,no,yes,no,yes,https://fortune.com/company/facebook/global500/
+1086,2021,87.0,Royal Ahold Delhaize,Food & Drug Stores,Food & Drug Stores,85157.9,14.8,1591.8,-19.5,49798.9,249000,Zaandam,,no,yes,no,yes,https://fortune.com/company/royal-ahold-delhaize/global500/
+1087,2021,88.0,Sony,Technology,"Electronics, Electrical Equip.",84893.1,11.7,11053.6,106.4,238289.7,109700,Tokyo,,no,yes,no,no,https://fortune.com/company/sony/global500/
+1088,2021,89.0,United Parcel Service,Transportation,"Mail, Package, and Freight Delivery",84628.0,14.2,1343.0,-69.8,62408.0,408255,Atlanta,Georgia,no,yes,yes,yes,https://fortune.com/company/ups/global500/
+1089,2021,90.0,People&#8217;s Insurance Co. of China,Financials,Insurance: Property and Casualty (Stock),84290.4,5.6,2903.8,-9.4,192500.2,193494,Beijing,,no,yes,no,no,https://fortune.com/company/peoples-insurance-co-of-china/global500/
+1090,2021,91.0,China Southern Power Grid,Energy,Utilities,83699.0,2.1,998.6,-45.5,155171.8,288974,Guangzhou,,no,yes,no,yes,https://fortune.com/company/china-southern-power-grid/global500/
+1091,2021,92.0,China National Offshore Oil,Energy,"Mining, Crude-Oil Production",83296.3,-23.4,4802.4,-31.0,193366.2,80058,Beijing,,no,yes,no,no,https://fortune.com/company/china-national-offshore-oil/global500/
+1092,2021,93.0,Crédit Agricole,Financials,Banks: Commercial and Savings,82958.8,-21.0,3067.4,-43.4,2399947.7,73817,Montrouge,,no,yes,no,yes,https://fortune.com/company/credit-agricole/global500/
+1093,2021,94.0,Johnson & Johnson,Health Care,Pharmaceuticals,82584.0,0.6,14714.0,-2.7,174894.0,134500,New Brunswick,New Jersey,no,yes,no,yes,https://fortune.com/company/johnson-johnson/global500/
+1094,2021,95.0,Hitachi,Technology,"Electronics, Electrical Equip.",82344.6,2.1,4731.8,487.3,107168.7,350864,Tokyo,,no,yes,no,yes,https://fortune.com/company/hitachi/global500/
+1095,2021,96.0,Carrefour,Food & Drug Stores,Food & Drug Stores,82211.3,-4.3,730.4,-42.2,58238.2,322164,Massy,,no,yes,no,yes,https://fortune.com/company/carrefour/global500/
+1096,2021,97.0,BNP Paribas,Financials,Banks: Commercial and Savings,81632.4,-4.0,8052.5,-12.0,3045415.3,193319,Paris,,no,yes,no,no,https://fortune.com/company/bnp-paribas/global500/
+1097,2021,98.0,Bosch Group,Motor Vehicles & Parts,Motor Vehicles & Parts,81463.8,-6.4,360.1,-79.8,111817.4,395034,Gerlingen-Schillerhöhe,,no,yes,no,no,https://fortune.com/company/robert-bosch/global500/
+1098,2021,99.0,Tesco,Food & Drug Stores,Food & Drug Stores,81248.0,-1.8,7948.4,541.0,63983.9,242911,Welwyn Garden City,,no,yes,no,no,https://fortune.com/company/tesco/global500/
+1099,2021,100.0,AEON,Food & Drug Stores,Food & Drug Stores,81227.8,2.9,-670.5,-372.4,107764.9,282073,Chiba,,no,no,no,no,https://fortune.com/company/aeon/global500/
+1100,2021,101.0,China Energy Investment,Energy,"Mining, Crude-Oil Production",80716.2,0.3,4102.1,-3.8,274035.0,326641,Beijing,,no,yes,no,no,https://fortune.com/company/shenhua-group/global500/
+1101,2021,102.0,HSBC Holdings,Financials,Banks: Commercial and Savings,80429.0,-18.5,5229.0,-29.2,2984164.0,226059,London,,no,yes,no,no,https://fortune.com/company/hsbc-holdings/global500/
+1102,2021,103.0,Wells Fargo,Financials,Banks: Commercial and Savings,80303.0,-22.7,3301.0,-83.1,1955163.0,268531,San Francisco,California,no,yes,no,yes,https://fortune.com/company/wells-fargo/global500/
+1103,2021,104.0,General Electric,Industrials,Industrial Machinery,79619.0,-16.4,5704.0,,253452.0,184000,Boston,Massachusetts,no,yes,no,no,https://fortune.com/company/general-electric/global500/
+1104,2021,105.0,Electricité de France,Energy,Utilities,78903.5,-1.7,740.6,-87.2,374349.4,161203,Paris,,no,yes,no,no,https://fortune.com/company/electricite-de-france/global500/
+1105,2021,106.0,State Farm Insurance,Financials,Insurance: Property and Casualty (Mutual),78898.0,-0.6,3738.9,-33.1,299104.5,57582,Bloomington,Illinois,no,yes,no,no,https://fortune.com/company/state-farm-insurance-cos/global500/
+1106,2021,107.0,PowerChina,Engineering & Construction,Engineering & Construction,78486.5,16.5,688.6,-10.9,161989.2,180883,Beijing,,no,yes,no,yes,https://fortune.com/company/powerchina/global500/
+1107,2021,108.0,Intel,Technology,Semiconductors and Other Electronic Components,77867.0,8.2,20899.0,-0.7,153091.0,110600,Santa Clara,California,no,yes,no,no,https://fortune.com/company/intel/global500/
+1108,2021,109.0,Sinopharm,Health Care,Pharmaceuticals,77278.2,9.3,1258.7,38.0,70865.3,176686,Beijing,,no,yes,no,yes,https://fortune.com/company/sinopharm/global500/
+1109,2021,110.0,Humana,Health Care,Health Care: Insurance and Managed Care,77155.0,18.9,3367.0,24.4,34969.0,48700,Louisville,Kentucky,no,yes,no,yes,https://fortune.com/company/humana/global500/
+1110,2021,111.0,Nippon Life Insurance,Financials,"Insurance: Life, Health (Mutual)",76984.3,4.0,3127.2,77.0,773869.4,95352,Osaka,,no,yes,no,yes,https://fortune.com/company/nippon-life-insurance/global500/
+1111,2021,112.0,COFCO,Wholesalers,Trading,76855.6,6.5,1377.6,232.6,102649.4,109839,Beijing,,no,yes,no,no,https://fortune.com/company/cofco/global500/
+1112,2021,113.0,Deutsche Post DHL Group,Transportation,"Mail, Package, and Freight Delivery",76122.1,7.4,3394.4,15.6,67684.7,526896,Bonn,,no,yes,no,yes,https://fortune.com/company/deutsche-post-dhl-group/global500/
+1113,2021,114.0,Mitsui,Wholesalers,Trading,75562.4,19.3,3164.5,-12.1,113163.2,44509,Tokyo,,no,yes,no,no,https://fortune.com/company/mitsui/global500/
+1114,2021,115.0,CITIC Group,Financials,Diversified Financials,74689.2,-0.6,3842.5,5.4,1265205.7,148283,Beijing,,no,yes,no,no,https://fortune.com/company/citic-group/global500/
+1115,2021,116.0,Nissan Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,74169.5,-18.4,-4232.7,,148752.9,139507,Yokohama,,no,no,no,no,https://fortune.com/company/nissan-motor/global500/
+1116,2021,117.0,Munich Re Group,Financials,Insurance: Property and Casualty (Stock),74074.5,2.1,1379.9,-54.7,364626.3,39642,Munich,,no,yes,no,no,https://fortune.com/company/munich-re-group/global500/
+1117,2021,118.0,Enel,Energy,Utilities,74047.1,-17.6,2974.0,22.2,200033.8,66717,Rome,,no,yes,no,no,https://fortune.com/company/enel/global500/
+1118,2021,119.0,Dai-ichi Life Holdings,Financials,"Insurance: Life, Health (stock)",73841.5,12.8,3431.6,1050.3,574988.3,64823,Tokyo,,no,yes,no,yes,https://fortune.com/company/dai-ichi-life-holdings/global500/
+1119,2021,120.0,Banco Santander,Financials,Banks: Commercial and Savings,73630.1,-16.6,-9994.1,-237.1,1845796.4,184720,Madrid,,no,no,no,no,https://fortune.com/company/banco-santander/global500/
+1120,2021,121.0,International Business Machines,Technology,Information Technology Services,73620.0,-4.6,5590.0,-40.7,155971.0,364800,Armonk,New York City,no,yes,no,no,https://fortune.com/company/ibm/global500/
+1121,2021,122.0,China Evergrande Group,Financials,Real estate,73514.0,6.3,1170.4,-53.2,352668.0,123276,Shenzhen,,no,yes,no,no,https://fortune.com/company/china-evergrande-group/global500/
+1122,2021,123.0,U.S. Postal Service,Transportation,"Mail, Package, and Freight Delivery",73133.0,2.8,-9176.0,,35904.0,569987,Washington,District Of Columbia,no,no,no,yes,https://fortune.com/company/u-s-postal-service/global500/
+1123,2021,124.0,Beijing Automotive Group,Motor Vehicles & Parts,Motor Vehicles & Parts,72147.3,-0.6,339.8,-54.5,81894.4,110000,Beijing,,no,yes,no,no,https://fortune.com/company/beijing-automotive-group/global500/
+1124,2021,125.0,Lukoil,Energy,Petroleum Refining,71856.2,-37.3,209.9,-97.9,81060.5,100769,Moscow,,no,yes,no,no,https://fortune.com/company/lukoil/global500/
+1125,2021,126.0,China Telecommunications,Telecommunications,Telecommunications,71400.9,6.0,1886.1,4.6,139128.5,400945,Beijing,,no,yes,no,no,https://fortune.com/company/china-telecommunications/global500/
+1126,2021,127.0,China North Industries Group,Aerospace & Defense,Aerospace & Defense,71017.5,3.4,1510.9,17.7,67419.7,212960,Beijing,,no,yes,no,yes,https://fortune.com/company/china-north-industries-group/global500/
+1127,2021,128.0,Procter & Gamble,Household Products,Household and Personal Products,70950.0,4.8,13027.0,234.3,120700.0,99000,Cincinnati,Ohio,no,yes,no,yes,https://fortune.com/company/procter-gamble/global500/
+1128,2021,129.0,SK,Energy,Petroleum Refining,70839.2,-17.8,160.5,-73.9,126632.7,114842,Seoul,,no,yes,no,yes,https://fortune.com/company/sk-holdings/global500/
+1129,2021,130.0,E.ON,Energy,Energy,70381.5,50.2,1158.8,-33.9,116732.2,78126,Essen,,no,yes,no,no,https://fortune.com/company/e-on/global500/
+1130,2021,131.0,PepsiCo,"Food, Beverages & Tobacco",Food Consumer Products,70372.0,4.8,7120.0,-2.7,92918.0,291000,Purchase,New York City,no,yes,no,yes,https://fortune.com/company/pepsico/global500/
+1131,2021,132.0,Tencent Holdings,Technology,Internet Services and Retailing,69864.2,27.9,23166.2,71.5,204356.3,85858,Shenzhen,,no,yes,no,yes,https://fortune.com/company/tencent-holdings/global500/
+1132,2021,133.0,Albertsons,Food & Drug Stores,Food & Drug Stores,69690.4,11.6,850.2,82.3,26598.0,300000,Boise,Idaho,no,yes,no,yes,https://fortune.com/company/albertsons-cos/global500/
+1133,2021,134.0,BASF,Chemicals,Chemicals,69464.3,-1.8,-1207.8,-112.8,98261.3,110302,Ludwigshafen,,no,no,no,no,https://fortune.com/company/basf/global500/
+1134,2021,135.0,FedEx,Transportation,"Mail, Package, and Freight Delivery",69217.0,-0.7,1286.0,138.1,73537.0,499718,Memphis,Tennessee,no,yes,no,yes,https://fortune.com/company/fedex/global500/
+1135,2021,136.0,MetLife,Financials,"Insurance: Life, Health (stock)",67842.0,-2.6,5407.0,-8.3,795146.0,46500,New York,New York City,no,yes,no,no,https://fortune.com/company/metlife/global500/
+1136,2021,137.0,Bank of Communications,Financials,Banks: Commercial and Savings,67605.5,1.6,11409.3,2.0,1639481.4,90716,Shanghai,,no,yes,no,yes,https://fortune.com/company/bank-of-communications/global500/
+1137,2021,138.0,Jinneng Holding Group,Energy,"Mining, Crude-Oil Production",67534.8,145.1,8.2,,157497.6,472860,Datong,,no,yes,no,yes,https://fortune.com/company/datong-coal-mine-group/global500/
+1138,2021,139.0,Country Garden Holdings,Financials,Real estate,67080.4,-4.6,5075.6,-11.3,308936.2,93899,Foshan,,no,yes,no,no,https://fortune.com/company/country-garden-holdings/global500/
+1139,2021,140.0,Aviation Industry Corp. of China,Aerospace & Defense,Aerospace & Defense,66964.1,1.6,915.7,58.4,161220.8,407344,Beijing,,no,yes,no,no,https://fortune.com/company/aviation-industry-corp-of-china/global500/
+1140,2021,141.0,Freddie Mac,Financials,Diversified Financials,66228.0,-11.8,7326.0,1.6,2627415.0,6922,McLean,Virginia,no,yes,no,yes,https://fortune.com/company/freddie-mac/global500/
+1141,2021,142.0,Greenland Holding Group,Financials,Real estate,66095.8,6.7,2173.6,1.9,214151.2,86251,Shanghai,,no,yes,no,yes,https://fortune.com/company/greenland-holding-group/global500/
+1142,2021,143.0,Phillips 66,Energy,Petroleum Refining,65494.0,-40.2,-3975.0,-229.2,54721.0,14300,Houston,Texas,no,no,no,no,https://fortune.com/company/phillips/global500/
+1143,2021,144.0,Lockheed Martin,Aerospace & Defense,Aerospace & Defense,65398.0,9.3,6833.0,9.7,50710.0,114000,Bethesda,Maryland,no,yes,no,yes,https://fortune.com/company/lockheed-martin/global500/
+1144,2021,145.0,Walt Disney,Media,Entertainment,65388.0,-6.0,-2864.0,-125.9,201549.0,203000,Burbank,California,no,no,no,no,https://fortune.com/company/disney/global500/
+1145,2021,146.0,Archer Daniels Midland (ADM),"Food, Beverages & Tobacco",Food Production,64355.0,-0.5,1772.0,28.5,49719.0,38332,Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/archer-daniels-midland/global500/
+1146,2021,147.0,Roche Group,Health Care,Pharmaceuticals,64285.0,0.2,15228.8,12.1,97485.3,101465,Basel,,no,yes,no,yes,https://fortune.com/company/roche-group/global500/
+1147,2021,148.0,Xiamen C&D,Wholesalers,Trading,64111.8,30.4,952.6,42.8,66968.3,28928,Xiamen,,no,yes,no,yes,https://fortune.com/company/xiamen-cd/global500/
+1148,2021,149.0,Pacific Construction Group,Engineering & Construction,Engineering & Construction,64037.7,-34.3,2218.1,-35.8,44740.8,295281,Urumqi,,no,yes,no,no,https://fortune.com/company/pacific-construction-group/global500/
+1149,2021,150.0,Siemens,Industrials,Industrial Machinery,63935.5,-34.7,4509.4,-22.7,145207.3,293000,Munich,,no,yes,no,no,https://fortune.com/company/siemens/global500/
+1150,2021,151.0,Sinochem,Wholesalers,Trading,63544.0,-20.9,809.1,70.9,97620.3,72237,Beijing,,no,yes,no,yes,https://fortune.com/company/sinochem-group/global500/
+1151,2021,152.0,Engie,Energy,Energy,63525.4,-5.5,-1750.2,-258.9,187464.1,172703,Courbevoie,,no,no,yes,yes,https://fortune.com/company/engie/global500/
+1152,2021,153.0,Legal & General Group,Financials,"Insurance: Life, Health (stock)",63324.5,-30.1,2061.0,-11.9,779962.4,10099,London,,no,yes,no,yes,https://fortune.com/company/legal-general-group/global500/
+1153,2021,154.0,Panasonic,Technology,"Electronics, Electrical Equip.",63191.3,-8.3,1557.2,-25.0,61908.4,243540,Osaka,,no,yes,no,no,https://fortune.com/company/panasonic/global500/
+1154,2021,155.0,Reliance Industries,Energy,Petroleum Refining,62912.1,-25.3,6619.4,19.3,180648.9,236334,Mumbai,,no,yes,no,yes,https://fortune.com/company/reliance-industries/global500/
+1155,2021,156.0,Brookfield Asset Management,Financials,Diversified Financials,62752.0,-7.5,-134.0,-104.8,343696.0,151000,"Toronto, Ontario",,no,no,no,no,https://fortune.com/company/brookfield-asset-management/global500/
+1156,2021,157.0,Aviva,Financials,"Insurance: Life, Health (stock)",62579.3,-30.2,3588.4,10.4,655964.5,28930,London,,no,yes,yes,no,https://fortune.com/company/aviva/global500/
+1157,2021,158.0,China Pacific Insurance (Group),Financials,"Insurance: Life, Health (stock)",61185.7,9.7,3562.9,-11.3,271418.2,110940,Shanghai,,no,yes,no,no,https://fortune.com/company/china-pacific-insurance-group/global500/
+1158,2021,159.0,Lenovo Group,Technology,"Computers, Office Equipment",60742.3,19.8,1178.3,77.2,37990.6,71500,Hong Kong,,no,yes,no,yes,https://fortune.com/company/lenovo-group/global500/
+1159,2021,160.0,China Vanke,Financials,Real estate,60740.7,14.1,6016.7,6.9,286473.7,140565,Shenzhen,,no,yes,no,yes,https://fortune.com/company/china-vanke/global500/
+1160,2021,161.0,ChemChina,Chemicals,Chemicals,60491.9,-8.0,-815.6,,131406.4,141250,Beijing,,no,no,no,no,https://fortune.com/company/chemchina/global500/
+1161,2021,162.0,China Merchants Bank,Financials,Banks: Commercial and Savings,60433.2,5.6,14107.5,4.9,1281448.0,90867,Shenzhen,,no,yes,no,yes,https://fortune.com/company/china-merchants-bank/global500/
+1162,2021,163.0,China Merchants Group,Transportation,"Mail, Package, and Freight Delivery",60280.7,22.7,5919.4,13.1,340740.9,246002,Hong Kong,,no,yes,no,yes,https://fortune.com/company/china-merchants-group/global500/
+1163,2021,164.0,Valero Energy,Energy,Petroleum Refining,60115.0,-41.5,-1421.0,-158.7,51774.0,9964,San Antonio,Texas,no,no,no,no,https://fortune.com/company/valero-energy/global500/
+1164,2021,165.0,Marubeni,Wholesalers,Trading,59735.2,-4.9,2125.7,,62739.2,49265,Tokyo,,no,yes,no,no,https://fortune.com/company/marubeni/global500/
+1165,2021,166.0,ENEOS Holdings,Energy,Petroleum Refining,59540.0,-21.6,1075.4,,72864.5,40753,Tokyo,,no,yes,no,no,https://fortune.com/company/jxtg-holdings/global500/
+1166,2021,167.0,Toyota Tsusho,Wholesalers,Trading,59517.1,-3.3,1269.7,1.8,47269.5,64402,Nagoya,,no,yes,no,no,https://fortune.com/company/toyota-tsusho/global500/
+1167,2021,168.0,Zurich Insurance Group,Financials,Insurance: Property and Casualty (Stock),59001.0,-17.8,3834.0,-7.5,439299.0,52930,Zurich,,no,yes,no,no,https://fortune.com/company/zurich-insurance-group/global500/
+1168,2021,169.0,Manulife Financial,Financials,"Insurance: Life, Health (stock)",58840.4,-1.9,4377.9,3.7,691283.1,37000,"Toronto, Ontario",,no,yes,no,yes,https://fortune.com/company/manulife-financial/global500/
+1169,2021,170.0,Wuchan Zhongda Group,Wholesalers,Trading,58545.7,12.7,397.9,0.6,16345.2,18549,Hangzhou,,no,yes,no,no,https://fortune.com/company/wuchan-zhongda-group/global500/
+1170,2021,171.0,Xiamen ITG Holding Group,Wholesalers,Trading,58279.0,36.2,285.8,583.8,23533.5,21374,Xiamen,,no,yes,no,yes,https://fortune.com/company/xiamen-itg-holding-group/global500/
+1171,2021,172.0,Aegon,Financials,"Insurance: Life, Health (stock)",58211.1,-22.7,-166.4,-112.0,543139.6,22322,The Hague,,no,no,no,no,https://fortune.com/company/aegon/global500/
+1172,2021,173.0,Boeing,Aerospace & Defense,Aerospace & Defense,58158.0,-24.0,-11873.0,,152136.0,141000,Chicago,Illinois,no,no,no,no,https://fortune.com/company/boeing/global500/
+1173,2021,174.0,China Poly Group,Financials,Real estate,58072.3,1.6,1949.4,-4.0,240687.3,106403,Beijing,,no,yes,no,yes,https://fortune.com/company/china-poly-group/global500/
+1174,2021,175.0,Unilever,Household Products,Household and Personal Products,57797.4,-0.7,6359.3,1.0,82801.1,148949,London,,no,yes,no,no,https://fortune.com/company/unilever/global500/
+1175,2021,176.0,Guangzhou Automobile Industry Group,Motor Vehicles & Parts,Motor Vehicles & Parts,57723.9,7.6,576.2,2.1,51344.8,103688,Guangzhou,,no,yes,no,no,https://fortune.com/company/guangzhou-automobile-industry-group/global500/
+1176,2021,177.0,China National Building Material Group,Materials,"Building Materials, Glass",57115.3,-0.9,103.0,,91973.3,202844,Beijing,,no,yes,no,no,https://fortune.com/company/china-national-building-material-group/global500/
+1177,2021,178.0,Prudential Financial,Financials,"Insurance: Life, Health (stock)",57033.0,-12.0,-374.0,-108.9,940722.0,41671,Newark,New Jersey,no,no,no,no,https://fortune.com/company/prudential-financial/global500/
+1178,2021,179.0,Airbus,Aerospace & Defense,Aerospace & Defense,56872.2,-27.9,-1291.0,,134734.3,131349,Leiden,,no,no,no,no,https://fortune.com/company/airbus-group/global500/
+1179,2021,180.0,Mitsubishi UFJ Financial Group,Financials,Banks: Commercial and Savings,56838.4,-15.3,7329.8,50.9,3250212.6,137997,Tokyo,,no,yes,no,no,https://fortune.com/company/mitsubishi-ufj-financial-group/global500/
+1180,2021,181.0,Petrobras,Energy,Petroleum Refining,56683.0,-26.0,1141.0,-88.8,190010.0,49050,Rio de Janeiro,,no,yes,no,no,https://fortune.com/company/petrobras/global500/
+1181,2021,182.0,HP,Technology,"Computers, Office Equipment",56639.0,-3.6,2844.0,-9.8,34681.0,53000,Palo Alto,California,no,yes,no,no,https://fortune.com/company/hp/global500/
+1182,2021,183.0,Raytheon Technologies,Aerospace & Defense,Aerospace & Defense,56587.0,-26.6,-3519.0,-163.6,162153.0,181000,Waltham,Massachusetts,no,no,no,no,https://fortune.com/company/raytheon-technologies/global500/
+1183,2021,184.0,SoftBank Group,Telecommunications,Telecommunications,56213.6,-35.7,47052.6,,413656.9,58786,Tokyo,,no,yes,no,no,https://fortune.com/company/softbank-group/global500/
+1184,2021,185.0,Prudential PLC,Financials,"Insurance: Life, Health (stock)",55973.0,-40.3,2118.0,170.5,516097.0,18687,London,,no,yes,no,yes,https://fortune.com/company/prudential/global500/
+1185,2021,186.0,Fortum,Energy,Energy,55850.1,816.1,2077.2,25.2,70747.9,19933,Espoo,,yes,yes,no,yes,https://fortune.com/company/fortum/global500/
+1186,2021,187.0,Tokyo Electric Power,Energy,Utilities,55343.1,-3.6,1706.4,265.9,109341.4,37891,Tokyo,,no,yes,no,no,https://fortune.com/company/tokyo-electric-power/global500/
+1187,2021,188.0,Seven & I Holdings,Retailing,Specialty Retailers,54442.4,-10.7,1692.4,-15.4,65204.0,97154,Tokyo,,no,yes,no,no,https://fortune.com/company/seven-i-holdings/global500/
+1188,2021,189.0,XMXYG,Wholesalers,Trading,54323.9,32.1,279.0,26.8,26057.5,11671,Xiamen,,no,yes,no,yes,https://fortune.com/company/xiamen-xiangyu-group/global500/
+1189,2021,190.0,StoneX,Financials,Diversified Financials,54139.6,64.6,169.6,99.3,13474.9,2950,New York,New York City,no,yes,no,yes,https://fortune.com/company/stonex-group/global500/
+1190,2021,191.0,Alimentation Couche-Tard,Retailing,Specialty Retailers,54132.4,-8.4,2353.6,28.3,25679.5,131000,"Laval, Quebec",,no,yes,no,no,https://fortune.com/company/alimentation-couche-tard/global500/
+1191,2021,192.0,LG Electronics,Technology,"Electronics, Electrical Equip.",53625.4,0.3,1668.5,6115.2,44349.8,75000,Seoul,,no,yes,no,yes,https://fortune.com/company/lg-electronics/global500/
+1192,2021,193.0,Goldman Sachs Group,Financials,Banks: Commercial and Savings,53498.0,-0.8,9459.0,11.7,1163028.0,40500,New York,New York City,no,yes,no,yes,https://fortune.com/company/goldman-sachs-group/global500/
+1193,2021,194.0,China Everbright Group,Financials,Banks: Commercial and Savings,53429.0,13.8,2570.9,29.2,907878.6,78600,Beijing,,no,yes,no,no,https://fortune.com/company/china-everbright-group/global500/
+1194,2021,195.0,Rosneft Oil,Energy,Petroleum Refining,53375.8,-44.6,2033.2,-81.4,207671.3,356000,Moscow,,no,yes,no,yes,https://fortune.com/company/rosneft-oil/global500/
+1195,2021,196.0,Industrial Bank,Financials,Banks: Commercial and Savings,53313.9,4.6,9655.9,1.3,1209808.4,59630,Fuzhou,,no,yes,no,no,https://fortune.com/company/industrial-bank/global500/
+1196,2021,197.0,ArcelorMittal,Materials,Metals,53270.0,-24.6,-733.0,,82052.0,167743,Luxembourg,,no,no,no,no,https://fortune.com/company/arcelormittal/global500/
+1197,2021,198.0,Aluminum Corp. of China,Materials,Metals,53191.2,3.0,320.9,17.4,96920.2,152681,Beijing,,no,yes,no,no,https://fortune.com/company/aluminum-corp-of-china/global500/
+1198,2021,199.0,Sysco,Wholesalers,Wholesalers: Food and Grocery,52893.3,-12.0,215.5,-87.1,22628.3,57000,Houston,Texas,no,yes,no,no,https://fortune.com/company/sysco/global500/
+1199,2021,200.0,HBIS Group,Materials,Metals,52760.7,2.8,5.7,,74410.7,121247,Shijiazhuang,,no,yes,no,no,https://fortune.com/company/hbis-group/global500/
+1200,2021,201.0,Shanghai Pudong Development Bank,Financials,Banks: Commercial and Savings,52628.3,2.6,8443.6,-0.7,1219640.9,61686,Shanghai,,no,yes,no,yes,https://fortune.com/company/shanghai-pudong-development-bank/global500/
+1201,2021,202.0,JBS,"Food, Beverages & Tobacco",Food Production,52429.0,1.1,892.2,-42.0,31538.6,250000,Sao Paulo,,no,yes,no,yes,https://fortune.com/company/jbs/global500/
+1202,2021,203.0,Société Générale,Financials,Banks: Commercial and Savings,52068.3,-8.4,-294.0,-108.1,1789136.9,126391,Paris,,no,no,no,no,https://fortune.com/company/societe-generale/global500/
+1203,2021,204.0,Morgan Stanley,Financials,Banks: Commercial and Savings,52047.0,-3.3,10996.0,21.6,1115862.0,68097,New York,New York City,no,yes,no,yes,https://fortune.com/company/morgan-stanley/global500/
+1204,2021,205.0,State Bank of India,Financials,Banks: Commercial and Savings,51919.4,,3018.9,8.3,662540.0,245652,Mumbai,,no,yes,no,no,https://fortune.com/company/state-bank-of-india/global500/
+1205,2021,206.0,PTT,Energy,Petroleum Refining,51647.5,-27.8,1207.2,-59.7,84834.4,29421,Bangkok,,no,yes,no,yes,https://fortune.com/company/ptt/global500/
+1206,2021,207.0,HCA Healthcare,Health Care,Health Care: Medical Facilities,51533.0,0.4,3754.0,7.1,47490.0,235000,Nashville,Tennessee,no,yes,no,no,https://fortune.com/company/hca-holdings/global500/
+1207,2021,208.0,Tokio Marine Holdings,Financials,Insurance: Property and Casualty (Stock),51516.7,2.5,1526.3,-36.1,232959.9,43257,Tokyo,,no,yes,no,yes,https://fortune.com/company/tokio-marine-holdings/global500/
+1208,2021,209.0,Vodafone Group,Telecommunications,Telecommunications,51054.5,2.2,130.5,,182044.0,96506,Newbury,,no,yes,no,yes,https://fortune.com/company/vodafone-group/global500/
+1209,2021,210.0,Christian Dior,Apparel,Apparel,50877.6,-15.3,2202.6,-33.0,129743.6,139409,Paris,,no,yes,no,no,https://fortune.com/company/christian-dior/global500/
+1210,2021,211.0,Wilmar International,"Food, Beverages & Tobacco",Food Production,50526.8,18.5,1534.1,18.6,51020.0,100000,Singapore,,no,yes,no,yes,https://fortune.com/company/wilmar-international/global500/
+1211,2021,212.0,Indian Oil,Energy,Petroleum Refining,50433.0,-27.2,2915.5,,48527.5,33439,New Delhi,,no,yes,no,no,https://fortune.com/company/indian-oil/global500/
+1212,2021,213.0,AIA Group,Financials,"Insurance: Life, Health (stock)",50359.0,6.6,5779.0,-13.1,326121.0,23397,Hong Kong,,no,yes,no,yes,https://fortune.com/company/aia-group/global500/
+1213,2021,214.0,Vinci,Engineering & Construction,Engineering & Construction,50270.2,-8.2,1415.2,-61.2,111567.7,217731,Rueil-Malmaison,,no,yes,no,no,https://fortune.com/company/vinci/global500/
+1214,2021,215.0,Kia,Motor Vehicles & Parts,Motor Vehicles & Parts,50155.1,0.5,1261.0,-19.6,55653.6,51899,Seoul,,no,yes,no,no,https://fortune.com/company/kia-motors/global500/
+1215,2021,216.0,ENI,Energy,Petroleum Refining,50121.0,-37.0,-9839.1,-6039.7,134187.2,31495,Rome,,no,no,no,no,https://fortune.com/company/eni/global500/
+1216,2021,217.0,KDDI,Telecommunications,Telecommunications,50115.0,4.0,6145.7,4.4,95256.1,47320,Tokyo,,no,yes,no,yes,https://fortune.com/company/kddi/global500/
+1217,2021,218.0,Novartis,Health Care,Pharmaceuticals,49898.0,-1.2,8072.0,-31.2,132059.0,105794,Basel,,no,yes,no,yes,https://fortune.com/company/novartis/global500/
+1218,2021,219.0,Renault,Motor Vehicles & Parts,Motor Vehicles & Parts,49536.4,-20.3,-9124.7,,141638.9,170158,Boulogne-Billancourt,,no,no,no,no,https://fortune.com/company/renault/global500/
+1219,2021,220.0,Shaanxi Coal & Chemical Industry,Energy,"Mining, Crude-Oil Production",49314.3,12.6,120.8,1.1,91350.2,126707,Xi'an,,no,yes,no,yes,https://fortune.com/company/shaanxi-coal-chemical-industry/global500/
+1220,2021,221.0,Cisco Systems,Technology,Network and Other Communications Equipment,49301.0,-5.0,11214.0,-3.5,94853.0,77500,San Jose,California,no,yes,no,yes,https://fortune.com/company/cisco-systems/global500/
+1221,2021,222.0,Korea Electric Power,Energy,Utilities,49102.0,-2.3,1688.0,,186898.8,48519,"Naju, Jeollanam-do",,no,yes,no,yes,https://fortune.com/company/korea-electric-power/global500/
+1222,2021,223.0,Telefónica,Telecommunications,Telecommunications,49082.9,-9.4,1802.6,41.0,128561.4,112797,Madrid,,no,yes,no,no,https://fortune.com/company/telefonica/global500/
+1223,2021,224.0,China Minsheng Banking,Financials,Banks: Commercial and Savings,49076.0,1.1,4972.3,-36.2,1065169.8,59262,Beijing,,no,yes,no,yes,https://fortune.com/company/china-minsheng-banking/global500/
+1224,2021,225.0,Jiangxi Copper,Materials,Metals,48820.1,32.0,194.7,14.9,25944.9,24528,Guixi,,no,yes,no,no,https://fortune.com/company/jiangxi-copper/global500/
+1225,2021,226.0,POSCO,Materials,Metals,48712.8,-12.4,1340.3,-16.2,73312.1,35393,Seoul,,no,yes,no,yes,https://fortune.com/company/posco/global500/
+1226,2021,227.0,Bayer,Health Care,Pharmaceuticals,48483.6,-6.4,-11958.5,-361.2,143240.9,99538,Leverkusen,,no,no,no,no,https://fortune.com/company/bayer/global500/
+1227,2021,228.0,Power Corp. of Canada,Financials,"Insurance: Life, Health (stock)",48183.1,30.9,1525.7,74.5,493996.1,30000,"Montreal, Quebec",,no,yes,no,no,https://fortune.com/company/power-corp-of-canada/global500/
+1228,2021,229.0,Orange,Telecommunications,Telecommunications,48164.5,1.9,5494.4,63.3,131843.6,142150,Paris,,no,yes,no,no,https://fortune.com/company/orange/global500/
+1229,2021,230.0,Charter Communications,Telecommunications,Telecommunications,48097.0,5.1,3222.0,93.2,144206.0,96100,Stamford,Connecticut,no,yes,no,yes,https://fortune.com/company/charter-communications/global500/
+1230,2021,231.0,COSCO Shipping,Transportation,Shipping,47998.3,7.5,1471.2,35.4,130251.3,110338,Shanghai,,no,yes,no,no,https://fortune.com/company/china-cosco-shipping/global500/
+1231,2021,232.0,Merck,Health Care,Pharmaceuticals,47994.0,2.5,7067.0,-28.2,91588.0,73500,Kenilworth,New Jersey,no,yes,no,yes,https://fortune.com/company/merck/global500/
+1232,2021,233.0,ELO Group,Food & Drug Stores,Food & Drug Stores,47607.3,-12.9,772.5,,28282.0,160606,Croix,,no,yes,no,no,https://fortune.com/company/auchan-holding/global500/
+1233,2021,234.0,Shaanxi Yanchang Petroleum (Group),Energy,"Mining, Crude-Oil Production",47529.1,6.7,160.7,-25.3,68054.2,131093,Xi'an,,no,yes,no,yes,https://fortune.com/company/shaanxi-yanchang-petroleum-group/global500/
+1234,2021,235.0,Pegatron,Technology,"Electronics, Electrical Equip.",47517.9,7.5,686.2,9.8,24370.5,169083,Taipei,,no,yes,no,no,https://fortune.com/company/pegatron/global500/
+1235,2021,236.0,Anheuser-Busch InBev,"Food, Beverages & Tobacco",Beverages,47358.0,-11.8,1405.0,-84.7,226410.0,163695,Leuven,,no,yes,no,no,https://fortune.com/company/anheuser-busch-inbev/global500/
+1236,2021,237.0,América Móvil,Telecommunications,Telecommunications,47326.0,-9.6,2180.5,-38.0,81591.0,186851,Mexico City,,no,yes,no,no,https://fortune.com/company/america-movil/global500/
+1237,2021,238.0,Best Buy,Retailing,Specialty Retailers,47262.0,8.3,1798.0,16.7,19067.0,81600,Richfield,Minnesota,no,yes,yes,no,https://fortune.com/company/best-buy/global500/
+1238,2021,239.0,Zhejiang Geely Holding Group,Motor Vehicles & Parts,Motor Vehicles & Parts,47191.0,-1.5,1352.3,9.8,74391.4,125764,Hangzhou,,no,yes,no,no,https://fortune.com/company/zhejiang-geely-holding-group/global500/
+1239,2021,240.0,China State Shipbuilding,Transportation,Shipping,46844.6,-15.5,1874.6,56.7,132019.3,218956,Beijing,,yes,yes,no,yes,https://fortune.com/company/china-state-shipbuilding/global500/
+1240,2021,241.0,Talanx,Financials,Insurance: Property and Casualty (Stock),46788.1,6.3,766.8,-25.8,221553.1,23527,Hanover,,no,yes,no,yes,https://fortune.com/company/talanx/global500/
+1241,2021,242.0,New York Life Insurance,Financials,"Insurance: Life, Health (Mutual)",46712.4,5.9,-822.3,-181.9,359312.5,11506,New York,New York City,no,no,no,no,https://fortune.com/company/new-york-life-insurance/global500/
+1242,2021,243.0,Oil & Natural Gas,Energy,"Mining, Crude-Oil Production",46597.1,-18.5,2189.3,42.3,74280.4,30105,New Delhi,,no,yes,no,no,https://fortune.com/company/oil-natural-gas/global500/
+1243,2021,244.0,Denso,Motor Vehicles & Parts,Motor Vehicles & Parts,46569.3,-1.8,1179.7,88.3,61190.6,168391,Kariya,,no,yes,no,no,https://fortune.com/company/denso/global500/
+1244,2021,245.0,MS&AD Insurance Group Holdings,Financials,Insurance: Property and Casualty (Stock),46149.7,-2.9,1362.1,3.5,218287.2,41501,Tokyo,,no,yes,no,no,https://fortune.com/company/msad-insurance-group-holdings/global500/
+1245,2021,246.0,Equinor,Energy,Petroleum Refining,45818.0,-28.8,-5510.0,-399.0,121972.0,21245,Stavanger,,no,no,no,no,https://fortune.com/company/statoil/global500/
+1246,2021,247.0,AbbVie,Health Care,Pharmaceuticals,45804.0,37.7,4616.0,-41.4,150565.0,47000,North Chicago,Illinois,no,yes,no,yes,https://fortune.com/company/abbvie/global500/
+1247,2021,248.0,China Huaneng Group,Energy,Energy,45750.4,2.8,312.4,67.5,181995.3,128560,Beijing,,no,yes,no,no,https://fortune.com/company/china-huaneng-group/global500/
+1248,2021,249.0,Nippon Steel Corporation,Materials,Metals,45555.7,-16.4,-305.9,,68480.5,115632,Tokyo,,no,no,no,no,https://fortune.com/company/nippon-steel-sumitomo-metal/global500/
+1249,2021,250.0,Royal Bank of Canada,Financials,Banks: Commercial and Savings,45508.8,-10.5,8496.9,-12.2,1218350.1,83842,"Toronto, Ontario",,no,yes,no,yes,https://fortune.com/company/royal-bank-of-canada/global500/
+1250,2021,251.0,Taiwan Semiconductor Manufacturing,Technology,Semiconductors and Other Electronic Components,45477.8,31.4,17343.6,51.4,98308.5,56831,Hsinchu,,no,yes,no,yes,https://fortune.com/company/taiwan-semiconductor-manufacturing/global500/
+1251,2021,252.0,Deutsche Bahn,Transportation,Railroads,45465.2,-8.6,-6476.6,-967.5,80079.4,322768,Berlin,,no,no,no,no,https://fortune.com/company/deutsche-bahn/global500/
+1252,2021,253.0,Publix Super Markets,Food & Drug Stores,Food & Drug Stores,45204.0,17.5,3971.8,32.2,28094.1,227000,Lakeland,Florida,no,yes,no,yes,https://fortune.com/company/publix-super-markets/global500/
+1253,2021,254.0,Allstate,Financials,Insurance: Property and Casualty (Stock),44791.0,0.3,5576.0,15.0,125987.0,42010,Northbrook,Illinois,no,yes,no,no,https://fortune.com/company/allstate/global500/
+1254,2021,255.0,Zhejiang Rongsheng Holding Group,Chemicals,Chemicals,44725.9,50.3,626.5,254.9,40749.4,20493,Hangzhou,,yes,yes,no,yes,https://fortune.com/company/zhejiang-rongsheng-holding-group/global500/
+1255,2021,256.0,Rio Tinto Group,Energy,"Mining, Crude-Oil Production",44611.0,3.3,9769.0,22.0,97390.0,47474,London,,no,yes,no,yes,https://fortune.com/company/rio-tinto-group/global500/
+1256,2021,257.0,Pemex,Energy,"Mining, Crude-Oil Production",44383.6,-39.1,-23683.3,,96826.2,123899,Mexico City,,no,no,no,no,https://fortune.com/company/pemex/global500/
+1257,2021,258.0,Accenture,Technology,Information Technology Services,44327.0,2.6,5107.8,6.9,37078.6,506000,Dublin,,no,yes,yes,yes,https://fortune.com/company/accenture/global500/
+1258,2021,259.0,Edeka Zentrale,Wholesalers,Wholesalers: Food and Grocery,44158.6,10.9,315.4,-17.2,10567.4,402000,Hamburg,,no,yes,no,yes,https://fortune.com/company/edeka-zentrale/global500/
+1259,2021,260.0,China United Network Communications,Telecommunications,Telecommunications,44034.4,4.7,800.2,11.0,89268.3,242121,Beijing,,no,yes,no,no,https://fortune.com/company/china-united-network-communications/global500/
+1260,2021,261.0,Sumitomo,Wholesalers,Trading,43817.9,-10.1,-1443.9,-191.6,73055.9,74920,Tokyo,,no,no,no,yes,https://fortune.com/company/sumitomo/global500/
+1261,2021,262.0,Liberty Mutual Insurance Group,Financials,Insurance: Property and Casualty (Stock),43796.0,1.3,758.0,-27.4,145377.0,45000,Boston,Massachusetts,no,yes,no,no,https://fortune.com/company/liberty-mutual-insurance-group/global500/
+1262,2021,263.0,American International Group,Financials,Insurance: Property and Casualty (Stock),43736.0,-12.1,-5944.0,-277.5,586481.0,45000,New York,New York City,no,no,no,no,https://fortune.com/company/aig/global500/
+1263,2021,264.0,GlaxoSmithKline,Health Care,Pharmaceuticals,43731.8,1.5,7373.1,24.4,109949.2,94066,Brentford,,no,yes,yes,no,https://fortune.com/company/glaxosmithkline/global500/
+1264,2021,265.0,Groupe BPCE,Financials,Banks: Commercial and Savings,43475.7,-9.3,1834.5,-45.9,1769944.0,98790,Paris,,no,yes,no,no,https://fortune.com/company/groupe-bpce/global500/
+1265,2021,266.0,Saint-Gobain,Materials,"Building Materials, Glass",43444.9,-8.8,519.6,-67.0,59508.5,167552,Courbevoie,,no,yes,no,no,https://fortune.com/company/saint-gobain/global500/
+1266,2021,267.0,Lloyds Banking Group,Financials,Banks: Commercial and Savings,43440.7,-32.4,1690.3,-54.7,1191024.7,61576,London,,no,yes,no,no,https://fortune.com/company/lloyds-banking-group/global500/
+1267,2021,268.0,Swiss Re,Financials,Insurance: Property and Casualty (Stock),43338.0,-12.1,-878.0,-220.8,182622.0,13189,Zurich,,no,no,no,no,https://fortune.com/company/swiss-re/global500/
+1268,2021,269.0,Sberbank,Financials,Banks: Commercial and Savings,43263.6,-10.5,10527.2,-19.4,487263.1,285555,Moscow,,no,yes,no,yes,https://fortune.com/company/sberbank/global500/
+1269,2021,270.0,Tyson Foods,"Food, Beverages & Tobacco",Food Production,43185.0,1.8,2061.0,4.1,34456.0,139000,Springdale,Arkansas,no,yes,no,no,https://fortune.com/company/tyson-foods/global500/
+1270,2021,271.0,Hanwha,Financials,"Insurance: Life, Health (stock)",43168.9,-0.2,181.2,134.8,175891.6,53801,Seoul,,no,yes,no,no,https://fortune.com/company/hanwha/global500/
+1271,2021,272.0,Continental,Motor Vehicles & Parts,Motor Vehicles & Parts,42982.7,-13.7,-1096.0,,48509.0,236386,Hanover,,no,no,no,no,https://fortune.com/company/continental/global500/
+1272,2021,273.0,BHP Group,Energy,"Mining, Crude-Oil Production",42931.0,-4.9,7956.0,-4.2,104783.0,31589,Melbourne,,no,yes,no,yes,https://fortune.com/company/bhp-billiton/global500/
+1273,2021,274.0,Woolworths Group,Food & Drug Stores,Food & Drug Stores,42677.8,-6.3,780.8,-59.4,26503.4,215000,Bella Vista,,no,yes,no,yes,https://fortune.com/company/woolworths/global500/
+1274,2021,275.0,Progressive,Financials,Insurance: Property and Casualty (Stock),42658.1,9.3,5704.6,43.7,64098.3,43326,Mayfield Village,Ohio,no,yes,yes,yes,https://fortune.com/company/progressive/global500/
+1275,2021,276.0,Sanofi,Health Care,Pharmaceuticals,42580.1,1.1,14031.2,346.8,140160.6,99412,Paris,,no,yes,no,no,https://fortune.com/company/sanofi/global500/
+1276,2021,277.0,Petronas,Energy,Energy,42562.5,-26.7,-5679.5,-171.2,142803.7,48679,Kuala Lumpur,,no,no,no,yes,https://fortune.com/company/petronas/global500/
+1277,2021,278.0,Bristol-Myers Squibb,Health Care,Pharmaceuticals,42518.0,62.6,-9015.0,-362.1,118481.0,30250,New York,New York City,no,no,no,yes,https://fortune.com/company/bristol-myers-squibb/global500/
+1278,2021,279.0,Tsingshan Holding Group,Materials,Metals,42448.1,11.7,1129.3,36.7,13204.5,75102,Wenzhou,,no,yes,no,yes,https://fortune.com/company/tsingshan-holding-group/global500/
+1279,2021,280.0,Nationwide,Financials,Insurance: Property and Casualty (Mutual),41929.8,-4.7,-138.4,-116.7,256589.3,25391,Columbus,Ohio,no,no,no,no,https://fortune.com/company/nationwide/global500/
+1280,2021,281.0,Pfizer,Health Care,Pharmaceuticals,41908.0,-19.0,9616.0,-40.9,154229.0,78500,New York,New York City,no,yes,no,no,https://fortune.com/company/pfizer/global500/
+1281,2021,282.0,Shandong Weiqiao Pioneering Group,Industrials,Textiles,41878.8,3.6,1236.0,56.0,37715.8,100395,Shandong,,no,yes,no,no,https://fortune.com/company/shandong-weiqiao-pioneering-group/global500/
+1282,2021,283.0,Caterpillar,Industrials,Construction and Farm Machinery,41748.0,-22.4,2998.0,-50.8,78324.0,97300,Deerfield,Illinois,no,yes,no,no,https://fortune.com/company/caterpillar/global500/
+1283,2021,284.0,Sinomach,Industrials,Industrial Machinery,41712.0,-3.3,570.9,26.2,54390.5,139453,Beijing,,no,yes,no,no,https://fortune.com/company/sinomach/global500/
+1284,2021,285.0,TIAA,Financials,"Insurance: Life, Health (Mutual)",41619.3,2.9,558.1,-77.3,654252.0,14953,New York,New York City,no,yes,yes,no,https://fortune.com/company/tiaa/global500/
+1285,2021,286.0,Ingka Group,Retailing,Specialty Retailers,41580.4,-6.1,1323.0,-35.7,62380.9,166350,Leiden,,yes,yes,no,yes,https://fortune.com/company/ingka-group/global500/
+1286,2021,287.0,Pertamina,Energy,Petroleum Refining,41469.5,-24.0,1051.1,-58.4,69143.8,34564,Jakarta,,yes,yes,yes,yes,https://fortune.com/company/pertamina/global500/
+1287,2021,288.0,Midea Group,Industrials,"Electronics, Electrical Equip.",41407.1,2.4,3945.3,12.6,55231.1,149239,Foshan,,no,yes,no,yes,https://fortune.com/company/midea-group/global500/
+1288,2021,289.0,Bunge,"Food, Beverages & Tobacco",Food Production,41404.0,0.6,1145.0,,23655.0,23000,St. Louis,Missouri,no,yes,no,no,https://fortune.com/company/bunge/global500/
+1289,2021,290.0,Fresenius,Health Care,Health Care: Medical Facilities,41335.8,4.3,1945.0,-7.7,81561.4,277822,Bad Homburg,,no,yes,no,yes,https://fortune.com/company/fresenius/global500/
+1290,2021,291.0,Intesa Sanpaolo,Financials,Banks: Commercial and Savings,41258.3,2.2,3734.0,-20.2,1226999.0,105615,Turin,,no,yes,no,yes,https://fortune.com/company/intesa-sanpaolo/global500/
+1291,2021,292.0,George Weston,Food & Drug Stores,Food & Drug Stores,40792.6,8.0,718.1,293.7,37750.3,220000,"Toronto, Ontario",,no,yes,no,yes,https://fortune.com/company/george-weston/global500/
+1292,2021,293.0,State Power Investment,Energy,Energy,40322.8,2.3,343.8,91.5,202932.9,123727,Beijing,,no,yes,no,yes,https://fortune.com/company/state-power-investment/global500/
+1293,2021,294.0,Vale,Energy,"Mining, Crude-Oil Production",40018.0,6.5,4881.0,,92007.0,74316,Rio de Janeiro,,no,yes,no,yes,https://fortune.com/company/vale/global500/
+1294,2021,295.0,ACS,Engineering & Construction,Engineering & Construction,39967.2,-8.6,654.0,-39.3,45689.0,150265,Madrid,,no,yes,no,no,https://fortune.com/company/acs/global500/
+1295,2021,296.0,Toronto-Dominion Bank,Financials,Banks: Commercial and Savings,39899.5,-10.3,8841.0,0.7,1286834.4,89598,"Toronto, Ontario",,no,yes,no,yes,https://fortune.com/company/toronto-dominion-bank/global500/
+1296,2021,297.0,Maersk,Transportation,Shipping,39740.0,1.4,2850.0,,56117.0,83624,Copenhagen,,no,yes,no,yes,https://fortune.com/company/maersk-group/global500/
+1297,2021,298.0,ThyssenKrupp,Materials,Metals,39658.8,-16.3,10725.1,,42766.3,103598,Essen,,no,yes,yes,no,https://fortune.com/company/thyssenkrupp/global500/
+1298,2021,299.0,Bouygues,Engineering & Construction,Engineering & Construction,39607.3,-6.9,793.1,-40.2,49714.4,129018,Paris,,no,yes,no,no,https://fortune.com/company/bouygues/global500/
+1299,2021,300.0,Mitsubishi Electric,Industrials,"Electronics, Electrical Equip.",39538.8,-3.7,1821.9,-10.7,43380.8,145653,Tokyo,,no,yes,no,no,https://fortune.com/company/mitsubishi-electric/global500/
+1300,2021,301.0,China Energy Engineering Group,Engineering & Construction,Engineering & Construction,39439.0,9.2,507.6,28.4,73015.0,120963,Beijing,,no,yes,no,no,https://fortune.com/company/china-energy-engineering-group/global500/
+1301,2021,302.0,UBS Group,Financials,Banks: Commercial and Savings,39298.0,-5.3,6557.0,52.3,1125765.0,71551,Zurich,,no,yes,no,yes,https://fortune.com/company/ubs-group/global500/
+1302,2021,303.0,Finatis,Food & Drug Stores,Food & Drug Stores,39197.1,-13.0,-211.9,,39314.6,203002,Paris,,no,no,no,no,https://fortune.com/company/finatis/global500/
+1303,2021,304.0,Oracle,Technology,Computer Software,39068.0,-1.1,10135.0,-8.6,115438.0,135000,Austin,Texas,no,yes,yes,no,https://fortune.com/company/oracle/global500/
+1304,2021,305.0,Energy Transfer,Energy,Pipelines,38954.0,-28.1,-648.0,-118.0,95144.0,11421,Dallas,Texas,no,no,no,no,https://fortune.com/company/energy-transfer-equity/global500/
+1305,2021,306.0,Daiwa House Industry,Engineering & Construction,Engineering & Construction,38928.8,-3.4,1840.2,-14.4,45687.6,48807,Osaka,,no,yes,no,yes,https://fortune.com/company/daiwa-house-industry/global500/
+1306,2021,307.0,China Aerospace Science & Technology,Aerospace & Defense,Aerospace & Defense,38741.9,7.0,2735.1,4.1,79504.3,179085,Beijing,,no,yes,no,yes,https://fortune.com/company/china-aerospace-science-technology/global500/
+1307,2021,308.0,Jiangsu Shagang Group,Materials,Metals,38664.5,6.0,1144.5,59.5,46318.1,45060,Zhangjiagang,,no,yes,no,no,https://fortune.com/company/jiangsu-shagang-group/global500/
+1308,2021,309.0,Zhejiang Hengyi Group,Chemicals,Chemicals,38561.7,16.5,152.0,-22.8,17406.1,22019,Hangzhou,,yes,yes,no,yes,https://fortune.com/company/zhejiang-hengyi-group/global500/
+1309,2021,310.0,Dow,Chemicals,Chemicals,38542.0,-10.3,1225.0,,61470.0,35700,Midland,Michigan,no,yes,no,no,https://fortune.com/company/dow/global500/
+1310,2021,311.0,Shenghong Holding Group,Chemicals,Chemicals,38440.0,37.9,519.8,6.9,17638.6,32272,Suzhou City,,no,yes,no,yes,https://fortune.com/company/shenghong-holding-group/global500/
+1311,2021,312.0,American Express,Financials,Diversified Financials,38185.0,-18.8,3135.0,-53.6,191367.0,63700,New York,New York City,no,yes,no,no,https://fortune.com/company/american-express/global500/
+1312,2021,313.0,Meiji Yasuda Life Insurance,Financials,"Insurance: Life, Health (Mutual)",38003.6,1.4,1780.4,-6.9,415712.5,46928,Tokyo,,no,yes,no,yes,https://fortune.com/company/meiji-yasuda-life-insurance/global500/
+1313,2021,314.0,J. Sainsbury,Food & Drug Stores,Food & Drug Stores,37943.5,3.0,-365.7,-289.4,34703.4,117000,London,,no,no,no,yes,https://fortune.com/company/j-sainsbury/global500/
+1314,2021,315.0,Anhui Conch Group,Materials,"Building Materials, Glass",37929.8,11.8,1878.4,5.9,37624.1,59823,Wuhu,,no,yes,no,yes,https://fortune.com/company/anhui-conch-group/global500/
+1315,2021,316.0,General Dynamics,Aerospace & Defense,Aerospace & Defense,37925.0,-3.6,3167.0,-9.1,51308.0,100700,Reston,Virginia,no,yes,yes,no,https://fortune.com/company/general-dynamics/global500/
+1316,2021,317.0,Deutsche Bank,Financials,Banks: Commercial and Savings,37852.5,-9.4,550.4,,1621487.3,84659,Frankfurt,,no,yes,no,no,https://fortune.com/company/deutsche-bank/global500/
+1317,2021,318.0,Idemitsu Kosan,Energy,Petroleum Refining,37792.3,-22.7,329.4,,35754.5,16560,Tokyo,,no,yes,no,yes,https://fortune.com/company/idemitsu-kosan/global500/
+1318,2021,319.0,Iberdrola,Energy,Utilities,37767.0,-7.4,4114.6,7.9,149937.5,35637,Bilbao,,no,yes,no,yes,https://fortune.com/company/iberdrola/global500/
+1319,2021,320.0,China Aerospace Science & Industry,Aerospace & Defense,Aerospace & Defense,37697.0,0.2,1955.0,-0.2,58851.6,145148,Beijing,,no,yes,no,no,https://fortune.com/company/china-aerospace-science-industry/global500/
+1320,2021,321.0,Nike,Apparel,Apparel,37403.0,-4.4,2539.0,-37.0,31342.0,75400,Beaverton,Oregon,no,yes,no,no,https://fortune.com/company/nike/global500/
+1321,2021,322.0,Itaú Unibanco Holding,Financials,Banks: Commercial and Savings,37279.7,-27.9,3666.5,-46.7,388788.5,96540,Sao Paulo,,no,yes,no,yes,https://fortune.com/company/itau-unibanco-holding/global500/
+1322,2021,323.0,ZF Friedrichshafen,Motor Vehicles & Parts,Motor Vehicles & Parts,37158.6,-9.1,-940.0,-340.0,44950.2,153522,Friedrichshafen,,no,no,no,yes,https://fortune.com/company/zf-friedrichshafen/global500/
+1323,2021,324.0,Quanta Computer,Technology,"Computers, Office Equipment",37042.9,11.2,860.1,66.7,23640.8,90895,Taoyuan,,no,yes,no,yes,https://fortune.com/company/quanta-computer/global500/
+1324,2021,325.0,Sumitomo Mitsui Financial Group,Financials,Banks: Commercial and Savings,36811.4,-24.7,4837.5,-25.3,2193348.2,86781,Tokyo,,no,yes,no,yes,https://fortune.com/company/sumitomo-mitsui-financial-group/global500/
+1325,2021,326.0,Northrop Grumman,Aerospace & Defense,Aerospace & Defense,36799.0,8.7,3189.0,41.9,44469.0,97000,Falls Church,Virginia,no,yes,yes,yes,https://fortune.com/company/northrop-grumman/global500/
+1326,2021,327.0,Volvo,Motor Vehicles & Parts,Motor Vehicles & Parts,36754.3,-19.6,2097.9,-44.7,62266.4,91843,Göteborg,,no,yes,no,no,https://fortune.com/company/volvo/global500/
+1327,2021,328.0,Suning.com Group,Retailing,Specialty Retailers,36564.5,-6.2,-619.5,-143.5,32501.9,69398,Nanjing,,no,no,no,no,https://fortune.com/company/suning-commerce-group/global500/
+1328,2021,329.0,Metro,Wholesalers,Wholesalers: Food and Grocery,36524.7,-11.7,514.7,,15461.0,95779,Düsseldorf,,no,yes,no,no,https://fortune.com/company/metro/global500/
+1329,2021,330.0,USAA,Financials,Insurance: Property and Casualty (Stock),36296.2,1.9,3906.9,-2.5,200348.4,35935,San Antonio,Texas,no,yes,no,yes,https://fortune.com/company/usaa/global500/
+1330,2021,331.0,Sompo Holdings,Financials,Insurance: Property and Casualty (Stock),36283.3,4.9,1344.1,19.3,118613.5,48115,Tokyo,,no,yes,no,yes,https://fortune.com/company/sompo-holdings/global500/
+1331,2021,332.0,Yango Longking Group,Financials,Diversified Financials,36263.9,1.0,540.2,-12.0,72575.7,28670,Fuzhou,,no,yes,no,yes,https://fortune.com/company/yango-financial-holding/global500/
+1332,2021,333.0,Chubb,Financials,Insurance: Property and Casualty (Stock),35994.0,5.3,3533.0,-20.7,190774.0,31000,Zurich,,no,yes,no,no,https://fortune.com/company/chubb/global500/
+1333,2021,334.0,China Electronics,Technology,"Electronics, Electrical Equip.",35930.9,10.7,-97.2,-170.6,53587.7,180822,Beijing,,no,no,no,yes,https://fortune.com/company/china-electronics/global500/
+1334,2021,335.0,Heraeus Holding,Materials,Metals,35929.1,43.3,,,7055.2,14809,Hanau,,yes,no,no,no,https://fortune.com/company/heraeus-holding/global500/
+1335,2021,336.0,Jinchuan Group,Materials,Metals,35907.1,6.2,360.4,20.9,17602.1,29220,Jinchang City,,no,yes,no,no,https://fortune.com/company/jinchuan-group/global500/
+1336,2021,337.0,Banco Bilbao Vizcaya Argentaria,Financials,Banks: Commercial and Savings,35872.1,-23.5,1487.0,-62.2,900932.2,123174,Bilbao,,no,yes,no,no,https://fortune.com/company/banco-bilbao-vizcaya-argentaria/global500/
+1337,2021,338.0,Xiaomi,Technology,Internet Services and Retailing,35632.6,19.6,2950.1,102.9,38878.1,22074,Beijing,,no,yes,no,yes,https://fortune.com/company/xiaomi/global500/
+1338,2021,339.0,Compal Electronics,Technology,"Computers, Office Equipment",35619.1,12.3,317.9,41.3,16627.8,112761,Taipei,,no,yes,no,yes,https://fortune.com/company/compal-electronics/global500/
+1339,2021,340.0,Deere,Industrials,Construction and Farm Machinery,35540.0,-9.5,2751.0,-15.4,75091.0,69634,Moline,Illinois,no,yes,no,no,https://fortune.com/company/deere/global500/
+1340,2021,341.0,La Poste,Transportation,"Mail, Package, and Freight Delivery",35533.7,22.2,2374.6,158.1,927801.9,219625,Paris,,no,yes,no,no,https://fortune.com/company/la-poste/global500/
+1341,2021,342.0,DZ Bank,Financials,Banks: Commercial and Savings,35498.4,-9.3,993.6,-47.6,727638.4,28061,Frankfurt,,no,yes,no,yes,https://fortune.com/company/dz-bank/global500/
+1342,2021,343.0,Taikang Insurance Group,Financials,"Insurance: Life, Health (Mutual)",35475.6,20.2,3483.6,8.5,173121.2,56899,Beijing,,no,yes,no,no,https://fortune.com/company/taikang-insurance-group/global500/
+1343,2021,344.0,China Taiping Insurance Group,Financials,"Insurance: Life, Health (Mutual)",35460.5,11.1,415.1,-29.1,150763.8,65900,Hong Kong,,no,yes,no,no,https://fortune.com/company/china-taiping-insurance-group/global500/
+1344,2021,345.0,Barclays,Financials,Banks: Commercial and Savings,35404.6,-7.6,3056.2,-26.8,1844785.6,83000,London,,no,yes,no,yes,https://fortune.com/company/barclays/global500/
+1345,2021,346.0,Cathay Financial Holding,Financials,"Insurance: Life, Health (stock)",35123.5,4.8,2532.5,24.7,389960.2,57848,Taipei,,no,yes,no,yes,https://fortune.com/company/cathay-life-insurance/global500/
+1346,2021,347.0,Mitsubishi Heavy Industries,Industrials,Industrial Machinery,34902.5,-6.1,383.4,-52.2,43496.6,79974,Tokyo,,no,yes,no,no,https://fortune.com/company/mitsubishi-heavy-industries/global500/
+1347,2021,348.0,Rajesh Exports,Wholesalers,Trading,34804.8,26.2,113.9,-33.0,3209.4,377,Bengaluru,,no,yes,no,no,https://fortune.com/company/rajesh-exports/global500/
+1348,2021,349.0,CRRC Group,Industrials,Industrial Machinery,34778.2,0.2,748.0,43.0,66931.8,179374,Beijing,,no,yes,no,yes,https://fortune.com/company/crrc-group/global500/
+1349,2021,350.0,Abbott Laboratories,Health Care,Medical Products and Equipment,34608.0,8.5,4495.0,21.9,72548.0,109000,Abbott Park,Illinois,no,yes,no,yes,https://fortune.com/company/abbott-laboratories/global500/
+1350,2021,351.0,China South Industries Group,Aerospace & Defense,Aerospace & Defense,34454.6,18.6,852.6,-13.7,54926.3,164918,Beijing,,no,yes,no,no,https://fortune.com/company/china-south-industries-group/global500/
+1351,2021,352.0,China Huadian,Energy,Utilities,34440.0,1.9,584.8,88.4,131960.5,93331,Beijing,,no,yes,no,no,https://fortune.com/company/china-huadian/global500/
+1352,2021,353.0,CK Hutchison Holdings,Retailing,Specialty Retailers,34347.1,-10.0,3757.5,-26.1,161804.0,300000,Hong Kong,,no,yes,no,no,https://fortune.com/company/ck-hutchison-holdings/global500/
+1353,2021,354.0,China Electronics Technology Group,Aerospace & Defense,Aerospace & Defense,34311.4,4.1,1879.6,7.9,69212.3,179390,Beijing,,no,yes,no,yes,https://fortune.com/company/china-electronics-technology-group/global500/
+1354,2021,355.0,Poste Italiane,Financials,"Insurance: Life, Health (stock)",34205.1,-6.7,1375.3,-8.4,333310.5,123583,Rome,,no,yes,no,no,https://fortune.com/company/poste-italiane/global500/
+1355,2021,356.0,SNCF Group,Transportation,Railroads,34155.0,-13.1,-3452.5,,156584.0,271509,St. Denis,,no,no,no,no,https://fortune.com/company/sncf-mobilites/global500/
+1356,2021,357.0,Tata Motors,Motor Vehicles & Parts,Motor Vehicles & Parts,34012.8,-8.7,-1812.4,,46915.5,75278,Mumbai,,no,no,no,no,https://fortune.com/company/tata-motors/global500/
+1357,2021,358.0,Fujitsu,Technology,Information Technology Services,33862.5,-4.6,1912.1,29.9,28844.5,126371,Tokyo,,no,yes,no,no,https://fortune.com/company/fujitsu/global500/
+1358,2021,359.0,Cedar Holdings Group,Wholesalers,Trading,33837.0,-18.0,49.6,-59.4,18875.2,23856,Guangzhou,,no,yes,no,no,https://fortune.com/company/cedar-holdings-group/global500/
+1359,2021,360.0,Northwestern Mutual,Financials,"Insurance: Life, Health (Mutual)",33782.1,4.6,425.0,-66.5,308767.0,6641,Milwaukee,Wisconsin,no,yes,no,yes,https://fortune.com/company/northwestern-mutual/global500/
+1360,2021,361.0,Dollar General,Retailing,Specialty Retailers,33746.8,21.6,2655.1,55.0,25862.6,158000,Goodlettsville,Tennessee,no,yes,no,yes,https://fortune.com/company/dollar-general/global500/
+1361,2021,362.0,Louis Dreyfus,"Food, Beverages & Tobacco",Food Production,33564.0,-0.7,382.0,66.1,23253.0,15708,Rotterdam,,no,yes,no,no,https://fortune.com/company/louis-dreyfus/global500/
+1362,2021,363.0,Shanghai Construction Group,Engineering & Construction,Engineering & Construction,33525.6,12.7,485.6,-14.6,49250.1,48609,Shanghai,,no,yes,no,yes,https://fortune.com/company/shanghai-construction-group/global500/
+1363,2021,364.0,Sunac China Holdings,Financials,Real estate,33418.4,36.4,5165.8,37.1,169870.5,64436,Beijing,,yes,yes,no,yes,https://fortune.com/company/sunac-china-holdings/global500/
+1364,2021,365.0,Aisin,Motor Vehicles & Parts,Motor Vehicles & Parts,33259.7,-4.5,996.5,350.3,36411.4,118359,Kariya,,no,yes,no,no,https://fortune.com/company/aisin-seiki/global500/
+1365,2021,366.0,KB Financial Group,Financials,Banks: Commercial and Savings,33201.2,12.7,2928.8,3.1,561842.5,26948,Seoul,,no,yes,no,yes,https://fortune.com/company/kb-financial-group/global500/
+1366,2021,367.0,Sumitomo Life Insurance,Financials,"Insurance: Life, Health (Mutual)",33183.4,3.5,254.4,431.1,371555.9,42954,Osaka,,no,yes,no,no,https://fortune.com/company/sumitomo-life-insurance/global500/
+1367,2021,368.0,British American Tobacco,"Food, Beverages & Tobacco",Tobacco,33057.6,0.1,8208.0,12.8,188222.2,55329,London,,no,yes,no,no,https://fortune.com/company/british-american-tobacco/global500/
+1368,2021,369.0,Exelon,Energy,Utilities,33039.0,-4.1,1963.0,-33.1,129317.0,32340,Chicago,Illinois,no,yes,no,no,https://fortune.com/company/exelon/global500/
+1369,2021,370.0,Coca-Cola,"Food, Beverages & Tobacco",Beverages,33014.0,-11.4,7747.0,-13.2,87296.0,80300,Atlanta,Georgia,no,yes,no,no,https://fortune.com/company/coca-cola/global500/
+1370,2021,371.0,China National Nuclear,Energy,Energy,32662.8,25.7,1188.3,7.6,139809.5,183400,Beijing,,no,yes,no,yes,https://fortune.com/company/china-national-nuclear/global500/
+1371,2021,372.0,Magna International,Motor Vehicles & Parts,Motor Vehicles & Parts,32647.0,-17.2,757.0,-57.1,28605.0,158000,"Aurora, Ontario",,no,yes,no,no,https://fortune.com/company/magna-international/global500/
+1372,2021,372.0,Jardine Matheson,Motor Vehicles & Parts,Motor Vehicles & Parts,32647.0,-20.2,-394.0,-113.9,93526.0,403000,Hong Kong,,no,no,no,no,https://fortune.com/company/jardine-matheson/global500/
+1373,2021,373.0,Honeywell International,Industrials,"Electronics, Electrical Equip.",32637.0,-11.1,4779.0,-22.2,64586.0,103000,Charlotte,North Carolina,no,yes,no,no,https://fortune.com/company/honeywell-international/global500/
+1374,2021,374.0,Jingye Group,Materials,Metals,32528.2,76.4,607.3,-6.9,10708.7,31000,Shijiazhuang,,yes,yes,no,yes,https://fortune.com/company/jingye-group/global500/
+1375,2021,375.0,Bank of Nova Scotia,Financials,Banks: Commercial and Savings,32501.1,-7.4,5037.8,-20.2,852306.9,92001,"Toronto, Ontario",,no,yes,no,no,https://fortune.com/company/bank-of-nova-scotia/global500/
+1376,2021,376.0,Phoenix Pharma,Health Care,Wholesalers: Health Care,32386.9,6.2,221.3,3337.1,12566.5,33090,Mannheim,,no,yes,no,yes,https://fortune.com/company/phoenix-pharmahandel/global500/
+1377,2021,377.0,Credit Suisse Group,Financials,Banks: Commercial and Savings,32343.3,-9.9,2843.4,-17.4,911976.0,48770,Zurich,,no,yes,no,yes,https://fortune.com/company/credit-suisse-group/global500/
+1378,2021,378.0,Sun Life Financial,Financials,"Insurance: Life, Health (stock)",32315.7,8.1,1862.7,-8.9,253640.4,23816,"Toronto, Ontario",,no,yes,no,yes,https://fortune.com/company/sun-life-financial/global500/
+1379,2021,379.0,Thermo Fisher Scientific,Technology,"Scientific,Photographic and Control Equipment",32218.0,26.1,6375.0,72.5,69052.0,84362,Waltham,Massachusetts,no,yes,no,yes,https://fortune.com/company/thermo-fisher-scientific/global500/
+1380,2021,380.0,Repsol,Energy,Petroleum Refining,32188.3,-32.3,-3747.6,,60335.8,23203,Madrid,,no,no,no,no,https://fortune.com/company/repsol/global500/
+1381,2021,381.0,3M,Chemicals,Chemicals,32184.0,0.1,5384.0,17.8,47344.0,94987,St. Paul,Minnesota,no,yes,no,no,https://fortune.com/company/3m/global500/
+1382,2021,382.0,TJX,Retailing,Specialty Retailers,32137.0,-23.0,90.5,-97.2,30813.6,320000,Framingham,Massachusetts,no,yes,no,yes,https://fortune.com/company/tjx/global500/
+1383,2021,383.0,Shandong Iron & Steel Group,Materials,Metals,31990.3,15.3,129.4,496.6,57269.8,50131,Jinan,,no,yes,no,no,https://fortune.com/company/shandong-iron-steel-group/global500/
+1384,2021,384.0,Travelers,Financials,Insurance: Property and Casualty (Stock),31981.0,1.3,2697.0,2.9,116764.0,30294,New York,New York City,no,yes,no,no,https://fortune.com/company/travelers-cos/global500/
+1385,2021,385.0,Migros Group,Food & Drug Stores,Food & Drug Stores,31903.3,10.5,1882.4,434.3,82368.7,85226,Zurich,,no,yes,no,no,https://fortune.com/company/migros-group/global500/
+1386,2021,386.0,L’Oréal,Household Products,Household and Personal Products,31895.6,-4.6,4060.3,-3.3,53366.1,85392,Clichy,,no,yes,no,no,https://fortune.com/company/loreal/global500/
+1387,2021,387.0,Fubon Financial Holding,Financials,"Insurance: Life, Health (stock)",31837.8,2.7,3065.4,62.0,329206.7,44369,Taipei,,no,yes,no,no,https://fortune.com/company/fubon-financial-holding/global500/
+1388,2021,388.0,Capital One Financial,Financials,Banks: Commercial and Savings,31643.0,-6.3,2714.0,-51.1,421602.0,51985,McLean,Virginia,no,yes,no,yes,https://fortune.com/company/capital-one-financial/global500/
+1389,2021,389.0,New Hope Holding Group,"Food, Beverages & Tobacco",Food Production,31605.7,184.7,515.4,,48435.3,140757,Chengdu,,yes,yes,no,yes,https://fortune.com/company/new-hope-holding-group/global500/
+1390,2021,390.0,ING Group,Financials,Banks: Commercial and Savings,31604.9,-14.6,2563.8,-41.3,1142895.8,57527,Amsterdam,,no,yes,no,yes,https://fortune.com/company/ing-group/global500/
+1391,2021,391.0,Tesla,Motor Vehicles & Parts,Motor Vehicles & Parts,31536.0,28.3,721.0,,52148.0,70757,Palo Alto,California,yes,yes,no,yes,https://fortune.com/company/tesla/global500/
+1392,2021,392.0,CMA CGM,Transportation,Shipping,31445.1,3.9,1755.3,,32899.8,90792,Marseille,,no,yes,no,yes,https://fortune.com/company/cma-cgm/global500/
+1393,2021,393.0,Bharat Petroleum,Energy,Petroleum Refining,31315.1,-22.5,2178.0,405.4,22012.4,9257,Mumbai,,no,yes,no,no,https://fortune.com/company/bharat-petroleum/global500/
+1394,2021,394.0,SAP,Technology,Computer Software,31150.3,1.0,5862.5,57.7,71558.0,102430,Walldorf,,no,yes,no,yes,https://fortune.com/company/sap/global500/
+1395,2021,395.0,Shenzhen Investment Holdings,Financials,Diversified Financials,31143.6,7.9,1661.0,4.2,129558.2,75102,Shenzhen,,no,yes,no,yes,https://fortune.com/company/shenzhen-investment-holdings/global500/
+1396,2021,396.0,Coop Group,Food & Drug Stores,Food & Drug Stores,31057.5,4.1,574.2,7.4,23365.8,78578,Basel,,no,yes,no,yes,https://fortune.com/company/coop-group/global500/
+1397,2021,397.0,Hyundai Mobis,Motor Vehicles & Parts,Motor Vehicles & Parts,31047.2,-4.9,1296.2,-34.1,44619.8,35087,Seoul,,no,yes,no,yes,https://fortune.com/company/hyundai-mobis/global500/
+1398,2021,398.0,Anglo American,Energy,"Mining, Crude-Oil Production",30902.0,3.5,2089.0,-41.1,62534.0,64000,London,,no,yes,no,yes,https://fortune.com/company/anglo-american/global500/
+1399,2021,399.0,Ansteel Group,Materials,Metals,30885.6,-1.9,258.5,,52135.4,119331,Anshan,,no,yes,no,no,https://fortune.com/company/ansteel-group/global500/
+1400,2021,400.0,Mitsubishi Chemical Holdings,Chemicals,Chemicals,30729.1,-8.0,-71.3,-114.3,47805.0,69607,Tokyo,,no,no,no,no,https://fortune.com/company/mitsubishi-chemical-holdings/global500/
+1401,2021,401.0,Siemens Energy,Energy,Energy,30722.9,,-1797.0,,50433.5,92000,Munich,,yes,no,no,no,https://fortune.com/company/siemens-energy/global500/
+1402,2021,402.0,Shanxi Coking Coal Group,Energy,"Mining, Crude-Oil Production",30453.7,16.3,159.9,-24.4,67852.8,212698,Taiyuan,,no,yes,no,yes,https://fortune.com/company/shanxi-coking-coal-group/global500/
+1403,2021,403.0,JFE Holdings,Materials,Metals,30443.7,-11.3,-206.3,,42088.4,64371,Tokyo,,no,no,no,yes,https://fortune.com/company/jfe-holdings/global500/
+1404,2021,404.0,Haier Smart Home,Industrials,"Electronics, Electrical Equip.",30395.0,4.6,1286.5,8.3,31181.5,99299,Qingdao,,no,yes,no,no,https://fortune.com/company/qingdao-haier/global500/
+1405,2021,405.0,Mizuho Financial Group,Financials,Banks: Commercial and Savings,30357.1,-17.2,4443.2,7.7,2039658.3,54492,Tokyo,,no,yes,no,no,https://fortune.com/company/mizuho-financial-group/global500/
+1406,2021,406.0,TongLing Nonferrous Metals Group,Materials,Metals,30301.1,8.9,-25.8,,14266.4,22501,Tongling,,no,no,no,no,https://fortune.com/company/tongling-nonferrous-metals-group/global500/
+1407,2021,407.0,Medipal Holdings,Wholesalers,Wholesalers: Health Care,30291.3,1.2,225.7,-35.4,15189.3,14614,Tokyo,,no,yes,no,no,https://fortune.com/company/medipal-holdings/global500/
+1408,2021,408.0,Takeda Pharmaceutical,Health Care,Pharmaceuticals,30165.7,-0.3,3546.9,771.7,116747.7,47099,Tokyo,,no,yes,no,no,https://fortune.com/company/takeda-pharmaceutical/global500/
+1409,2021,409.0,ABB,Industrials,Industrial Machinery,30142.0,-18.6,5146.0,257.6,41088.0,105600,Zurich,,no,yes,no,no,https://fortune.com/company/abb/global500/
+1410,2021,410.0,Shougang Group,Materials,Metals,30053.7,2.7,42.5,6.2,78468.5,97235,Beijing,,no,yes,no,no,https://fortune.com/company/shougang-group/global500/
+1411,2021,411.0,Suzuki Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,29980.8,-6.6,1381.2,11.9,36495.1,68739,Hamamatsu,,no,yes,no,yes,https://fortune.com/company/suzuki-motor/global500/
+1412,2021,412.0,Veolia Environnement,Energy,Utilities,29637.0,-2.6,101.2,-85.5,55516.3,171450,Aubervilliers,,no,yes,no,yes,https://fortune.com/company/veolia-environnement/global500/
+1413,2021,413.0,Canon,Technology,"Computers, Office Equipment",29598.9,-10.2,780.4,-32.0,44813.2,181897,Tokyo,,no,yes,no,no,https://fortune.com/company/canon/global500/
+1414,2021,414.0,New China Life Insurance,Financials,"Insurance: Life, Health (stock)",29544.6,18.6,2071.6,-1.7,153927.4,36309,Beijing,,yes,yes,no,no,https://fortune.com/company/new-china-life-insurance/global500/
+1415,2021,415.0,Samsung Life Insurance,Financials,"Insurance: Life, Health (stock)",29273.8,7.3,1073.0,27.9,309657.0,5273,Seoul,,no,yes,no,no,https://fortune.com/company/samsung-life-insurance/global500/
+1416,2021,416.0,Kansai Electric Power,Energy,Utilities,29171.3,-0.4,1028.0,-14.0,73017.7,31933,Osaka,,no,yes,no,yes,https://fortune.com/company/kansai-electric-power/global500/
+1417,2021,417.0,Enbridge,Energy,Pipelines,29146.5,-22.8,2507.7,-41.7,125854.7,12100,"Calgary, Alberta",,no,yes,no,yes,https://fortune.com/company/enbridge/global500/
+1418,2021,418.0,Medtronic,Health Care,Medical Products and Equipment,28913.0,-5.4,4789.0,3.4,90689.0,104950,Dublin,,no,yes,no,yes,https://fortune.com/company/medtronic/global500/
+1419,2021,419.0,Toshiba,Technology,"Electronics, Electrical Equip.",28812.6,-7.6,1075.2,,31651.3,117300,Tokyo,,no,yes,no,no,https://fortune.com/company/toshiba/global500/
+1420,2021,420.0,Wistron,Technology,"Computers, Office Equipment",28694.5,1.0,294.8,34.0,15270.9,69506,Taipei,,no,yes,no,no,https://fortune.com/company/wistron/global500/
+1421,2021,421.0,Philip Morris International,"Food, Beverages & Tobacco",Tobacco,28694.0,-3.7,8056.0,12.1,44815.0,71000,New York,New York City,no,yes,no,no,https://fortune.com/company/philip-morris-international/global500/
+1422,2021,422.0,Arrow Electronics,Wholesalers,Wholesalers: Electronics and Office Equipment,28673.4,-0.8,584.4,,17053.9,19600,Centennial,Colorado,no,yes,no,yes,https://fortune.com/company/arrow-electronics/global500/
+1423,2021,423.0,Schneider Electric,Industrials,"Electronics, Electrical Equip.",28667.4,-5.7,2422.5,-10.3,60556.1,126328,Rueil-Malmaison,,no,yes,no,no,https://fortune.com/company/schneider-electric/global500/
+1424,2021,424.0,Weichai Power,Industrials,Industrial Machinery,28621.8,13.4,1334.4,1.2,41494.3,81600,Weifang,,yes,yes,no,yes,https://fortune.com/company/weichai-power/global500/
+1425,2021,425.0,Banco Bradesco,Financials,Banks: Commercial and Savings,28539.3,-35.9,3072.9,-42.4,308961.6,80170,Osasco,,no,yes,no,no,https://fortune.com/company/banco-bradesco/global500/
+1426,2021,426.0,Phoenix Group Holdings,Financials,"Insurance: Life, Health (stock)",28493.2,-23.4,1023.4,843.5,457022.3,7653,London,,no,yes,no,yes,https://fortune.com/company/phoenix-group-holdings/global500/
+1427,2021,427.0,Hailiang Group,Wholesalers,Trading,28466.7,4.6,117.3,-33.0,9348.1,20176,Hangzhou,,no,yes,no,no,https://fortune.com/company/hailiang-group/global500/
+1428,2021,428.0,CHS,"Food, Beverages & Tobacco",Food Production,28406.4,-11.0,422.4,-49.1,15993.9,10493,Inver Grove Heights,Minnesota,no,yes,no,no,https://fortune.com/company/chs/global500/
+1429,2021,429.0,China General Technology,Engineering & Construction,Engineering & Construction,28379.3,6.9,558.3,14.1,34592.7,52945,Beijing,,no,yes,no,yes,https://fortune.com/company/china-general-technology/global500/
+1430,2021,430.0,Beijing Jianlong Heavy Industry Group,Materials,Metals,28361.5,28.9,494.0,-12.4,23685.4,61300,Beijing,,yes,yes,no,yes,https://fortune.com/company/beijing-jianlong-heavy-industry-group/global500/
+1431,2021,431.0,NEC,Technology,Information Technology Services,28243.3,-0.8,1411.3,53.5,33169.7,114714,Tokyo,,no,yes,no,yes,https://fortune.com/company/nec/global500/
+1432,2021,432.0,Zhejiang Communications Investment Group,Transportation,Transportation and Logistics,28168.2,29.3,706.7,-5.2,91171.4,38466,Hangzhou,,yes,yes,no,yes,https://fortune.com/company/zhejiang-communications-investment-group/global500/
+1433,2021,433.0,Bridgestone,Motor Vehicles & Parts,Motor Vehicles & Parts,28046.8,-12.8,-218.2,-109.9,40586.4,138036,Tokyo,,no,no,no,no,https://fortune.com/company/bridgestone/global500/
+1434,2021,434.0,China Datang,Energy,Energy,27928.3,1.7,317.2,-25.7,122078.6,100721,Beijing,,no,yes,no,yes,https://fortune.com/company/china-datang/global500/
+1435,2021,435.0,BT Group,Telecommunications,Telecommunications,27863.3,-4.2,1922.8,-12.7,70169.6,99700,London,,no,yes,no,no,https://fortune.com/company/bt-group/global500/
+1436,2021,436.0,Shanghai Pharmaceuticals Holding,Health Care,Wholesalers: Health Care,27812.9,3.0,651.6,10.3,22863.7,48136,Shanghai,,no,yes,no,yes,https://fortune.com/company/shanghai-pharmaceuticals-holding/global500/
+1437,2021,437.0,LyondellBasell Industries,Chemicals,Chemicals,27753.0,-20.1,1420.0,-58.1,35403.0,19200,Rotterdam,,no,yes,no,yes,https://fortune.com/company/lyondellbasell-industries/global500/
+1438,2021,438.0,Guangxi Investment Group,Financials,Diversified Financials,27707.9,6.3,41.3,-47.2,91594.9,33005,Nanning,,no,yes,no,yes,https://fortune.com/company/guangxi-investment-group/global500/
+1439,2021,439.0,Chubu Electric Power,Energy,Utilities,27690.4,-1.8,1388.6,-7.6,51413.6,28238,Nagoya,,no,yes,no,no,https://fortune.com/company/chubu-electric-power/global500/
+1440,2021,440.0,CRH,Materials,"Building Materials, Glass",27587.0,-12.9,1122.0,-48.0,44944.0,77100,Dublin,,no,yes,no,no,https://fortune.com/company/crh/global500/
+1441,2021,441.0,Sumitomo Electric Industries,Motor Vehicles & Parts,Motor Vehicles & Parts,27531.7,-3.7,531.5,-20.5,30577.9,286784,Osaka,,no,yes,no,yes,https://fortune.com/company/sumitomo-electric-industries/global500/
+1442,2021,442.0,Financière de l&#8217;Odet,Media,Entertainment,27470.1,-1.2,244.0,78.8,68530.8,79207,Paris,,no,yes,no,no,https://fortune.com/company/financiere-de-lodet/global500/
+1443,2021,443.0,Xinjiang Guanghui Industry Investment,Wholesalers,Trading,27448.3,-4.4,59.2,-34.1,42635.0,73963,Urumqi,,no,yes,no,no,https://fortune.com/company/xinjiang-guanghui-industry-investment/global500/
+1444,2021,444.0,X5 Retail Group,Food & Drug Stores,Food & Drug Stores,27359.1,2.1,392.0,30.0,15872.7,339716,Amsterdam,,no,yes,no,yes,https://fortune.com/company/x5-retail-group/global500/
+1445,2021,445.0,Jabil,Technology,Semiconductors and Other Electronic Components,27266.4,7.8,53.9,-81.2,14397.4,240000,St. Petersburg,Florida,yes,yes,no,yes,https://fortune.com/company/jabil-circuit/global500/
+1446,2021,446.0,Linde,Chemicals,Chemicals,27250.0,-5.0,2501.0,9.5,88229.0,74207,"Guildford, Surrey",,no,yes,no,no,https://fortune.com/company/linde/global500/
+1447,2021,447.0,Enterprise Products Partners,Energy,Pipelines,27199.7,-17.0,3775.6,-17.8,64106.7,7130,Houston,Texas,no,yes,no,no,https://fortune.com/company/enterprise-products-partners/global500/
+1448,2021,448.0,Mazda Motor,Motor Vehicles & Parts,Motor Vehicles & Parts,27187.2,-13.8,-298.6,-367.6,26378.1,49786,Hiroshima,,no,no,no,no,https://fortune.com/company/mazda-motor/global500/
+1449,2021,449.0,CJ Corp.,Retailing,Specialty Retailers,27124.7,-6.4,73.5,-68.0,36824.5,62756,Seoul,,no,yes,no,yes,https://fortune.com/company/cj-corp/global500/
+1450,2021,450.0,China National Coal Group,Energy,"Mining, Crude-Oil Production",27104.9,4.9,484.5,57.4,63259.2,131121,Beijing,,no,yes,no,yes,https://fortune.com/company/china-national-coal-group/global500/
+1451,2021,451.0,SK Hynix,Technology,Semiconductors and Other Electronic Components,27041.1,16.8,4030.8,133.3,65482.7,36854,"Icheon, Gyeonggi-do",,yes,yes,no,yes,https://fortune.com/company/sk-hynix/global500/
+1452,2021,452.0,Hewlett Packard Enterprise,Technology,"Computers, Office Equipment",26982.0,-7.4,-322.0,-130.7,54015.0,59400,Houston,Texas,no,no,no,no,https://fortune.com/company/hewlett-packard-enterprise/global500/
+1453,2021,453.0,Danone,"Food, Beverages & Tobacco",Food Consumer Products,26913.8,-4.9,2228.8,3.2,52349.3,101911,Paris,,no,yes,yes,no,https://fortune.com/company/danone/global500/
+1454,2021,454.0,Achmea,Financials,"Insurance: Life, Health (Mutual)",26843.1,-2.7,731.5,36.2,114615.0,13921,Zeist,,no,yes,yes,yes,https://fortune.com/company/achmea/global500/
+1455,2021,455.0,Longfor Group Holdings,Financials,Real estate,26745.9,22.3,2898.8,9.2,117265.7,35426,Beijing,,yes,yes,no,yes,https://fortune.com/company/longfor-group-holdings/global500/
+1456,2021,456.0,United Natural Foods,Wholesalers,Wholesalers: Food and Grocery,26742.8,13.9,-274.1,,7587.0,28300,Providence,Rhode Island,yes,no,no,yes,https://fortune.com/company/united-natural-foods/global500/
+1457,2021,457.0,Centrica,Energy,Utilities,26701.5,-7.7,52.6,,23401.7,25753,Windsor,,no,yes,no,no,https://fortune.com/company/centrica/global500/
+1458,2021,458.0,Subaru,Motor Vehicles & Parts,Motor Vehicles & Parts,26698.0,-13.2,721.7,-48.6,30847.3,36070,Tokyo,,no,yes,no,yes,https://fortune.com/company/subaru/global500/
+1459,2021,459.0,Guangzhou Municipal Construction Group,Engineering & Construction,Engineering & Construction,26682.4,36.6,126.8,26.8,23703.1,38367,Guangzhou,,yes,yes,no,yes,https://fortune.com/company/guangzhou-municipal-construction-group/global500/
+1460,2021,460.0,LG Chem,Chemicals,Chemicals,26644.8,8.5,434.5,61.6,38079.4,40234,Seoul,,yes,yes,no,no,https://fortune.com/company/lg-chem/global500/
+1461,2021,461.0,AstraZeneca,Health Care,Pharmaceuticals,26617.0,9.2,3196.0,139.4,66729.0,76100,Cambridge,,yes,yes,no,yes,https://fortune.com/company/astrazeneca/global500/
+1462,2021,462.0,Mondelez International,"Food, Beverages & Tobacco",Food Consumer Products,26581.0,2.8,3555.0,-8.1,67810.0,79000,Chicago,Illinois,no,yes,no,no,https://fortune.com/company/mondelez-international/global500/
+1463,2021,463.0,Boehringer Ingelheim,Health Care,Pharmaceuticals,26496.8,11.3,3489.0,14.6,45142.3,51944,Ingelheim,,yes,yes,no,yes,https://fortune.com/company/boehringer-ingelheim/global500/
+1464,2021,464.0,ViacomCBS,Media,Entertainment,26186.0,-5.8,2422.0,-26.8,52663.0,24225,New York,New York City,no,yes,no,no,https://fortune.com/company/cbs/global500/
+1465,2021,465.0,Kraft Heinz,"Food, Beverages & Tobacco",Food Consumer Products,26185.0,4.8,356.0,-81.6,99830.0,38000,Chicago,Illinois,yes,yes,no,yes,https://fortune.com/company/kraft-heinz/global500/
+1466,2021,466.0,Koç Holding,Energy,Energy,26179.2,-3.2,1320.9,70.7,84825.5,100641,Istanbul,,no,yes,no,yes,https://fortune.com/company/koc-holding/global500/
+1467,2021,467.0,Guangzhou Pharmaceutical Holdings,Health Care,Pharmaceuticals,26070.1,9.0,299.0,6.4,9132.8,34371,Guangzhou,,yes,yes,no,yes,https://fortune.com/company/guangzhou-pharmaceutical-holdings/global500/
+1468,2021,468.0,Olam International,Wholesalers,Wholesalers: Food and Grocery,26067.8,7.6,178.1,-56.9,20206.3,60425,Singapore,,yes,yes,no,no,https://fortune.com/company/olam-international/global500/
+1469,2021,469.0,China Resources Land,Financials,Real estate,26027.1,21.7,4352.2,3.8,133186.4,48414,Hong Kong,,yes,yes,no,no,https://fortune.com/company/china-resources-land/global500/
+1470,2021,470.0,Yunnan Provincial Investment Holding Group,Financials,Diversified Financials,25886.9,39.4,278.6,172.9,72723.6,51442,Kunming,,yes,yes,no,yes,https://fortune.com/company/yunnan-provincial-investment-holding-group/global500/
+1471,2021,471.0,Bank of Montreal,Financials,Banks: Commercial and Savings,25664.6,-12.0,3788.4,-12.6,711910.2,43360,"Toronto, Ontario",,no,yes,no,no,https://fortune.com/company/bank-of-montreal/global500/
+1472,2021,472.0,Samsung C&T,Wholesalers,Trading,25613.3,-3.0,877.8,-2.6,49987.3,16075,Seoul,,no,yes,no,no,https://fortune.com/company/samsung-ct/global500/
+1473,2021,473.0,WH Group,"Food, Beverages & Tobacco",Food Consumer Products,25589.0,6.2,828.0,-43.5,18715.0,107000,Hong Kong,,yes,yes,no,yes,https://fortune.com/company/wh-group/global500/
+1474,2021,474.0,Dollar Tree,Retailing,Specialty Retailers,25509.3,8.0,1341.9,62.3,20696.0,129772,Chesapeake,Virginia,yes,yes,no,yes,https://fortune.com/company/dollar-tree/global500/
+1475,2021,475.0,Amgen,Health Care,Pharmaceuticals,25424.0,8.8,7264.0,-7.4,62948.0,24300,Thousand Oaks,California,yes,yes,no,yes,https://fortune.com/company/amgen/global500/
+1476,2021,476.0,Compass Group,Business Services,Food Services,25413.4,-19.9,169.5,-88.0,19030.4,548143,Chertsey,,no,yes,no,no,https://fortune.com/company/compass-group/global500/
+1477,2021,477.0,Coles Group,Food & Drug Stores,Food & Drug Stores,25324.5,-17.2,655.5,-36.1,12640.6,118000,Hawthorn East,,no,yes,no,yes,https://fortune.com/company/coles-group/global500/
+1478,2021,478.0,U.S. Bancorp,Financials,Banks: Commercial and Savings,25241.0,-7.6,4959.0,-28.3,553905.0,68108,Minneapolis,Minnesota,no,yes,no,no,https://fortune.com/company/u-s-bancorp/global500/
+1479,2021,479.0,Ericsson,Technology,Network and Other Communications Equipment,25236.9,5.0,1898.6,707.5,33098.1,101129,Stockholm,,yes,yes,no,yes,https://fortune.com/company/ericsson/global500/
+1480,2021,480.0,Huayang New Material Technology Group,Energy,"Mining, Crude-Oil Production",25187.9,-1.2,-172.7,,39670.2,99487,Yangquan,,no,no,no,no,https://fortune.com/company/yangquan-coal-industry-group/global500/
+1481,2021,481.0,Banco do Brasil,Financials,Banks: Commercial and Savings,25149.6,-40.4,2299.6,-44.7,326124.7,91673,Brasilia,,no,yes,no,no,https://fortune.com/company/banco-do-brasil/global500/
+1482,2021,482.0,Performance Food Group,Wholesalers,Wholesalers: Food and Grocery,25086.3,27.1,-114.1,-168.4,7719.7,20000,Richmond,Virginia,yes,no,no,yes,https://fortune.com/company/performance-food-group/global500/
+1483,2021,483.0,Netflix,Media,Entertainment,24996.1,24.0,2761.4,47.9,39280.4,9400,Los Gatos,California,yes,yes,no,yes,https://fortune.com/company/netflix/global500/
+1484,2021,484.0,Nokia,Technology,Network and Other Communications Equipment,24899.2,-4.6,-2874.8,-36793.1,44290.5,92039,Espoo,,no,no,no,no,https://fortune.com/company/nokia/global500/
+1485,2021,485.0,Zijin Mining Group,Materials,Metals,24855.2,26.2,943.3,52.1,27940.7,36860,Longyan,,yes,yes,no,yes,https://fortune.com/company/zijin-mining-group/global500/
+1486,2021,486.0,BAE Systems,Aerospace & Defense,Aerospace & Defense,24722.7,5.8,1666.0,-11.5,37633.5,81000,London,,yes,yes,no,yes,https://fortune.com/company/bae-systems/global500/
+1487,2021,487.0,Gree Electric Appliances,Industrials,"Electronics, Electrical Equip.",24709.7,-14.9,3213.8,-10.1,42792.0,83952,Zhuhai,,no,yes,yes,no,https://fortune.com/company/gree-electrical-appliances/global500/
+1488,2021,488.0,Gilead Sciences,Health Care,Pharmaceuticals,24689.0,10.0,123.0,-97.7,68407.0,13600,Foster City,California,yes,yes,no,yes,https://fortune.com/company/gilead-sciences/global500/
+1489,2021,489.0,TD Synnex,Wholesalers,Wholesalers: Electronics and Office Equipment,24675.6,3.9,529.2,5.7,13468.6,277900,Fremont,California,yes,yes,no,yes,https://fortune.com/company/synnex/global500/
+1490,2021,490.0,UniCredit Group,Financials,Banks: Commercial and Savings,24664.5,-9.2,-3173.4,-184.1,1139915.9,82107,Milan,,no,no,no,no,https://fortune.com/company/unicredit-group/global500/
+1491,2021,491.0,Holcim,Materials,"Building Materials, Glass",24653.8,-8.3,1807.9,-20.0,60235.4,67409,Zug,,no,yes,no,no,https://fortune.com/company/lafargeholcim/global500/
+1492,2021,492.0,Mapfre Group,Financials,Insurance: Property and Casualty (Stock),24641.5,-10.5,599.9,-12.0,84629.0,33730,Madrid,,no,yes,no,no,https://fortune.com/company/mapfre-group/global500/
+1493,2021,493.0,Alfresa Holdings,Health Care,Wholesalers: Health Care,24556.3,-1.1,231.1,-37.6,11904.7,12045,Tokyo,,yes,yes,no,no,https://fortune.com/company/alfresa-holdings/global500/
+1494,2021,494.0,Eli Lilly,Health Care,Pharmaceuticals,24539.8,9.9,6193.7,-25.5,46633.1,35000,Indianapolis,Indiana,yes,yes,no,yes,https://fortune.com/company/eli-lilly/global500/
+1495,2021,495.0,Truist Financial,Financials,Banks: Commercial and Savings,24427.0,66.6,4482.0,39.0,509228.0,53638,Charlotte,North Carolina,yes,yes,no,no,https://fortune.com/company/bbt-corp/global500/
+1496,2021,496.0,China Reinsurance (Group),Financials,Insurance: Property and Casualty (Stock),24376.0,18.1,827.6,-5.5,69513.7,63914,Beijing,,yes,yes,no,no,https://fortune.com/company/china-reinsurance-group/global500/
+1497,2021,497.0,Commonwealth Bank of Australia,Financials,Banks: Commercial and Savings,24362.0,-18.7,6457.1,5.4,698585.9,43585,Sydney,,no,yes,no,no,https://fortune.com/company/commonwealth-bank-of-australia/global500/
+1498,2021,498.0,Flex,Technology,"Electronics, Electrical Equip.",24124.0,-0.4,613.0,599.9,15836.0,167201,Singapore,,yes,yes,yes,yes,https://fortune.com/company/flex/global500/
+1499,2021,499.0,Rite Aid,Food & Drug Stores,Food & Drug Stores,24043.4,9.6,-90.9,,9335.4,50000,Camp Hill,Pennsylvania,yes,no,no,yes,https://fortune.com/company/rite-aid/global500/
