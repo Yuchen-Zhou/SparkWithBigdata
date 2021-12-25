@@ -8,6 +8,7 @@
 
 ## Scala教程
 参考菜鸟教程:https://www.runoob.com/scala/scala-tutorial.html
+也可以参考[这个](./ScalaTutorial.md)
 
 ## Maven教程
 参考菜鸟教程:https://www.runoob.com/maven/maven-tutorial.html
