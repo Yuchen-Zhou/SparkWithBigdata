@@ -356,6 +356,20 @@
 
   使用细节参考：http://dblab.xmu.edu.cn/blog/install-hbase/
   
-
+- ### 1.8Kafka安装
+  ```shell
+  $ tar -zxvf kafka_2.11-2.4.0.tgz -C /opt/software
+  $ vim /etc/profile
+  
+  export KAFKA_HOME=/opt/software/kafka
+  export PATH=$PATH:$KAFKA_HOME/bin
+  ```
+  ```shell
+  #启动kafka
+  $ kafka-server-start.sh config/server.properties
+  
+  #关闭kafka
+  $ kafka-server-stop.sh config/server.properties
+  ```
 ## 开发环境配置问题
 [在Spark上使用Python3的解释器](./studying/py/README.md)
