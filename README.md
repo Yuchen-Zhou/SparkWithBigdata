@@ -42,7 +42,6 @@
       <property>
           <name>hadoop.tmp.dir</name>
           <value>file:/opt/software/hadoop/tmp</value>
-          <description>Abase for other temporary directories.</description>
       </property>
       <property>
           <name>fs.defaultFS</name>
@@ -95,11 +94,6 @@
     </property>
   </configuration>
   ```
-
-
-
-
-
 
 
   /opt/software/hadoop/etc/hadoop/hadoop-env.sh
@@ -183,7 +177,7 @@
   $ cd /opt/software/spark
   $ cp ./conf/spark-env.sh.template ./conf/spark-env.sh
   $ vim ./conf/spark-env.sh
-  $ export SPARK_DIST_CLASSPATH=$(/usr/local/hadoop/bin/hadoop classpath)
+  $ export SPARK_DIST_CLASSPATH=$(/opt/software/hadoop/bin/hadoop classpath)
   ```
 
   编写环境变量
@@ -237,22 +231,18 @@
     <property>
       <name>javax.jdo.option.ConnectionURL</name>
       <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
-      <description>JDBC connect string for a JDBC metastore</description>
     </property>
     <property>
       <name>javax.jdo.option.ConnectionDriverName</name>
       <value>com.mysql.jdbc.Driver</value>
-      <description>Driver class name for a JDBC metastore</description>
     </property>
     <property>
       <name>javax.jdo.option.ConnectionUserName</name>
       <value>hive</value>
-      <description>username to use against metastore database</description>
     </property>
     <property>
       <name>javax.jdo.option.ConnectionPassword</name>
       <value>hive</value>
-      <description>password to use against metastore database</description>
     </property>
   </configuration>
   ```
