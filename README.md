@@ -7,10 +7,10 @@
 ### 关于版本使用
 - [JDK 1.8.0](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
 - [Hadoop 2.6.0](https://hadoop.apache.org/release/2.6.0.html)
-- [Spark 2.4.2](https://archive.apache.org/dist/spark/spark-2.4.2/)
+- [Spark 2.0.0](https://archive.apache.org/dist/spark/spark-2.0.0/)
 - [HBase 1.2.4](https://archive.apache.org/dist/hbase/1.2.4/)
 - [Maven 3.5.4](https://archive.apache.org/dist/maven/maven-3/3.5.4/binaries/)
-- [Hive 1.2.1](https://archive.apache.org/dist/hive/hive-1.2.1/)
+- [Hive 1.2.2](https://archive.apache.org/dist/hive/hive-1.2.2/)
 - [Zookeeper 3.4.5](https://archive.apache.org/dist/zookeeper/zookeeper-3.4.5/)
 - [Scala 2.12.2](https://www.scala-lang.org/download/2.12.2.html)
 - MySQL 5.7 参考下面MySQL的安装
