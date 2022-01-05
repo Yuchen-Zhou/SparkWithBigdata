@@ -1767,7 +1767,7 @@ Hive是构建在Hadoop之上的数据仓库工具。可以支持大规模数据�
 
 为了让Spark能够访问Hive，必须为Spark添加Hive支持。
 
-在spark-shell中执行`import org.apache.spark.sql.hive.HiveContext 
+在spark-shell中执行`import org.apache.spark.sql.hive.HiveContext `
 
 `(2)在Hive中创建数据库和表`
 
