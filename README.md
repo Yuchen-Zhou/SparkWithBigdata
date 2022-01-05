@@ -1,8 +1,9 @@
 # Spark大数据平台笔记
 
 ## 0.前言
-### 关于编程语言 
-这个仓库主要以Python为主要开发语言，当然也会有一些Scala的开发，如果你对Scala开发更感兴趣，可以点[这里](./studying/scalaDep)
+这个仓库主要是以伪分布式为主的大数据平台，在Spark编程方面，集群和伪分布式之间代码上并没有不同，所以大部分代码可以直接参考。当然，这个仓库里面还有很多问题没有写上去，如果你在安装的时候遇到问题了还需要自己解决。（解决问题可以提高你的水平哦）
+### 关于开发版本
+[Scala版](./studying/scalaDep)的Spark开发可能更为主流，但是随着近年来Python的崛起，Python在Spark编程中也能占有一半天地。
 
 ### 关于版本使用
 - [JDK 1.8.0](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
