@@ -10,6 +10,8 @@
 - [Maven Tutorial](./Maven_Tutorial/Maven.md)
 - [Spark RDD](./RDD.md)
 - [Spark DataFrame](./DataFrame.md)
+- [Spark Streaming](./Streaming.md)
+
 
 ## 使用IDEA Maven打包Scala
 可以参考这篇教程：https://blog.csdn.net/u011470552/article/details/54564636  
