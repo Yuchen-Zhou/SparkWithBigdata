@@ -21,6 +21,6 @@ Spark开发Scala可能更为主流，但是随着近年来Python的崛起，Pyth
 - [Sqoop 1.4.7](https://archive.apache.org/dist/sqoop/1.4.7/)
 - [Flume 1.8.0](https://downloads.apache.org/flume/1.8.0/)
 
-### [安装](./studying/Installation/README.md)
+### [安装教程](./studying/Installation/README.md)
 参考教程: [Hadoop伪分布式](http://dblab.xmu.edu.cn/blog/2441-2/)、[Hadoop集群](http://dblab.xmu.edu.cn/blog/2775-2/)、[Spark安装](http://dblab.xmu.edu.cn/blog/2501-2/)
 
