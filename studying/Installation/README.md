@@ -38,11 +38,11 @@
       </property>
       <property>
           <name>dfs.namenode.name.dir</name>
-          <value>file:/usr/local/hadoop/tmp/dfs/name</value>
+          <value>file:/opt/software/hadoop/tmp/dfs/name</value>
       </property>
       <property>
           <name>dfs.datanode.data.dir</name>
-          <value>file:/usr/local/hadoop/tmp/dfs/data</value>
+          <value>file:/uopt/software/hadoop/tmp/dfs/data</value>
       </property>
   </configuration>
   ```
