@@ -322,4 +322,81 @@ scalaVersion := "2.11.8"
 libraryDependencies += "org.apache.spark" % "spark-streaming_2.11" % "2.0.0"
 ```
 
-然后打包编译，上传至Linux，然后提交jar包
+然后打包编译，上传至Linux，到带有jar包的目录提交jar包，命令如下：  
+`
+spark-submit --class "org.apache.spark.examples.streaming.NetworkWordCount" socket.jar localhost 9999
+
+`
+
+执行上面的命令后，就在当前的Linux终端（即“流计算终端”）内顺利启动了Socket客户端，现在，再打开一个终端（数据源终端），启动一个Socket服务器端，让该服务器端接收客户端的请求，并给客户端不断发送数据流。通常，Linux发行版中都带有NetCat（nc），可以使用nc命令生成一个Socket服务器端：  
+`$ nc -lk 9999`
+
+在上面的命令中，-l这个参数表示启动监听模式，也就是作为Socket服务器端，nc会监听本机(localhost)的9999端口，只要监听到来自客户端的连接请求，就会与客户端建立连接通道，把数据发送给客户端；-k表示多次监听，而不是监听一次
+
+由于之前在流计算终端内运行了NetworkWordCount程序，该程序扮演了Socket客户端的角色，会向localhost的9999端口发送链接请求，所以，数据源终端内的nc进程就会监听9999端口有来自客户端的连接请求，于是就会建立服务器端和客户端之间的连接通道。连接通道建立以后，nc成宿就会把我们在数据源终端内手动输入的内容，全部发送给“流计算终端”内的NetworkWordCount程序进行处理。为了测试程序运行的效果，在“数据源终端”内执行上面的nc命令后，可以通过键盘输入一行英文句子不断发送给“流计算终端”的NetworkWordCount程序。在“流计算终端”打印出词频统计信息，结果如下
+
+<img src='./pics/15.png' width='80%'>
+
+**3.使用Socket编程实现自定义数据源**  
+在之前的实例中，采用了nc程序作为数据源。现在把数据源的产生方式修改了一下，不使用nc程序，而是采用自己编写的程序产生Socket数据源。
+关闭Linux系统中已经打开的终端
+在IDEA创建一个sbt，创建一个Scala文件DataSourceSocket.scala，输入如下代码：  
+```scala
+package org.apache.spark.examples.streaming
+import org.scalatest.enablers.Length
+
+import java.io.{PrintStream, PrintWriter}
+import java.net.ServerSocket
+import scala.io.Source
+
+object DataSourceSocket {
+  def index(length: Int) = {
+    val rdm = new java.util.Random()
+    rdm.nextInt(length)
+  }
+
+  def main(args: Array[String]): Unit = {
+    if (args.length != 3) {
+      System.err.println("Usage: <filename> <port> <millisecond>")
+      System.exit(1)
+    }
+
+    val fileName = args(0)
+    val lines = Source.fromFile(fileName).getLines.toList
+    val rowCount = lines.length
+    val listener = new ServerSocket(args(1).toInt)
+    while (true) {
+      val socket = listener.accept()
+      new Thread() {
+        override def run = {
+          println("Got client connected from: " + socket.getInetAddress)
+          val out = new PrintWriter(socket.getOutputStream(), true)
+          while (true) {
+            Thread.sleep(args(2).toLong)
+            val content = lines(index(rowCount))
+            println(content)
+            out.write(content + '\n')
+            out.flush()
+          }
+          socket.close()
+        }
+      }.start()
+    }
+  }
+}
+
+```
+
+上面代码的功能是，从一个文件中读取内容，把文件的每一行作为一个字符串，每次随机选择文件中的一行，源源不断发送给客户端。DataSourceSocket程序在运行时，需要为该程序提供3个参数，即<filename>、<port>、<millisecond>，其中，<filename>表示作为数据源头的文件的路径，<port>表示Socket通信的端口号、<millisecond>表示Socket服务器端（即DataSourceSocket程序）每隔多长时间向客户端发送一次数据。
+
+`val lines = Source.fromFile(fileName).getLines.toList`语句执行后，文件中的所有行的内容都会被读取到列表lines中。`val listener = new ServerSocket(args(1).toInt)`语句用于在服务器端创建监听特定端口的ServerSocket对象，ServerSocket负责接收客户端的连接请求。`val socket = listener.accept()`语句执行后，`listener`会进入阻塞状态，一直等待客户端的连接请求。一旦listener监听到特定端口上有来自客户端的请求，就会执行new Thread()，生成新的线程，负责和客户端建立连接，并发送数据给客户端。
+
+接下来，我们打包编译，上传至Linux，然后提交jar包  
+`spark-submit --class "org.apache.spark.examples.streaming.DataSourceSocket" socket.jar /opt/spark/mycode/streaming/logfile/log.txt 9999 1000`
+
+运行结果如下图
+
+<img src='./pics/16.png' width='80%'>
+
+
+### RDD队列流
