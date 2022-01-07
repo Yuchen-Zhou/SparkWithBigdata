@@ -121,5 +121,95 @@ Spark Streaming无法实现毫秒级的流计算，是因为其将流数据分�
 
 ## DStream操作概述
 ### Spark Streaming工作机制
+在Spark Streaming中，会有一个组件Receiver，作为一个长期运行的任务(Task)运行在一个Executor上，每个Receiver都会负责一个DStream输入流（如从文件中读取数据的文件流、套接字流或者Kafka中读取的一个输入流等）。Receiver组件接收到数据源发来的数据后，会提交给Spark Streaming程序进行处理。处理后的结果，可以交给可视化组件进行可视化展示，也可以写入到HDFS、HBase中。
+
+### 编写Spark Streaming程序的基本步骤
+编写Spark Streaming程序的基本步骤如下：
+- 通过创建输入DStream(Input DStream)来定义输入源。流计算处理的数据对象是来自输入源的数据，这些输入源会源源不断产生数据，并发送给Spark Streaming，由Receiver组件接收到以后，交给用户自定义的Spark Streaming程序进行处理
+- 通过对DStream应用转换操作和输出操作来定义流计算。流计算过程通常是由用户自定义实现的，需要调用各种DStream操作实现用户处理逻辑
+- 调用StreamingContext对象的start()方法来开始接收数据和处理流程
+- 通过调用StreamingContext对象的awaitTermination()方法来等待流计算进程结束，或者可以通过调用StreamingContext对象的stop()方法来手动结束流计算进程
+
+### 创建StreamingContext对象
+在RDD编程中需要生成一个SparkContext对象，在Spark SQL中需要生成一个SparkSession对象，同理，如果要运行一个Spark Streaming程序，就需要首先生成一个StreamingContext对象，它是Spark Streaming程序的主入口
+
+可以从一个SparkConf对象创建一个Streaming Context对象。启动spark-shell,就已经获得一个默认的SparkContext对象，也就是sc。因此，可以采用如下方式创建StreamingContext对象：  
+```scala
+scala> import  org.apache.spark.streaming._
+
+scala> val ssc = new StreamingContext(sc, Seconds(1))
+```
+`new StreamingContext(sc, Seconds(1))`的两个参数中，`sc`表示SparkContext对象，Seconds(1)表示在对Spark Streaming的数据流进行分段时，每1秒切成一个分段。可以调整分段大小，比如使用Seconds(5)就表示每5秒切成一个分段，但是，无法实现毫秒级别的分段，因此，Spark Streaming无法实现毫秒级别的流计算。
+
+如果是编写一个独立的Spark Streaming程序，而不是在spark-shell中运行，则需要在代码文件中通过如下方式创建StreamingContext对象：  
+```scala
+import org.apache.spark._
+import org.apache.spark.streaming._
+val conf = new SparkConf().setAppName("TestDStream").setMaster("local[2]")
+val ssc = new StreamingContext(conf, Seconds(1))
+```
+
+## 基本输入源
+Spark Streaming可以来自对不同类型数据源的数据进行处理，包括基本数据源和高级数据源（如Kafka、Flume等）。
+
+### 文件流
+在文件流的应用场景中，需要编写Spark Streaming程序，一直对文件系统中的某个目录进行监听，一旦发现有新的文件生成，Spark Streaming就会自动生成把文件内容读取过来，使用用户自定义的处理逻辑进行处理。
+
+**1.在spark-shell中创建文件流**  
+首先，在Linux系统打开一个终端（数据源终端），然后创建一个logfile  
+```shell
+$ cd /opt/software/spark/mycode
+$ mkdir streaming & cd streaming
+$ mkdir logfile
+```
+
+然后，打开第二个终端（流计算终端）,进入spark-shell，然后输入以下语句
+```scala
+scala> import org.apache.spark.streaming._
+scala> val ssc = new StreamingContext(sc, Seconds(20))
+scala> val lines = ssc.textFileStream("file:///opt/software/spark/mycode/streaming/logfile")
+scala> val words = lines.flatMap(_.split(" "))
+scala> val wordCounts = words.map(x => (x, 1)).reduceByKey(_+_)
+scala> wordCounts.print()
+scala> ssc.start()
+scala> ssc.awaitTermination()
+```
+
+在spark-shell中输入`ssc.start()`以后，程序就开始自动进入循环监听状态，屏幕上会不断显示信息
+
+<img src='./pics/10.png' width='80%'>
+
+这里可以切换到数据源终端，`logfile`文件夹中创建一个log.txt文件，在文件中输入一些英文语句后保存并退出文件编辑器。然后切换到流计算终端，等待20秒左右，会出现词频统计结果
+
+<img src='./pics/11.png' width='80%'>
+
+**2.采用独立应用程序方式创建文件流**  
+首先，创建代码目录和代码文件TestStreaming，关闭之前打开的所有终端，重新打开一个终端（流计算终端）
+
+在IDEA中创建一个Scala Object，输入以下代码
+```scala
+import org.apache.spark._
+import org.apache.spark.streaming._
+
+object TestStreaming {
+  def main(args: Array[String]): Unit = {
+    val sparkConf = new SparkConf().setAppName("WordCountStreaming").setMaster("local[2]")
+    val ssc = new StreamingContext(sparkConf, Seconds(10))
+    val lines = ssc.textFileStream("file:///opt/spark/mycode/logfile")
+    val words = lines.flatMap(_.split(" "))
+    val wordCounts = words.map(x => (x,1)).reduceByKey(_+_)
+    wordCounts.print()
+    ssc.start()
+    ssc.awaitTermination()
+  }
+}
+```
+然后打包编译上传至Linux，使用`spark-submit`提交运行程序,出现下面情形代表启动成功
+
+<img src='./pics/12.png' width='80%'>
+
+然后在logfile文件夹下创建一个log2.txt文件，输入一些单词，保存退出切换至程序运行的终端，等待2秒就会出现单词计数。如下图
+
+<img src='./pics/13.png' width='80%'>
 
 
