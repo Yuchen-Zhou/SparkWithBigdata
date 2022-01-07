@@ -204,6 +204,46 @@ object TestStreaming {
   }
 }
 ```
+Maven pom.xml可以参考  
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>zyc</groupId>
+    <artifactId>MavenProject</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_2.11</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-hive_2.11</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+    </dependencies>
+</project>
+```
+
 然后打包编译上传至Linux，使用`spark-submit`提交运行程序,出现下面情形代表启动成功
 
 <img src='./pics/12.png' width='80%'>
@@ -213,3 +253,73 @@ object TestStreaming {
 <img src='./pics/13.png' width='80%'>
 
 
+### 套接字流   
+Spark Streaming可以通过Socket端口监听并接收数据，然后进行相应处理。  
+**1.Socket工作原理**  
+在网络编程中，大量的数据交换是通过Socket实现的。Socket工作原理如下,服务器先初始化Socket，然后与端口绑定(Bind)，对端口进行监听(Listen)，调用accept()方法进入阻塞状态，等待客户端连接。客户端初始化一个Socket，然后连接服务器(Connect)，如果连接成功，这时客户端与服务器端的连接就建立了。客户端发送数据请求，服务器端接收请求并处理请求，然后把回应数据发送给客户端，客户端读取数据，最后关闭连接，一次交互结束  
+
+<img src='./pics/14.jpeg' width='80%'>
+
+**2.使用套接字流作为数据源**  
+在套接字流作为数据源的应用场景中，Spark Streaming程序就是上图所示的Socket通信的客户端，它通过Socket方式请求数据，获取数据以后启动流计算过程进行处理。  
+下面编写一个Spark Streaming独立应用程序来实现这个应用场景。
+
+首先，在IDEA创建一个Scala工程，选择sbt为打包方式，写入以下内容
+```scala
+import org.apache.spark._
+import org.apache.spark.streaming._
+import org.apache.spark.storage.StorageLevel
+
+
+object NetworkWordCount {
+  def main(args: Array[String]): Unit = {
+    if (args.length < 2){
+      System.err.println("Usage: NetworkWordCount <hostname> <port>")
+      System.exit(1)
+    }
+    val sparkConf = new SparkConf().setAppName("NetworkWordCount").setMaster("local[2]")
+    val ssc = new StreamingContext(sparkConf, Seconds(10))
+    val lines = ssc.socketTextStream(args(0), args(1).toInt, StorageLevel.MEMORY_AND_DISK_SER)
+    val words = lines.flatMap(_.split(" "))
+    val wordCounts = words.map(x => (x, 1)).reduceByKey(_+_)
+    wordCounts.print()
+    ssc.start()
+    ssc.awaitTermination()
+  }
+}
+```
+
+然后在相同目录下，新建一个Scala文件StreamingExamples.scala，输入以下代码  
+```scala
+package org.apache.spark.examples.streaming
+
+import org.apache.spark.internal.Logging
+import org.apache.log4j.{Level, Logger}
+
+
+/** Utility functions for Spark Streaming examples. */
+object StreamingExamples extends Logging {
+  /** Set reasonable logging levels for streaming if the user has not configured log4j. */
+  def setStreamingLogLevels() {
+    val log4jInitialized = Logger.getRootLogger.getAllAppenders.hasMoreElements
+    if(!log4jInitialized){
+      //We first log something to initialize Spark's default loggin, then we override the logging level
+      logInfo("Setting log level to [WARN] for steaming exmaple."+" To override add a custom log4j.properties to the classpath.")
+      Logger.getRootLogger.setLevel(Level.WARN)
+    }
+  }
+}
+```
+
+sbt文件内容为
+```sbt
+name := "socket"
+
+version := "1.0"
+
+scalaVersion := "2.11.8"
+
+libraryDependencies += "org.apache.spark" % "spark-streaming_2.11" % "2.0.0"
+```
+
+然后打包编译，上传至Linux，然后提交jar包
