@@ -330,3 +330,10 @@ Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, all
 
 [0m2022.01.07 15:58:44 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/NetworkWordCount/build.sbt[0m
 [0m2022.01.07 15:58:51 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/NetworkWordCount/build.sbt[0m
+[0m2022.01.07 16:10:32 INFO  shutting down Metals[0m
+[0m2022.01.07 19:45:44 INFO  Started: Metals version 0.10.9 in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata' for client Visual Studio Code 1.63.2.[0m
+[0m2022.01.07 19:45:45 INFO  time: initialize in 0.5s[0m
+[0m2022.01.07 19:45:46 WARN  Build server is not auto-connectable.[0m
+[0m2022.01.07 19:45:46 WARN  no build tool detected in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+一月 07, 2022 8:23:36 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+信息: Unsupported notification method: $/setTrace
