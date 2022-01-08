@@ -337,3 +337,8 @@ Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, all
 [0m2022.01.07 19:45:46 WARN  no build tool detected in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 一月 07, 2022 8:23:36 下午 org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 信息: Unsupported notification method: $/setTrace
+[0m2022.01.07 21:29:32 INFO  shutting down Metals[0m
+[0m2022.01.08 19:59:53 INFO  Started: Metals version 0.10.9 in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata' for client Visual Studio Code 1.63.2.[0m
+[0m2022.01.08 19:59:54 INFO  time: initialize in 0.55s[0m
+[0m2022.01.08 19:59:54 WARN  Build server is not auto-connectable.[0m
+[0m2022.01.08 19:59:54 WARN  no build tool detected in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
