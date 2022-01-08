@@ -436,4 +436,7 @@ object QueueStream {
 
 
 ## 高级数据源
+Spark Streaming是用来进行流计算的组件，可以把Kafka（或Flume）作为数据源，让Kafka（或Flume）产生数据发送Spark Streaming应用程序，Spark Streaming应用程序再对接收到的数据进行实时处理，从而完成一个流计算过程。
+
+### Kafka简介
 
