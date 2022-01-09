@@ -433,6 +433,7 @@ object QueueStream {
 ```
 
 之后打包上传至Linux服务器，提交jar就可以看到运行结果
+<img src='./pics/20.png' width='80%'>
 
 
 ## 高级数据源
@@ -481,4 +482,161 @@ $ kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --p
 
 `kafka-topics.sh --list --zookeeper localhost:2181`
 
+这个Topic，就是专门负责采集发送一些单词的，下面用Producer来产生一些数据，请在当前终端内继续输入下面命令：  
+```shell 
+kafka-console-producer.sh --broker-list localhost:9092 --topic wordsendertest
+```
 
+然后再终端内输入一些英文单词，例如hadoop spark
+这些单词就是数据源，会被Kafka捕捉到发送给消费者。现在可以启动一个消费者
+```shell
+$ cd /opt/software/kafka
+$ kafka-console-consumer.sh --zookeeper localhost:2181 --topic wordsendertest --from-beginning
+```
+
+<img src='./pics/19.png' width='80%'>
+这里所有窗口不要关闭，后面还需要继续使用
+
+
+### Spark准备工作
+**1.添加相关jar包**  
+Kafka和Flume等高级输入源，需要依赖独立的库。已经安装好的Spark版本，这些jar包都不在里面，我们需要访问[MVNREPROSITROY](https://mvnrepository.com/artifact/org.apache.spark/spark-streaming-kafka-0-8_2.11/2.0.0),复制jar包的链接地址，到`spark/jars/kafka`下载，使用`wget https://repo1.maven.org/maven2/org/apache/spark/spark-streaming-kafka-0-8_2.11/2.0.0/spark-streaming-kafka-0-8_2.11-2.0.0.jar`即可，接下来要把kafka安装目录的libs里面所有的jar文件复制到`spark/jars/kafka`目录下，命令如下：
+```shell
+$ cd /opt/software/kafka/libs
+$ cp ./* $SPARK_HOME/jars/kafka 
+```
+**2.启动spark-shell**  
+然后启动spark-shell，导入jar包
+```
+$ spark-shell --jars /opt/software/spark/jars/*:/opt/software/spark/jars/kafka/*
+
+scala> import org.apache.spark.streaming.kafka._
+```
+
+### 编写Spark Streaming程序使用Kafka数据源
+**1.编写生产者(Producer)程序**  
+新建一个IDEA sbt工程kafka，然后创建一个Scala文件，输入以下代码：
+```scala
+package org.apache.spark.examples.streaming
+
+import java.util.HashMap
+import org.apache.kafka.clients.producer.{KafkaProducer, ProducerConfig, ProducerRecord}
+import org.apache.spark.SparkConf
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka._
+
+import java.util
+
+object KafkaWordProducer {
+  def main(args: Array[String]): Unit = {
+    if (args.length < 4) {
+      System.err.println("Usage: KafkaWordProducer <metadataBrokerList> <topic>" + "<messagesPerSec> <wordsPerMessage>")
+      System.exit(1)
+    }
+
+    val Array(brokers, topic, messagesPerSec, wordsPerMessage) = args
+    // Connect Zookeeper
+    val prop = new util.HashMap[String, Object]()
+    prop.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)
+    prop.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
+        "org.apache.kafka.common.serialization.StringSerializer")
+    prop.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
+        "org.apache.kafka.common.Serialization.StringSerializer")
+    val producer = new KafkaProducer[String, String](prop)
+    //Send message
+    while (true){
+      (1 to messagesPerSec.toInt).foreach { messageNum =>
+        val str = (1 to wordsPerMessage.toInt).map(x => scala.util.Random.nextInt(10).toString).mkString(" ")
+        println(str)
+        println()
+
+        val message = new ProducerRecord[String, String](topic, null, str)
+        producer.send(message)
+      }
+      Thread.sleep(1000)
+    }
+  }
+}
+```
+
+**2.编写消费者(Consumer)程序**  
+在同样的工程目录下，创建`KafkaWordCount.scala`，用于单词词频统计，它会把KafkaWordProducer发送来的单词进行词频统计，代码如下：
+```scala
+package org.apache.spark.examples.streaming
+
+import org.apache.spark._
+import org.apache.spark.SparkConf
+import org.apache.spark.streaming._
+import org.apache.spark.streaming.kafka._
+import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.streaming.kafka.KafkaUtils
+
+object KafkaWordCount {
+  def main(args: Array[String]): Unit = {
+    StreamingExamples.setStreamingLogLevels()
+    val sc = new SparkConf().setAppName("KafkaWordCount").setMaster("local[2]")
+    val ssc = new StreamingContext(sc, Seconds(10))
+    ssc.checkpoint("file:///home/spark/kafka/checkpoint")
+    val zkQuorum = "localhost:2181"
+    val group = "1"
+    val topics = "wdsender"
+    val numThreads = 1
+    val topicMap = topics.split(",").map((_, numThreads.toInt)).toMap
+    val lineMap = KafkaUtils.createStream(ssc, zkQuorum, group, topicMap)
+    val lines = lineMap.map(_._2)
+    val words = lines.flatMap(_.split(" "))
+    val pair = words.map(x => (x, 1))
+    val wordCounts = pair.reduceByKeyAndWindow(_+_,_ - _, Minutes(2), Seconds(10), 2)
+    wordCounts.print
+    ssc.start
+    ssc.awaitTermination
+  }
+}
+```
+
+在上面的代码中，`ssc.checkpoint()`用于创建检查点，实现容错功能。在Spark Streaming中，如果是文件流类型的数据源，Spark自身的容错机制可以保证数据不会发生丢失。但是对于Flume和Kafka等数据源，当数据源源不断到达时，会首先被放入缓存中，尚未被处理，可能会发生丢失。为了避免系统失败时发送数据丢失，可以通过`ssc.checkpoint()`创建检查点。但是，需要注意的是，检查点之后的数据仍然可能发生丢失，如果要保证数据不发生丢失，可以开启Spark Streaming的预写式日志(WAL:Write Ahead Logs)功能，当采用预写式日志以后，接收数据的正确性只在数据被预写到日志以后Receiver才会确认，这样，当系统发生失败导致缓存中的数据丢失时，就可以从日志中恢复丢失的数据。预写式日志需要额外的开销，因此，在默认情况下，Spark Streaming的预写式日志功能是关闭的，如果要开启该功能，需要设置SparkConf的属性`spark.streaming.receiver.writeAheadLog.enable`为`True`，`ssc.checkpoint()`在创建检查点的同时，系统也把检查点的文件写入路径`file:///home/spark/kafka/checkpoint`作为预写式日志的存放路径
+
+**3.编写日志格式设置程序**  
+在同样工程中，创建StreamingExamples.scala，用于设置log4j日志级别。StreamingExamples.scala里面的代码和之前的一样。
+
+**4.编译打包程序**  
+在build.sbt文件中，输入下面内容：
+```sbt
+name := "kafka"
+
+version := "0.1"
+
+scalaVersion := "2.11.12"
+
+libraryDependencies += "org.apache.spark" %% "spark-core" % "2.0.0"
+libraryDependencies += "org.apache.spark" % "spark-streaming_2.11" % "2.0.0"
+libraryDependencies += "org.apache.spark" % "spark-streaming-kafka-0-8_2.11" % "2.0.0"
+```
+
+然后编译打包
+
+**5.运行程序**  
+打开一个终端，执行下面命令，运行`KafkaWordProducer`程序，生成一些数字
+```shell
+$ cd /opt/software/spark
+$  spark-submit --driver-class-path /opt/spark/jars/*:/opt/spark/jars/kafka/* --class "org.apac.spark.examples.streaming.KafkaWordProducer" kafka.jar localhost:9092 wdsender 3 5
+```
+
+`localhost:9092 wdsender 3 5`是提供给KafkaWordProducer程序的四个输入参数，分别代表Kafka的Broker地址、Topic名称、每秒发送3条消息、每条消息包含5个数字
+
+运行结果如下  
+<img src='./pics/21.png' width='80%'>
+
+然后马上再打开一个终端，执行下面命令，进行单词计数：
+```shell 
+$ cd /opt/software
+$ spark-submit --driver-class-path /opt/spark/jars/*:/opt/spark/jars/kafka/* --class "org.apache.ark.examples.streaming.KafkaWordCount" kafka.jar 
+```
+运行结果如下  
+<img src='./pics/22.png' width='80%'>
+
+
+
+
+## 转换操作
+在流计算应用场景中，数据流会源源不断到达，Spark Streaming会把连续的数据流切分成一个又一个分段，然后，对每个分段内的DStream数据进行处理，也就是对DStream
