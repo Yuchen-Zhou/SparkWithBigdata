@@ -743,3 +743,23 @@ object NetworkWordCountStateful {
       Some (currentCount + previousCount)
     }
 ```
+
+然后，进行打包编译，上传至Linux服务器（流计算终端），执行如下命令：
+```
+spark-submit --class "org.apache.spark.examples.streaming.NetworkWordCountStateful" stateful.jar 
+```
+接着启动nc程序并输入一些单词
+```
+$ nc -lk 9999
+hadoop
+python
+scala 
+spark
+spark
+```
+
+运行结果如下
+
+<img src='./pics/24.png' width='80%'>
+
+
