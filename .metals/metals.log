@@ -364,3 +364,4 @@ Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, all
 [0m2022.01.09 18:32:52 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/stateful/StreamingExamples.scala[0m
 [0m2022.01.09 18:32:54 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/stateful/StreamingExamples.scala[0m
 [0m2022.01.09 18:32:56 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/kafka/StreamingExamples.scala[0m
+[0m2022.01.09 19:51:21 WARN  no build target for: /Users/zhouyuchen/bigdata/SparkWithBigdata/studying/scalaDep/ScalaProject/stateful/NetworkWordCountStateful.scala[0m

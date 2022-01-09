@@ -763,3 +763,121 @@ spark
 <img src='./pics/24.png' width='80%'>
 
 
+## 输出操作
+在Spark Streaming应用中，外部系统经常需要使用Spark Streaming处理后的数据，因此，需要采用输出操作把DStream的数据输出到数据库或者文件系统中
+
+### 把DStream输出到文本文件中
+把DStream输出到文本文件比较简单，只需要在DStream上调用`saveAsTextFiles()`方法即可。下面对NetworkWordCountStateful.scala代码稍作修改，把生成的词频统计结果写入到文本文件中。 
+内容如下：
+```scala
+package org.apache.spark.examples.streaming
+
+import org.apache.spark._
+import org.apache.spark.streaming._
+import org.apache.spark.storage.StorageLevel
+
+
+object NetworkWordCountStateful {
+  def main(args: Array[String]): Unit = {
+    val updateFunc = (values: Seq[Int], state: Option[Int]) => {
+      val currentCount = values.foldLeft(0)(_+_)
+      val previousCount = state.getOrElse(0)
+      Some (currentCount + previousCount)
+    }
+    StreamingExamples.setStreamingLogLevels()
+    val conf = new SparkConf().setAppName("NetworkWordCountStateful").setMaster("local[2]")
+    val sc = new StreamingContext(conf, Seconds(5))
+    sc.checkpoint("file:///home/spark/stateful/")
+    val lines = sc.socketTextStream("localhost", 9999)
+    val words = lines.flatMap(_.split(" "))
+    val wordDstream = words.map(x => (x, 1))
+    val stateDStream = wordDstream.updateStateByKey[Int](updateFunc)
+    stateDStream.print()
+    //修改内容在这里
+    stateDStream.saveAsTextFiles("file:///home/spark/stateful/output/")
+    sc.start()
+    sc.awaitTermination()
+  }
+}
+```
+重复刚才的操作，然后进入`/home/spark/stateful/output`目录中，可以看到出现了很多文本文件
+
+<img src='./pics/25.png' width='80%'>
+
+
+### 把DStream写入到关系数据库中
+在Mysql中已经有一个名为spark 的数据库，现在在spark数据库中创建一个`wordcount`表，MySQL命令如下
+```sql
+mysql> use spark;
+mysql> create table wordcount (word char(20), count int(4));
+```
+
+修改NetworkWordCountStateful.scala代码，在里面增加保存数据库的语句，修改后的代码内容为:
+```scala
+package org.apache.spark.examples.streaming
+
+import java.sql.{PreparedStatement, Connection, DriverManager}
+import java.util.concurrent.atomic.AtomicInteger
+import org.apache.spark.SparkConf
+import org.apache.spark.streaming.{Seconds, StreamingContext}
+import org.apache.spark.streaming.StreamingContext._
+import org.apache.spark.storage.StorageLevel
+
+
+object NetworkWordCountStateful {
+  def main(args: Array[String]): Unit = {
+    val updateFunc = (values: Seq[Int], state: Option[Int]) => {
+      val currentCount = values.foldLeft(0)(_+_)
+      val previousCount = state.getOrElse(0)
+      Some (currentCount + previousCount)
+    }
+    StreamingExamples.setStreamingLogLevels()
+    val conf = new SparkConf().setAppName("NetworkWordCountStateful").setMaster("local[2]")
+    val sc = new StreamingContext(conf, Seconds(5))
+    sc.checkpoint("file:///home/spark/stateful/")
+    val lines = sc.socketTextStream("localhost", 9999)
+    val words = lines.flatMap(_.split(" "))
+    val wordDstream = words.map(x => (x, 1))
+    val stateDStream = wordDstream.updateStateByKey[Int](updateFunc)
+    stateDStream.print()
+
+    //Add
+    stateDStream.foreachRDD(rdd => {
+      def func(records: Iterator[(String, Int)]): Unit = {
+        var conn: Connection = null
+        var stmt: PreparedStatement = null
+        try {
+          val url = "jdbc:mysql://localhost:3306/spark"
+          val user = "root"
+          val password = "Passwd1!"
+          conn = DriverManager.getConnection(url, user, password)
+          records.foreach(p => {
+            val sql = "insert into wordcout(word, count) values (?, ?)"
+            stmt = conn.prepareStatement(sql)
+            stmt.setString(1, p._1.trim)
+            stmt.setInt(2, p._2.toInt)
+            stmt.executeUpdate()
+          })
+        } catch {
+          case e: Exception => e.printStackTrace()
+        } finally {
+          if (stmt != null) {
+            stmt.close()
+          }
+          if (conn != null) {
+            conn.close()
+          }
+        }
+      }
+      val repartitionedRDD = rdd.repartition(3)
+      repartitionedRDD.foreachPartition(func)
+    })
+    sc.start()
+    sc.awaitTermination()
+  }
+}
+```
+
+编译打包上传之后运行代码，重复之前的操作，运行结果如下
+
+<img src='./pics/26.png' width='40%'>
