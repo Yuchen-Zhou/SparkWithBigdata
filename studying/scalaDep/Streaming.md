@@ -439,4 +439,46 @@ object QueueStream {
 Spark Streaming是用来进行流计算的组件，可以把Kafka（或Flume）作为数据源，让Kafka（或Flume）产生数据发送Spark Streaming应用程序，Spark Streaming应用程序再对接收到的数据进行实时处理，从而完成一个流计算过程。
 
 ### Kafka简介
+Kafka是一种高吞吐量的分布式发布订阅消息系统，为了更好地理解和使用Kafka，这里介绍一些Kafka的相关概念：
+- Broker：Kafka集群包含一个或多个服务器，这些服务器被称为Broker
+- Topic：每条发布到Kafka集群的消息都有一个类别，这个类别被称为Topic。物理上不同Topic的消息分开存储，逻辑上一个Topic的消息虽然保存于一个或多个Broker上，但用户只需指定消息的Topic，即可生产或消费数据，而不必关系数据存在何处
+- Partition：是物理上的概念，每个Topic包含一个或多个Partition
+- Producer：负责发布消息到Kafka Broker
+- Consumer：消息消费者，向Kafka Broker读取消息到客户端
+- Consumer Group：每个Consumer属于一个特定的Consumer Group，可为每个Consumer指定Group Name，若不指定Group Name，则属于默认的Group
+
+### Kafka准备工作
+参见[安装](../Installation/README.md)
+
+**启动Kafka**  
+首先需要启动Kafka，命令如下：
+```shell
+$ cd /opt/software/kafka
+$ kafka-server-start.sh config/server.properties
+```
+运行结果如下，此时终端窗口会停住不动
+<img src='./pics/17.png' width='80%'>
+
+另外，再打开一个终端，启动Kafka服务
+```shell 
+$ cd /opt/software/kafka
+% kafka-server-start.sh config/server.properties
+```
+
+同样执行命令后，终端返回一堆信息后会停住不动
+<img src='./pics/18.png' width='80%'>
+
+**测试Kafka是否正常工作**  
+再打开一个终端，然后输入命令创建一个名称为“wordsendertest”的Topic：
+```shell
+$ cd /opt/software/kafka
+$ kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic wordsendertest
+```
+
+这个`Topic`叫wordsendertest，2181是Zookeeper默认的端口号，`--partitions`是Topic里面的分区数，`--replication-factor`是备份的数量，在Kafka集群中使用，由于这里是单机版，所以不用备份
+
+可以用list列出所有创建的Topic，来查看上面创建的Topic是否存在
+
+`kafka-topics.sh --list --zookeeper localhost:2181`
+
 
