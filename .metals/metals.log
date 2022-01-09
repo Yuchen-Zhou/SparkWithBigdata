@@ -342,3 +342,4 @@ Caused by: java.lang.IllegalArgumentException: 9 is not a valid line number, all
 [0m2022.01.08 19:59:54 INFO  time: initialize in 0.55s[0m
 [0m2022.01.08 19:59:54 WARN  Build server is not auto-connectable.[0m
 [0m2022.01.08 19:59:54 WARN  no build tool detected in workspace '/Users/zhouyuchen/bigdata/SparkWithBigdata'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2022.01.08 20:12:55 INFO  shutting down Metals[0m

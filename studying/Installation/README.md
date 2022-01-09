@@ -325,6 +325,8 @@
   使用细节参考：http://dblab.xmu.edu.cn/blog/install-hbase/
   
 ### 1.8Kafka安装
+Kafka版本号一定要和Linux机器上的Scala版本一致
+
   ```shell
   $ tar -zxvf kafka_2.11-2.4.0.tgz -C /opt/software
   $ vim /etc/profile
