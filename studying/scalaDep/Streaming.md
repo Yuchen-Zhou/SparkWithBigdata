@@ -639,4 +639,107 @@ $ spark-submit --driver-class-path /opt/spark/jars/*:/opt/spark/jars/kafka/* --c
 
 
 ## 转换操作
-在流计算应用场景中，数据流会源源不断到达，Spark Streaming会把连续的数据流切分成一个又一个分段，然后，对每个分段内的DStream数据进行处理，也就是对DStream
+在流计算应用场景中，数据流会源源不断到达，Spark Streaming会把连续的数据流切分成一个又一个分段，然后，对每个分段内的DStream数据进行处理，也就是对DStream进行各种转换操作，包括无状态转换操作和有状态转换操作
+
+### DStream无状态转换操作
+对于DStream无状态转换操作而言，不会记录历史状态信息，每次对新的批次数据进行处理时，只会记录当前批次数据的状态。之前在“套接字流”部分介绍的词频统计程序`NetworkWordCount`，就是采用无状态转换，每次统计都是只统计当前批次到达的单词的词频，和之前批次的单词无关，不会进行历史词频的累积。下表给出了常用的DStream无状态转换操作
+
+|操作|含义|
+|--|--|
+|map(func)|对源DStream的每个元素，采用func函数进行转换，得到一个新的DStream|
+|flatMap(func)|与map相似，但是每个输入项可以被映射为零个或者多个输出项|
+|filter(func)|返回一个新的DStream，仅包含源DStream中满足func的项|
+|repartition(numPartitions)|通过创建更多或者更少的分区改变DStream的并行程度|
+|reduce(func)|利用函数func聚集源DStream中每个RDD的元素，返回一个包含单元素RDD的新DStream|
+|count()|统计源DStream中每个RDD的元素数量|
+|union(otherStream)|返回一个新的DStream，包含源DStream和其他DStream的元素|
+|countByValue()|应用于元素类型为K的DStream上，返回一个(K,V)键值对类型的新DStream，每个键的值是在源DStream的每个RDD中出现次数|
+|reduceByKey(func, [numTasks])|当一个由(K,V)键值对组成的DStream上执行的该操作时，返回一个新的由(K,V)键值对组成的DStream，每一个key的值均由给定的reduce函数(func)聚集起来|
+|join(otherStream, [numTasks])|当应用于两个DStream（一个包含(K,V)键值对，一个包含(K,W)键值对），返回一个(K, (V, W))键值对的新DStream|
+|cogroup(otherStream, [numTasks])|当应用于两个DStream（一个包含(K,V)键值对，一个包含(K,W)键值对），返回一个包含(K, Seq[V], Seq[W])的元组|
+|transform(func)|通过对源DStream的每个RDD应用RDD-to-RDD函数，创建一个新的DStream，支持在新的DStream中做任何RDD操作|
+
+
+### DStream有状态转换操作
+DStream有状态转换操作包括滑动窗口转换操作和updateStateByKey操作  
+**1.滑动窗口转换操作**  
+如下图所示，事先设定一个滑动窗口的长度（也就是窗口的持续时间），设定滑动窗口的时间间隔（每隔多长时间执行一次计算），让窗口按照指定时间间隔在源DStream上滑动，每次窗口停放的位置上，都会有一部分DStream（或者一部分RDD）被框入窗口内，形成一个小段的DStream，可以启动对这个小段DStream的计算，也就是对DStream执行各种转换操作。
+
+
+<img src='./pics/23.png' width='80%'>
+
+下表是常用的滑动窗口转换操作
+
+
+|操作|含义|
+|--|--|
+|window(windowLength, slideInterval)|将源DStream窗口化，并返回转化后的DStream|
+|countByWindow(windowLength,slideInterval)|返回数据流在一个滑动窗口内的元素个数|
+|reduceByWindow(func, windowLength,slideInterval)|基于数据流在一个滑动窗口内的元素，用func做聚合，返回一个单元素数据流。func必须满足结合律，以便支持并行计算。|
+|reduceByKeyAndWindow(func,windowLength, slideInterval, [numTasks])|基于(K, V)键值对DStream，将一个滑动窗口内的数据进行聚合，返回一个新的包含(K,V)键值对的DStream，其中每个value都是各个key经过func聚合后的结果。注意：如果不指定numTasks，其值将使用Spark的默认并行任务数（本地模式下为2，集群模式下由 spark.default.parallelism决定）。当然，你也可以通过numTasks来指定任务个数。|
+|reduceByKeyAndWindow(func, invFunc,windowLength,slideInterval, [numTasks])|和前面的reduceByKeyAndWindow() 类似，只是这个版本会用之前滑动窗口计算结果，递增地计算每个窗口的归约结果。当新的数据进入窗口时，这些values会被输入func做归约计算，而这些数据离开窗口时，对应的这些values又会被输入 invFunc 做”反归约”计算。举个简单的例子，就是把新进入窗口数据中各个单词个数“增加”到各个单词统计结果上，同时把离开窗口数据中各个单词的统计个数从相应的统计结果中“减掉”。不过，你的自己定义好”反归约”函数，即：该算子不仅有归约函数（见参数func），还得有一个对应的”反归约”函数（见参数中的 invFunc）。和前面的reduceByKeyAndWindow() 类似，该算子也有一个可选参数numTasks来指定并行任务数。注意，这个算子需要配置好检查点（checkpointing）才能用。|
+|countByValueAndWindow(windowLength,slideInterval, [numTasks])|基于包含(K, V)键值对的DStream，返回新的包含(K, Long)键值对的DStream。其中的Long value都是滑动窗口内key出现次数的计数。和前面的reduceByKeyAndWindow() 类似，该算子也有一个可选参数numTasks来指定并行任务数。|
+
+例如`reduceByKeyAndWindow(func, invFunc, windowLength, slideInterval, [numTasks])`这个函数，在之前我们使用过  
+`val wordCounts = pair.reduceByKeyAndWindow(_+_, _ - _, Minutes(2), Seconds(10), 2)`
+
+参数详解如下
+
+|参数|值|含义|
+|--|--|--|
+|func|_ + _|等价于匿名函数(a,b) => a+b|
+|invFunc|_ - _|等价于匿名函数(a,b) => a - b|
+|windowLength|Minutes(2)|滑动窗口大小为2分钟|
+|slideInterval|Seconds(10)|每隔十秒钟滑动一次|
+|numTasks|2|启动的任务数量为2|
+
+**2.updateStateByKey操作**  
+滑动窗口操作，只能对当前窗口内的数据进行计算，无法在不同批次之间维护状态。如果要跨批次维护状态，就必须使用`updateStateByKey`操作。`updateStateByKey`首先会对DStream中的数据根据key做计算，然后再对各个批次的数据进行累加。`updateStateByKey(updateFunc)`方法的输入参数`updateFunc`是一个函数，该函数的类型如下：  
+`(Seq[V], Option[S]) => Option[S]`  
+其中，V和S表示数据类型，如Int。可以看出,updateFunc函数的第1个输入参数表示Seq[V]类型，表示当前key对于的所有value，第2个输入参数属于Option[S]类型，表示当前key的历史状态，函数返回值类型Option[S]，表示当前key的新状态。
+
+仍然以词频统计为例，对于有状态转换操作而言，本批次的词频统计，会在之前批次的词频统计结果的基础上进行不断累加，所以，最终统计得到的词频，是所有批次的单词的总的词频统计结果。
+
+在IDEA中创建一个新的sbt工程`stateful`，新建一个`NetworkWordCountStateful.scala`，输入以下代码：
+```scala
+package org.apache.spark.examples.streaming
+
+import org.apache.spark._
+import org.apache.spark.streaming._
+import org.apache.spark.storage.StorageLevel
+
+
+object NetworkWordCountStateful {
+  def main(args: Array[String]): Unit = {
+    val updateFunc = (values: Seq[Int], state: Option[Int]) => {
+      val currentCount = values.foldLeft(0)(_+_)
+      val previousCount = state.getOrElse(0)
+      Some (currentCount + previousCount)
+    }
+    StreamingExamples.setStreamingLogLevels()
+    val conf = new SparkConf().setAppName("NetworkWordCountStateful").setMaster("local[2]")
+    val sc = new StreamingContext(conf, Seconds(5))
+    sc.checkpoint("file:///home/spark/stateful/")
+    val lines = sc.socketTextStream("localhost", 9999)
+    val words = lines.flatMap(_.split(" "))
+    val wordDstream = words.map(x => (x, 1))
+    val stateDStream = wordDstream.updateStateByKey[Int](updateFunc)
+    stateDStream.print()
+    sc.start()
+    sc.awaitTermination()
+  }
+}
+```
+
+同时，在相同文件夹下创建`StreamingExamples.scala`文件，用于设置log4j日志级别，代码参考前面
+
+`NetworkWordCountStateful.scala`程序中，`val lines = sc.socketTextStream("localhost", 9999)`这行语句定义了一个“套接字流”类型的数据源，这个数据源可以用nc程序产生。需要注意的是，在代码中，已经确定了Socket客户端会向主机名为localhost的9999端口发起Socket通信请求，所以，后面在启动nc程序时，需要把端口号设置为9999
+
+`val stateDstream = wordDstream.updateStateByKey[Int](updateFunc)`这行语句用于执行词频统计，updateStateByKey函数的输入参数是updateFunc函数。该函数是一个自定义函数，定义如下：
+```scala
+    val updateFunc = (values: Seq[Int], state: Option[Int]) => {
+      val currentCount = values.foldLeft(0)(_+_)
+      val previousCount = state.getOrElse(0)
+      Some (currentCount + previousCount)
+    }
+```
