@@ -128,24 +128,10 @@ sm: org.apache.spark.ml.linalg.Matrix =
 (1,1) 8.0
 ```
 
-这里创建了一个3行2列的稀疏矩阵
+这里创建了一个3行2列的稀疏矩阵[ [9.0, 0.0], [0.0, 8.0], [0.0, 6.0]]。`Matrices.sparse`的参数中，3表示行数，2表示列数。第1个数组参数表示列指针，其长度=列数+1，表示每一列元素的开始索引值。第2个数组参数表示行索引，即对应的元素是属于哪一列，其长度=非零元素的个数。第3个数第2列有2个(=3-1)元素；第二个数组(0, 2, 1)表示共有3个元素，分别在第0、2、1行
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 机器学习流水线
-### 机器学习流水线概念
+# 机器学习流水线
+## 机器学习流水线概念
 - DataFrame：使用Spark SQL中的DataFrame作为数据集，它可以容纳各种数据类型。较之RDD，DataFrame包含了schema信息，更类似传统数据库的二维表格。
 - 它被ML Pipeline用来存储源数据。例如，DataFrame中的列可以是存储的文本、特征向量、真实标签和预测的标签等
 
@@ -155,16 +141,82 @@ sm: org.apache.spark.ml.linalg.Matrix =
 - PipeLine：流水线或者管道。流水线将多个工作流阶段（转换器和评估器）连接在一起，形成机器学习的工作流，并获得结果输出。
 
 
-### 流水线工作流程
+## 流水线工作流程
 要构建一个Pipeline流水线，首先需要定义Pipeline中的各个流水线阶段PipelineStage(包括转换器和评估器），比如指标提取和转换模型训练等。有了这些处理特定问题的转换器和评估器，就可以按照具体的处理逻辑有序地组织PipelineStages并创建一个Pipeline
-```python
-pipeline = Pipeline(stages=[stage1, stage2, stage3]
+
+```scala
+val pipeline = new Pipeline().setStages(Array(stage1, stage2, stage3, ...))
 ```
 
-然后就可以把训练数据集作为输入参数，调用Pipeline实例的fit方法来开始以流的方式来处理源训练数据。这个调用会返回一个PipelineModel类实例，进而被用来预测测试数据的标签
+在一个流水线中，上一个PipelineStage的输出，恰好是下一个PipelineStage的输入。流水线建好以后，就可以把训练数据集作为输入参数，调用流水线实例的fit()方法，以流的方式来处理源训练数据。该调用会返回一个PipelineModel类的实例，进而被用来预测测试数据的标签。更具体地说，流水线的各个阶段按顺序运行，输入的DataFrame在它通过每个阶段时会被转换，对于转换器阶段，在DataFrame上会调用`transform()`方法，对于评估器阶段，先调用fit()方法来生成一个转换器，然后在DataFrame上调用该转换器的transform()方法。
 
-- 流水线的各个阶段按顺序运行，输入的DataFrame在它通过每个阶段时被转换
+例如，如下图所示，一个流水线具有3个阶段，前两个阶段(Tokenizer和HashingTF)是转换器，第三个阶段(LogisticRegression)是评估器。图中
+下面一行表示流经这个流水线的数据，其中，圆柱表示`DataFrame`。在原始DataFrame上调用`Pipeline.fit()`方法执行流水线，每个阶段运行流程如下：
 
-值得注意的是，流水线本身也可以看作是一个评估器，在流水线的fit()方法运行之后，它产生一个PipelineModel，它是一个Transformer。这个管道模型将在测试数据的时候使用
+(1)在Tokenizer阶段，调用`transform()`方法将原始文本文档拆分为单词，并向DataFrame添加一个带有单词的新列；  
+(2)在HashingTF阶段，调用其`transform()`方法将DataFrame中的单词列转换为特征向量，并将这些向量作为一个新列添加到DataFrame中  
+(3)在LogisticsRegression阶段，由于它是一个评估器，因此会调用`LogisticRegresion.fit()`产生一个转换器`LogisticRegresionModel`；如果工作流有更多的阶段，则在将DataFrame传递到下一阶段之前，会调用LogisticsRegressionModel的transform()方法。
+
+<img src='./pics/27.png' width='80%'>
+
+流水线本身就是一个评估器，因此，在流水线的fit()方法运行之后，会产生一个流水线模型(PipelineModel)，这是一个转换器，可在测试数据的时候使用。如下图所示，PipelineModel具有与原流水线相同的阶段数，但是，原流水线中的所有评估器。调用PipelineModel的transform()方法时，测试数据按顺序通过流水线的各个阶段，每个阶段的transform()方法更新数据集（DataFrame），并将其传递到下一个阶段。通过这种方式，流水线和PipelineModel确保了训练和测试数据通过相同的特征处理步骤。这里给出的示例都是用于线性流水线的，即流水线中每个阶段使用由前一阶段产生的数据，但是，也可以构建一个有向无环图（DAG）形式的流水线，以拓扑顺序指定每个阶段的输入和输出列名称。流水线的阶段必须时唯一的实例，相同的实例不应该两次插入流水线。但是，具有相同类型的两个阶段实例，可以放在同一个流水线中，流水线将使用不同的ID创建不同的实例。此外，DataFrame会对各个阶段的数据类型进行描述，流水线和流水线模型(PipelineModel)会在实际运行流水线之前，做类型的运行时检查，但不能使用编译时的类型检查。
+
+<img src='./pics/28.png' width='80%'>
 
 
+
+MLlib评估器和转换器，使用统一的API指定参数。其中，Param是一个自描述包含文档的命名参数，而ParamMap是一组(参数,值)对。将参数传递给算法主要有两种方法：
+- 设置实例的参数。例如，lr是一个LogisticRegression实例，用`lr.setMaxIter(10)`进行参数设置后，可以使`lr.fit()`最多迭代10次
+- 传递ParamMap给fit()或transform()函数。ParamMap中的任何参数，将覆盖先前通过set方法指定的参数
+
+需要注意的是参数同时属于评估器和转换器的特定实例。如果同一个流水线中的两个算法实例（比如LogisticRegression实例lr1和lr2），都需要设置`maxItera`参数，则可以建立一个ParamMap，即`ParamMap(lr1.maxIter -> 10, lr2.maxIter -> 20)`，然后传递给这个流水线
+
+
+
+# 特征提取、转换和选择
+机器学习过程中，输入的数据格式多种多样，为了满足相应机器学习算法的格式，一般都需要对数据进行预处理。特征处理相关的算法大体分为以下3类。
+
+(1)特征提取：从原始数据中抽取特征；  
+(2)特征转换：缩放、转换或修改特征；   
+(3)特征选择：从较大特征集中选取特征子集  
+
+## 特征提取
+特征提取(Feature Extraction)是指利用已有的特征计算出一个抽象程度更高的特征集，也指计算得到某个特征的算法。
+
+**1.特征提取操作**  
+spark.ml包提供的提取操作包括以下几种：  
+(1)TF-IDF。词频-逆向文件频率(Term Frequency_Inverse Document Frequency, TF-IDF)
+
+
+
+
+
+
+- “词频-逆向文件频率”(TF-IDF)是一种在文本挖掘中广泛使用的特征向量化方法，它可以体现一个文档中词语在语料库中的重要程度
+- 词语由t表示，文档由d表示，语料库由D表示。词频TF(t, d)是词语t在文档d中出现的次数。文件频率DF(t, D)是包含词语的文档的个数
+- TF-IDF就是在数值化文档信息，衡量词语能够提供多少信息以区分文档。其定义如下:
+
+$$
+        IDF(t,D) = log \frac {|D| + 1}{DF(t,D)+1} \\
+$$
+
+
+$$
+
+        TFIDF(t,d,D) = TF(t,d)·IDF(t,D)
+$$
+
+在Spark ML库中，TF-IDF被分成两部分：
+- TF(+hashing)
+    HashingTF是一个Transformer，在文本处理中，接收词条的集合然后把这些集合转化为固定长度的特征向量。这个算法在哈希的同时会统计各个词条的词频。
+        
+- IDF
+    IDF是一个Estimator，在一个数据集上应用它的fit()方法，产生一个IDFModel。该IDFModel接收特征向量（由HashingTF产生），然后计算每一个词在文档中出现的频次。IDF会减少那些在语料库中出现频率较高的词的权重。
+
+**过程描述**
+- 在下面的代码段中，我们以一组句子开始
+- 首先使用分解器Tokenizer把句子划分为单个词语
+- 对每一个句子（词带），使用HashingTF将句子转换为特征向量
+- 最后使用IDF重新调整特征向量（这种转换通常可以提高使用文本特征的性能）
+    
+    
