@@ -6,11 +6,12 @@
 - IDEA 2021 （IDEA的下载可以去官网自行下载）
 
 ## Scala版Spark编程详解
-- [Scala Basic](./ScalaBasic.md)
-- [Maven Tutorial](./Maven_Tutorial/Maven.md)
-- [Spark RDD](./RDD.md)
+- [Scala Basic](./ScalaBasic.md)  
+- [Maven Tutorial](./Maven_Tutorial/Maven.md)  
+- [Spark RDD](./RDD.md)  
 - [Spark DataFrame](./DataFrame.md)
 - [Spark Streaming](./Streaming.md)
+- [Spark MLlib](./MLlib.b)
 
 
 ## 使用IDEA Maven打包Scala
