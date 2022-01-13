@@ -51,6 +51,9 @@ scala> peopleDF.select("name", "age").write.format("csv").
 - `printSchema()`
 
   可以使用`df.printSchema()`操作，打印出DataFrame的模式信息
+  ```scala
+  
+  ```
 
 - `select()`
 
