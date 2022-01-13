@@ -52,16 +52,31 @@ scala> peopleDF.select("name", "age").write.format("csv").
 
   可以使用`df.printSchema()`操作，打印出DataFrame的模式信息
   ```scala
-  
+  scala> df.printSchema()
   ```
 
 - `select()`
 
   `df.select()`的功能，是从DataFrame中选取部分列的数据
+  ```scala
+  scala> df.select("col_name1", "col_name2", ...).show()
+  ```
 
 - `filter()`
 
   `df.filter()`可以实现条件查询，找到满足条件要求的记录
+  ```scala
+  //过滤掉A列中小于B列的数据
+  scala> df.filter($"A">=$"B")
+  //过滤出A列中等于某值或某字符串的数据
+  scala> df.filter($"A"==="xx")
+  scala> df.filter($"A"===123)
+  scala> df.filter($"A")
+  scala> df.filter(df("A") === "xx")
+  scala> df.filter(df.col("A") === "xx")
+  //统计某列中空值的个数
+  scala> df.filter(df.col("col_name").isNull).count
+  ```
 
 - `groupBy()`
 
@@ -70,7 +85,9 @@ scala> peopleDF.select("name", "age").write.format("csv").
 - `sort()`
 
   `df.sort()`用于对记录进行排序，`df.sort(df("age").desc, df("name").asc)`，desc为降序，asc为升序
-
+  ```scala
+  scala> df.sort(desc("col_name1"), asc("col_name2"))
+  ```
 - 去除空值、Nan
 
   `df.na.drop()`
@@ -78,6 +95,16 @@ scala> peopleDF.select("name", "age").write.format("csv").
 - 空值填补
 
   `df.na.fill()`
+  
+- 列名更改
+
+  `df.withColumnRenamed(old_name: String, new_name: String)`
+
+- 添加列
+
+  `df.withColumn(colName : scala.Predef.String, col : org.apache.spark.sql.Column)`
+
+
 
 ## 4.从RDD转换得到DataFrame
 
