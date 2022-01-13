@@ -13,6 +13,9 @@
 - [Spark Streaming](./Streaming.md)
 - [Spark MLlib](./MLlib.b)
 
+## 实用教程
+- https://www.bookstack.cn/read/BigData-Notes/ch3.me
+- https://blog.51cto.com/lovebetterworld/2839943#Datasetcuberollup_566
 
 ## 使用IDEA Maven打包Scala
 可以参考这篇教程：https://blog.csdn.net/u011470552/article/details/54564636  

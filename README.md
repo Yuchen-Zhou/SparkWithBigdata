@@ -5,8 +5,8 @@
 ### 关于开发版本
 Spark开发Scala可能更为主流，但是随着近年来Python的崛起，Python在Spark编程中也能占有一半天地。
 
-- [Scala版](./studying/scalaDep)
-- [Python版](./studying/pythonDep)
+- [Scala版](./studying/scalaDep/README.md)
+- [Python版](./studying/pythonDep/README.md)
 
 ### 关于版本使用
 - [JDK 1.8.0](https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html)
