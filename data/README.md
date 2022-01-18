@@ -27,3 +27,5 @@ This dataset is one of the public parts of City API project data.
 ## Fortune Global 500 from 2019-2021
 来源：Kaggle
 介绍：2019-2021世界500强公司信息
+
+## [技能大赛训练数据](./chinaskill_data/README.md)
